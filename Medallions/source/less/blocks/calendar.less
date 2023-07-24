@@ -1,0 +1,138 @@
+.calendar {
+  .w100();
+
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.calendar__wrapper {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  .wrapper();
+}
+
+.calendar__svg-bg {
+  &--1 {
+    stroke: #FFD8B1;
+
+    bottom: 0px;
+    right: 70px;
+
+    width: 139px;
+    height: 18px;
+  }
+
+  &--2 {
+    stroke: #96CDC8;
+
+    top: -40px;
+    right: 250px;
+
+    width: 192px;
+    height: 69px;
+
+    transform: rotate(90deg);
+  }
+
+  &--3 {
+    stroke: #FFD8B1;
+
+    bottom: 200px;
+    left: 70px;
+
+    width: 192px;
+    height: 69px;
+  }
+
+  &--4 {
+    fill: #FFE1ED;
+
+    top: 5px;
+    left: 250px;
+
+    width: 88px;
+    height: 67px;
+
+    transform: rotate(90deg);
+  }
+
+  &--5 {
+    fill: #96CDC8;
+
+    bottom: 200px;
+    right: 80px;
+
+    width: 88px;
+    height: 67px;
+  }
+
+  &--6 {
+    fill: #FFE1ED;
+
+    bottom: -80px;
+    right: 350px;
+
+    width: 88px;
+    height: 67px;
+  }
+}
+
+
+@media (max-width: 1249px) {
+  .calendar {
+    padding: 80px 0;
+  }
+
+  .calendar__wrapper {
+    justify-content: flex-start;
+  }
+
+  .calendar__gif {
+    margin-left: 70px;
+  }
+
+  .calendar__svg-bg {
+    &--1 {
+      bottom: -40px;
+      right: 70px;
+    }
+
+    &--2 {
+      top: -90px;
+      right: 10px;
+    }
+
+    &--3 {
+      bottom: 100px;
+      left: 0px;
+    }
+
+    &--4 {
+      top: 5px;
+      left: 250px;
+    }
+
+    &--5 {
+      bottom: 200px;
+      right: 50px;
+    }
+
+    &--6 {
+      bottom: -180px;
+      right: 350px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .calendar__gif {
+
+    width: 100%;
+    height: auto;
+
+    margin-left: 0;
+  }
+}

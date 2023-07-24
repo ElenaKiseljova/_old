@@ -1,0 +1,162 @@
+.promo {
+  padding: 0;
+  margin: 0;
+  /*.w100();
+  */
+  padding-bottom: 114px;
+
+  background-color: #58432e;
+
+  background-image: url(../img/promo.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: cover;
+}
+
+.promo__wrapper {
+  .wrapper();
+
+  align-items: stretch;
+
+  padding-top:  318px;
+}
+
+.promo__left {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  align-content: flex-start;
+
+  width: 90%;
+
+  padding: 0;
+  margin: 0;
+}
+
+.promo__store,
+.promo__shop {
+  width: 200px;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  font-size: 19px;
+  line-height: 19px;
+  font-weight: 400;
+
+  background-color: transparent;
+
+  color: #ffffff;
+
+  border-color: #ffffff;
+
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+
+    transition: all 0.5s;
+  }
+}
+
+.promo__store {
+  margin-right: 23px;
+}
+
+.promo__sub-title,
+.promo__title {
+  .w100();
+
+  color: #ffffff;
+
+  text-align: left;
+  vertical-align: middle;
+}
+
+.promo__sub-title {
+  margin-bottom: 45px;
+
+  font-size: 46px;
+  line-height: 100%;
+  font-weight: 300;
+}
+
+.promo__title {
+  margin-bottom: 20px;
+
+  font-size: 56px;
+  line-height: 100%;
+  font-weight: 500;
+}
+
+.promo__social {
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
+
+  width: 30px;
+
+  margin-bottom: 0;
+}
+
+
+@media (max-width: 767px) {
+  .promo {
+    min-height: 450px;
+    background-position: 60%;
+
+    padding-bottom: 0;
+  }
+
+  .promo__wrapper {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  .promo__left {
+    width: 100%;
+  }
+
+  .promo__title {
+    font-size: 45px;
+  }
+
+  .promo__sub-title {
+    font-size: 35px;
+  }
+
+  .promo__store,
+  .promo__shop {
+    max-width: calc(50% - 23px);
+  }
+
+  .promo__social {
+    flex-direction: row;
+
+    justify-content: flex-start;
+
+    width: 100%;
+
+    margin-top: 40px;
+
+    & li {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .promo__store,
+  .promo__shop {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    font-size: 15px;
+  }
+}

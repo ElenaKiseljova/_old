@@ -1,0 +1,184 @@
+
+.characteristic {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.characteristic__wrapper {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+
+}
+
+.characteristic__left {
+  width: 60%;
+
+  padding: 0;
+  margin: 0;
+}
+
+.characteristic__title {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  margin-bottom: 47px;
+
+
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 77px;
+
+  color: #000000;
+
+  text-align: left;
+
+  &--small {
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &--tablet {
+    display: none;
+  }
+}
+
+.characteristic__list {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  &:first-of-type {
+    margin-bottom: 40px;
+  }
+}
+
+.characteristic__item {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  margin-bottom: 5px;
+}
+
+.characteristic__text {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #000000;
+
+  text-align: left;
+}
+
+.characteristic__image {
+  width: 40%;
+}
+
+@media (max-width: 991px) {
+  .characteristic {
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+
+  .characteristic__wrapper {
+    justify-content: center;
+  }
+
+  .characteristic__title {
+    order: 1;
+
+    margin-bottom: 50px;
+
+    text-align: center;
+
+    &--small {
+      margin-bottom: 20px;
+
+      font-size: 24px;
+      line-height: 29px;
+
+      text-align: left;
+    }
+
+    &--desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  .characteristic__left {
+    order: 3;
+
+    width: 80%;
+  }
+
+  .characteristic__list:first-of-type {
+    margin-bottom: 25px;
+  }
+
+  .characteristic__image {
+    order: 2;
+
+    width: 80%;
+
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .characteristic {
+  }
+
+  .characteristic__title {
+    font-size: 36px;
+    line-height: 44px;
+
+    &--small {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  .characteristic__left {
+    width: 100%;
+  }
+
+  .characteristic__image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 374px) {
+  .characteristic__title--tablet {
+    font-size: 32px;
+  }
+}

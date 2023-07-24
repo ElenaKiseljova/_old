@@ -1,0 +1,179 @@
+.characteristic {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  padding: 72px 0;
+
+  color: #ffffff;
+
+  background-color: rgba(23, 23, 23, 0.9);
+
+  background-image: url("../img/gray.png");
+  background-position: 50%  0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.characteristic__wrapper {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  width: 1075px;
+
+  padding: 0;
+  margin: 0;
+
+  margin: 0 auto;
+}
+
+.characteristic__left {
+  width: 48%;
+}
+
+.characteristic__right {
+  width: 48%;
+
+  padding: 0;
+  margin: 0;
+}
+
+.characteristic__title {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  margin-bottom: 50px;
+
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 140%;
+
+  text-align: left;
+  vertical-align: middle;
+
+  color: #ffffff;
+}
+
+.characteristic__list {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.characteristic__item {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+
+  text-align: left;
+  vertical-align: middle;
+
+  color: #ffffff;
+}
+
+.characteristic__bold {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+
+  text-align: left;
+  vertical-align: middle;
+
+  color: #ffffff;
+}
+
+@media (min-width: 992px) and (max-width: 1349px) {
+  .characteristic__wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .characteristic {
+      padding-top: 80px;
+      padding-bottom: 80px;
+
+      background-position: 89% 0;
+  }
+
+  .characteristic__wrapper {
+    width: 100%;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .characteristic__left {
+    width: 396px;
+
+    margin-bottom: 50px;
+  }
+
+  .characteristic__right {
+    width: 416px;
+  }
+}
+
+@media (max-width: 767px) {
+  .characteristic {
+    padding-top: 0;
+
+    padding-bottom: 40px;
+  }
+
+  .characteristic__wrapper {
+    width: 100%;
+  }
+
+  .characteristic__left {
+    width: 100%;
+
+    margin-bottom: 40px;
+  }
+
+  .characteristic__right {
+    width: 100%;
+
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .characteristic__title {
+    margin-bottom: 30px;
+
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 140%;
+
+    text-align: center;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .characteristic__list {
+    width: 50%;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 374px) {
+  .characteristic__title {
+    font-size: 29px;
+  }
+}

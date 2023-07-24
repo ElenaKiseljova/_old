@@ -1,0 +1,155 @@
+.page-footer {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  color: #ffffff;
+
+  background-color:  #171717;
+}
+
+.page-footer__container {
+  width: 100%;
+  max-width: 1366px;
+
+  padding: 0;
+  margin: 0;
+
+  margin: 0 auto;
+}
+
+.page-footer__map {
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 650px;
+}
+
+.page-footer__map-iframe {
+  width: 100%;
+  height: 650px;
+}
+
+.page-footer__address {
+  position: absolute;
+
+  top: 50%;
+  left: 146px;
+
+  z-index: 200;
+
+  transform: translateY(-50%);
+
+  width: 362px;
+  min-height: 200px;
+
+  padding: 50px 55px 50px 44px;
+
+  background-color:  #171717;
+
+  .page-footer__text {
+    text-align: left;
+  }
+
+  .page-footer__text:first-of-type {
+    margin-bottom: 25px;
+  }
+}
+
+.page-footer__text {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  color: #ffffff;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+
+  text-align: center;
+  vertical-align: middle;
+
+  &--privacy {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.privacy {
+  color: #ffffff;
+
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1349px) {
+  .page-footer__address {
+    left: 36px;
+  }
+}
+
+@media (max-width: 991px) {
+  .page-footer__map {
+    height: 900px;
+    overflow: hidden;
+  }
+
+  .page-footer__map-iframe {
+    width: 100%;
+    height: 900px;
+  }
+
+  .page-footer__address {
+    top: 80px;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+  .page-footer__address .page-footer__text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-footer__map {
+    height: 720px;
+  }
+
+  .page-footer__map-iframe {
+    width: 100%;
+    height: 720px;
+  }
+
+  .page-footer__address {
+    top: auto;
+    left: 0;
+    bottom: 0;
+
+    transform: translateX(0);
+
+    width: 100%;
+    min-height: auto;
+
+    padding: 30px 27px;
+  }
+
+  .copiright-text {
+    font-size: 12px;
+
+    margin-bottom: 5px;
+
+    &--privacy {
+      font-size: 14px;
+    }
+  }
+}

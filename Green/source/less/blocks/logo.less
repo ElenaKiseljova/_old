@@ -1,0 +1,36 @@
+.logo {
+  .button();
+
+  flex-grow: 1;
+
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  overflow: hidden;
+
+  &:hover {
+    & .logo__icon {
+      margin-left: 0px;
+
+      transition: all 0.5s;
+    }
+  }
+}
+
+.logo__icon {
+  margin-left: -12.16px;
+
+  transition: all 0.5s;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    flex-grow: 0;
+
+    width: 135px;
+    height: 13px;
+  }
+
+}

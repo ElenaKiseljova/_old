@@ -1,0 +1,166 @@
+.faq {
+  .w100();
+
+  margin-bottom: 90px;
+}
+
+.faq__wrapper {
+  .wrapper();
+
+  align-items: flex-start;
+}
+
+.faq__list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: center;
+
+  align-content: flex-start;
+
+  width: calc(50% - 20px);
+  max-width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.faq__title,
+.faq__title-item,
+.faq__text-item {
+  .w100();
+
+  font-weight: 300;
+
+  text-align: left;
+  vertical-align: middle;
+}
+
+.faq__title {
+  margin-bottom: 50px;
+
+  font-size: 30px;
+  line-height: 55px;
+
+  color: #000000;
+}
+
+.faq__item {
+  .w100();
+
+  border-bottom: 1px solid #bababa;
+
+  &:first-of-type {
+    border-top: 1px solid #bababa;
+  }
+}
+
+.faq__title-item {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
+
+  font-size: 20px;
+  line-height: 55px;
+
+  color: #4a4a4a;
+
+  & span {
+    position: relative;
+
+    width: 36px;
+    height: 36px;
+
+    cursor: pointer;
+
+    transition: all 0.5s;
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      top: 50%;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      margin-top: -0.5px;
+
+      background-color: #ab875f;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.faq__text-item {
+  display: none;
+
+  margin-bottom: 25px;
+
+  font-size: 14px;
+  line-height: 25px;
+
+  color: #4a4a4a;
+}
+
+@media (max-width: 1111px) and (min-width: 918px) {
+  .faq__title-item {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 917px) and (min-width: 768px) {
+  .faq__title-item {
+    font-size: 15px;
+    line-height: 150%;
+
+    font-weight: 500;
+  }
+
+  .faq__text-item {
+    font-size: 14px;
+    line-height: 150%;
+
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 767px) {
+  .faq__list {
+    width: 100%;
+
+    &:last-of-type {
+      margin-top: -1px;
+    }
+  }
+
+  .faq__title-item {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+
+  .faq__text-item {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .faq__title-item span {
+    width: 20px;
+    height: 20px;
+  }
+}

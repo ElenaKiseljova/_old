@@ -1,0 +1,88 @@
+.title {
+  position: relative;
+
+  z-index: 2;
+
+  .w100();
+
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 100%;
+  /* identical to box height, or 80px */
+
+  letter-spacing: -0.03em;
+
+  text-align: center;
+  vertical-align: middle;
+
+  color: #FFFFFF;
+  -ms-color: #000000;
+
+  &--see {
+    margin-bottom: -25px;
+
+    mix-blend-mode: difference;
+  }
+
+  &--posts {
+    width: auto;
+
+    text-align: left;
+
+    mix-blend-mode: difference;
+  }
+
+  &--calc {
+    width: 50%;
+
+    margin-bottom: 80px;
+    margin-right: 50%;
+
+    text-align: left;
+
+    color: #000000;
+  }
+
+  &--publication {
+    -ms-color: #000000;
+
+    mix-blend-mode: difference;
+  }
+}
+
+@media (max-width: 1135px) {
+  .title {
+    font-size: 56px;
+    line-height: 100%;
+  }
+
+  .title--calc {
+    margin-bottom: 56px;
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 40px;
+    line-height: 100%;
+
+    &--see {
+      margin-bottom: -10px;
+    }
+
+    &--posts {
+      width: 100%;
+
+      margin-bottom: 40px;
+
+      text-align: center;
+    }
+
+    &--calc {
+      width: 100%;
+
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+  }
+}

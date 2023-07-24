@@ -1,0 +1,44 @@
+.social {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: center;
+
+  align-content: flex-start;
+
+  .w100();
+
+  margin-bottom: 25px;
+
+  list-style: none;
+}
+
+.social__item {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+
+  & svg {
+    fill: #ffffff;
+
+    transition: all 0.5s;
+
+    &:hover {
+      fill: #d8cbbd;
+
+      transition: all 0.5s;
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+
+
+}

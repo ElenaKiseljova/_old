@@ -1,0 +1,166 @@
+.reviews {
+  .w100();
+
+  .reviews__date {
+    width: auto;
+
+    padding: 0;
+    margin: 0;
+
+    margin-right: 40px;
+
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+
+    text-align: left;
+    vertical-align: middle;
+
+    color: #353535;
+  }
+
+  .reviews__rating {
+    position: static;
+
+    width: auto;
+
+    margin: 0;
+
+    & > span {
+      font-size: 18px;
+      line-height: 23px
+    }
+
+    & > svg {
+      width: 16px;
+      height: 16px;
+
+      margin-right: 5px;
+      margin-top: -2px;
+    }
+  }
+
+  .reviews__text {
+    .w100();
+
+    margin-bottom: 20px;
+
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+
+    text-align: left;
+    vertical-align: middle;
+
+    color: #353535;
+  }
+}
+
+.reviews__list {
+  .w100();
+
+  margin-bottom: 45px;
+
+  list-style: none;
+}
+
+.reviews__item {
+  .w100();
+
+  padding-left: 100px;
+}
+
+.reviews__header {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  align-content: flex-start;
+
+  width: calc(100% + 100px);
+
+  padding: 0;
+  margin: 0;
+
+  margin-left: -100px;
+  margin-bottom: 15px;
+}
+
+.reviews__speaker {
+  padding: 15px;
+
+  margin-right: 43px;
+
+  fill: #b4936f;
+
+  border-radius: 50%;
+
+  border: 1px solid #b4936f;
+}
+
+.reviews__name {
+  flex-grow: 1;
+
+  & h3 {
+    padding: 0;
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+
+    text-align: left;
+    vertical-align: middle;
+
+    color: #353535;
+  }
+}
+
+.reviews__mention {
+  .w100();
+
+  margin-bottom: 5px;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+
+  text-align: left;
+  vertical-align: middle;
+
+  color: #353535;
+}
+
+.reviews__more {
+  .more();
+
+  width: auto;
+
+  text-align: left;
+
+  text-transform: none;
+}
+
+@media (max-width: 767px) {
+  .reviews {
+    margin-bottom: 30px;
+  }
+
+  .reviews__item {
+    padding: 0;
+  }
+
+  .reviews__header {
+    width: 100%;
+
+    margin-left: 0;
+  }
+
+  .reviews__speaker {
+    margin-bottom: 10px;
+    margin-right: 20px;
+  }
+}

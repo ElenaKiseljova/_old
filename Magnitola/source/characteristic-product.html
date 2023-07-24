@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link type="text/css" rel="stylesheet" href="add/slick/slick.css"/>
+		<link type="text/css" rel="stylesheet" href="add/slick/slick-theme.css"/>
+
+    <link rel="stylesheet" href="add/plyr/plyr.css">
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <title>Характеристики</title>
+  </head>
+  <body>
+    <div class="page-container">
+
+      <header class="page-header">
+        <div class="container-fluid">
+          <div class="row justify-content-center align-items-center bg-warning">
+            <div class="col-6">
+              <p class="svg-wrapper svg-wrapper--logo">
+                <a class="button logo-link" href="/">
+                  <svg class="icon-logo" width="158" height="34" role="img" viewBox="0 0 158 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M41.4434 0.894043C50.5183 0.894043 57.9437 8.22069 57.9437 17.1757C57.9437 26.1313 50.519 33.4579 41.444 33.4579C32.3685 33.4579 24.9431 26.1319 24.9431 17.1763C24.9431 8.22129 32.3679 0.894043 41.4434 0.894043ZM49.3372 17.0111V25.4929C49.3372 26.0705 49.4769 26.5151 49.7508 26.8267C50.0253 27.1383 50.3823 27.2938 50.8218 27.2938C51.2612 27.2938 51.6219 27.1419 51.9069 26.8376C52.1925 26.534 52.3353 26.0857 52.3353 25.4929V16.9218C52.3353 16.3958 52.1925 15.981 51.9069 15.684C51.6219 15.3876 51.2612 15.2388 50.8218 15.2388C50.3823 15.2388 50.0253 15.3876 49.7508 15.684C49.4769 15.981 49.3372 16.4219 49.3372 17.0111ZM44.191 16.0326V25.4929C44.191 26.0699 44.3295 26.5151 44.604 26.8267C44.8779 27.1383 45.2349 27.2938 45.6744 27.2938C46.1138 27.2938 46.4751 27.1413 46.7601 26.8376C47.0451 26.5346 47.1885 26.0857 47.1885 25.4929V12.6387C47.1885 12.1127 47.0451 11.6972 46.7601 11.4009C46.4751 11.1045 46.1138 10.9557 45.6744 10.9557C45.2349 10.9557 44.8779 11.1045 44.604 11.4009C44.5542 11.4543 44.5092 11.5132 44.468 11.5764L44.4304 11.6128L39.0584 16.9139L33.6869 11.6128L33.6494 11.5764C33.6081 11.5132 33.5632 11.4543 33.5133 11.4009C33.2394 11.1045 32.8824 10.9557 32.443 10.9557C32.0035 10.9557 31.6422 11.1045 31.3578 11.4009C31.0723 11.6972 30.9288 12.1127 30.9288 12.6387V25.4929C30.9288 26.0857 31.0723 26.5346 31.3578 26.8376C31.6422 27.1413 32.0035 27.2938 32.443 27.2938C32.8824 27.2938 33.2394 27.1383 33.5133 26.8267C33.7878 26.5151 33.9263 26.0699 33.9263 25.4929V16.0326L37.7086 19.7643C38.0385 20.0904 38.3708 20.2945 38.7026 20.3789L38.7137 20.382L38.7223 20.3838L38.7315 20.3862L38.742 20.388L38.7814 20.3971L38.7857 20.3984L38.8005 20.4002L38.8029 20.4014C38.8657 20.4123 38.9303 20.4196 38.9956 20.422L39.0073 20.4233H39.0153H39.0257L39.0344 20.4239H39.0448H39.0541H39.0639H39.0725H39.083L39.0916 20.4233H39.1021H39.1107L39.1218 20.422C39.187 20.4196 39.2516 20.4123 39.3144 20.4014L39.3169 20.4002L39.3316 20.3984L39.3366 20.3971L39.3753 20.388L39.3858 20.3862L39.395 20.3838L39.4037 20.382L39.4147 20.3789C39.7471 20.2945 40.0789 20.0904 40.4088 19.7643L44.191 16.0326ZM44.6342 9.19855C44.9302 9.44999 45.2872 9.57693 45.7045 9.57693C46.1108 9.57693 46.456 9.44696 46.749 9.19186C47.042 8.93616 47.1885 8.57964 47.1885 8.12412C47.1885 7.65705 47.0383 7.29992 46.7379 7.05272C46.4382 6.80674 46.0954 6.68527 45.7045 6.68527C45.3032 6.68527 44.9493 6.82253 44.6452 7.09342C44.3406 7.3643 44.191 7.70868 44.191 8.12412C44.191 8.58693 44.3375 8.9471 44.6342 9.19855ZM33.4832 9.19855C33.1871 9.44999 32.8301 9.57693 32.4128 9.57693C32.0072 9.57693 31.6607 9.44696 31.3683 9.19186C31.076 8.93616 30.9288 8.57964 30.9288 8.12412C30.9288 7.65705 31.079 7.29992 31.3794 7.05272C31.6791 6.80674 32.022 6.68527 32.4128 6.68527C32.8147 6.68527 33.168 6.82253 33.4727 7.09342C33.7768 7.3643 33.9263 7.70868 33.9263 8.12412C33.9263 8.58693 33.7798 8.9471 33.4832 9.19855ZM49.781 13.4817C50.0776 13.7343 50.4346 13.8601 50.8519 13.8601C51.2576 13.8601 51.6029 13.7301 51.8958 13.475C52.1888 13.2193 52.3353 12.8628 52.3353 12.4073C52.3353 11.9402 52.1851 11.5843 51.8841 11.3359C51.5838 11.0911 51.2422 10.9684 50.8519 10.9684C50.4494 10.9684 50.0961 11.1057 49.7921 11.3766C49.4874 11.6474 49.3372 11.9918 49.3372 12.4073C49.3372 12.8701 49.4843 13.2302 49.781 13.4817Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M63.4137 25.0147V12.2157C63.4137 11.6897 63.2696 11.2743 62.9847 10.9779C62.7003 10.6821 62.339 10.5327 61.8995 10.5327C61.4601 10.5327 61.1018 10.6821 60.8286 10.9779C60.5559 11.2743 60.4156 11.7171 60.4156 12.3044V25.0147C60.4156 25.5911 60.5553 26.0381 60.8286 26.3491C61.1025 26.6601 61.4601 26.8162 61.8995 26.8162C62.339 26.8162 62.7003 26.6631 62.9847 26.36C63.2696 26.057 63.4137 25.6075 63.4137 25.0147ZM65.8295 17.4913L69.5262 26.6807L69.2486 27.3446C69.0461 27.828 68.8621 28.1985 68.7045 28.4488C68.5475 28.6972 68.3678 28.8757 68.1702 28.9753C67.9757 29.0737 67.7043 29.1278 67.359 29.1278C67.2199 29.1278 67.0537 29.1071 66.8629 29.061C66.7097 29.0239 66.5515 28.9978 66.3896 28.9978C65.9809 28.9978 65.6695 29.0938 65.462 29.276C65.254 29.4582 65.1469 29.7206 65.1469 30.0625C65.1469 30.5587 65.3691 30.9043 65.8079 31.0926C66.2462 31.2803 66.9085 31.3744 67.7874 31.3744C68.6885 31.3744 69.4068 31.2354 69.9361 30.9663C70.4679 30.696 70.9 30.3061 71.2206 29.7983C71.5407 29.2924 71.8645 28.5915 72.2091 27.7005L76.1268 17.5769C76.2265 17.3194 76.301 17.0576 76.3675 16.8062C76.4345 16.5547 76.4992 16.3592 76.5096 16.2201C76.5275 15.996 76.4536 15.7779 76.341 15.5787C76.2265 15.3758 76.0628 15.2131 75.856 15.0934C75.6479 14.9738 75.4282 14.9155 75.2023 14.9155C74.8872 14.9155 74.6416 14.9713 74.4699 15.0788C74.2975 15.1857 74.1344 15.3983 73.9818 15.7093C73.8285 16.019 73.658 16.4533 73.4635 17.0024L71.0551 23.7903L68.5125 16.491C68.3364 15.9856 68.1493 15.5933 67.9302 15.323C67.7117 15.0545 67.3849 14.9155 66.9491 14.9155C66.7017 14.9155 66.461 14.9841 66.232 15.1122C66.0006 15.2422 65.8172 15.4159 65.6879 15.6309C65.5562 15.8484 65.4885 16.0871 65.4885 16.3391C65.4885 16.576 65.6159 16.9598 65.8295 17.4913ZM3.26769 13.2695H9.70704C10.229 13.2695 10.6174 13.1547 10.8673 12.9282C11.119 12.7004 11.247 12.3949 11.247 12.0171C11.247 11.6497 11.1196 11.3478 10.8673 11.1194C10.618 10.8935 10.2271 10.7787 9.70704 10.7787H2.0016C1.54183 10.7787 1.16022 10.8461 0.864161 10.9791C0.56749 11.1115 0.348373 11.3278 0.210501 11.6199C0.0720134 11.912 0 12.2923 0 12.7545V25.0056C0 25.6603 0.153875 26.156 0.457931 26.4809C0.761988 26.8064 1.15652 26.9704 1.64154 26.9704C2.11486 26.9704 2.50631 26.8101 2.80975 26.4888C3.1132 26.1663 3.26769 25.6725 3.26769 25.0056V19.7641H8.65084C9.13893 19.7641 9.51316 19.6565 9.76305 19.4379C10.0111 19.2217 10.1348 18.9265 10.1348 18.5554C10.1348 18.1892 10.0111 17.8903 9.76674 17.6699C9.52424 17.4506 9.14509 17.3401 8.65084 17.3401H3.26769V13.2695ZM23.0006 19.4671C23.0055 18.3659 22.8424 17.484 22.5316 16.8177C22.2201 16.1508 21.6853 15.6631 20.9307 15.3564C20.1767 15.0497 19.1359 14.8936 17.8169 14.8936C16.6339 14.8936 15.6448 15.0533 14.8526 15.3716C14.0611 15.6898 13.4757 16.0937 13.1021 16.5875C12.7304 17.0783 12.5433 17.5885 12.5433 18.1108C12.5433 18.4449 12.6682 18.7188 12.9107 18.9295C13.1557 19.1433 13.448 19.2527 13.786 19.2527C14.1583 19.2527 14.4051 19.1877 14.519 19.0522C14.6329 18.9168 14.8274 18.6404 15.1007 18.222C15.3752 17.801 15.7082 17.4858 16.0928 17.2769C16.4763 17.068 17.0506 16.9617 17.8132 16.9617C18.7032 16.9617 19.2867 17.1439 19.5716 17.5101C19.8529 17.8721 20.0105 18.4479 20.0487 19.2308C19.4172 19.4118 18.8306 19.563 18.2939 19.6893C17.7572 19.8169 17.1047 19.9536 16.352 20.109L14.9357 20.4018C14.0229 20.5901 13.3059 20.9818 12.7833 21.5546C12.2626 22.1255 12.0022 22.8142 12.0022 23.6269C12.0022 24.227 12.1604 24.7839 12.4756 25.2984C12.7901 25.8134 13.2419 26.2173 13.8235 26.5179C14.4058 26.818 15.0859 26.9704 15.8559 26.9704C16.6973 26.9704 17.4611 26.8332 18.14 26.555C18.8158 26.2786 19.5181 25.862 20.2475 25.3056C20.5854 25.8468 20.9054 26.2592 21.2052 26.5441C21.5055 26.8289 21.8102 26.9704 22.118 26.9704C22.486 26.9704 22.8147 26.8441 23.1058 26.5957C23.3951 26.3497 23.5379 26.0697 23.5379 25.7654C23.5379 25.5911 23.4462 25.2012 23.2603 24.6017C23.0726 23.998 22.9729 23.4155 22.9784 22.8592L22.9938 21.2393L23.0006 19.4671ZM18.1283 21.5139C18.9678 21.3389 19.6086 21.1689 20.0487 21.0091V21.4325C20.0487 22.4608 19.9096 23.2036 19.643 23.653C19.4036 24.0575 19.0374 24.3922 18.5345 24.6497C18.036 24.9054 17.4863 25.0354 16.8924 25.0354C16.3329 25.0354 15.8823 24.8744 15.5407 24.561C15.1967 24.2458 15.0219 23.8638 15.0219 23.4155C15.0219 22.9776 15.1684 22.6387 15.4613 22.3964C15.7525 22.1546 16.0627 21.9888 16.3858 21.9062C16.7071 21.8236 17.2918 21.6882 18.1283 21.5139Z" fill="#222222"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M154.288 12.4745L153.564 15.7967L153.536 15.9273L152.24 21.8771C152.145 22.3198 151.748 22.6235 151.307 22.6253H138.616H137.89H125.612C125.132 22.6253 124.734 22.2749 124.667 21.82L123.381 15.9231C123.357 15.8411 123.345 15.7536 123.345 15.6637C123.345 15.1432 123.773 14.7205 124.3 14.7205H151.847L152.571 11.3927C152.64 10.9378 153.037 10.588 153.517 10.588H156.14C156.668 10.588 157.096 11.0101 157.096 11.5306C157.096 12.0517 156.668 12.4745 156.14 12.4745H154.288ZM125.839 18.245H131.172L131.002 16.607H125.482L125.839 18.245ZM131.73 16.607L131.899 18.245H137.89V16.607H131.73ZM138.616 16.607V18.245H144.552L144.721 16.607H138.616ZM145.449 16.607L145.28 18.245H151.079L151.436 16.607H145.449ZM150.923 18.9617H145.205L145.021 20.7389H150.536L150.923 18.9617ZM144.294 20.7389L144.478 18.9617H138.616V20.7389H144.294ZM137.89 20.7389V18.9617H131.973L132.157 20.7389H137.89ZM131.43 20.7389L131.246 18.9617H125.995L126.383 20.7389H131.43ZM112.429 12.3597V25.0694C112.429 25.6464 112.568 26.0928 112.842 26.4038C113.116 26.7147 113.474 26.8708 113.913 26.8708C114.352 26.8708 114.713 26.719 114.998 26.4147C115.284 26.111 115.427 25.6622 115.427 25.0694V12.2704C115.427 11.7444 115.283 11.329 114.998 11.0326C114.714 10.7368 114.352 10.588 113.913 10.588C113.474 10.588 113.116 10.7362 112.842 11.0326C112.568 11.329 112.429 11.7723 112.429 12.3597ZM93.8442 15.6103V25.0694C93.8442 25.6464 93.9833 26.0928 94.2572 26.4038C94.5311 26.7147 94.8887 26.8708 95.3282 26.8708C95.7676 26.8708 96.1289 26.719 96.4139 26.4147C96.6995 26.111 96.8423 25.6622 96.8423 25.0694V12.2157C96.8423 11.6891 96.6995 11.2743 96.4139 10.9779C96.1289 10.6815 95.7676 10.5327 95.3282 10.5327C94.8887 10.5327 94.5311 10.6815 94.2572 10.9779C94.2086 11.0308 94.1618 11.0903 94.1218 11.154L94.0849 11.1899L88.7122 16.4904L83.3407 11.1899L83.3038 11.154C83.2625 11.0903 83.2164 11.0308 83.1671 10.9779C82.8932 10.6815 82.5362 10.5327 82.0968 10.5327C81.6567 10.5327 81.296 10.6815 81.011 10.9779C80.7254 11.2743 80.5826 11.6904 80.5826 12.2157V25.0694C80.5826 25.6616 80.7254 26.111 81.011 26.4147C81.296 26.719 81.6567 26.8708 82.0968 26.8708C82.5362 26.8708 82.8932 26.7147 83.1671 26.4038C83.441 26.0928 83.5801 25.647 83.5801 25.0694V15.6097L87.3624 19.3413C87.696 19.6705 88.032 19.8758 88.3681 19.9584L88.3755 19.9608L88.3853 19.9627L88.3952 19.9651L88.4032 19.9669L88.4149 19.9693L88.421 19.9712L88.434 19.9736L88.4389 19.9748L88.493 19.9839C88.5441 19.9918 88.5958 19.9967 88.6488 19.9991L88.6611 19.9997H88.6685L88.6802 20.0003H88.6882H88.6986H88.7072H88.7177H88.7269H88.7368H88.7454L88.7565 19.9997H88.7645L88.7756 19.9991C88.8285 19.9967 88.8802 19.9918 88.9313 19.9839L88.9854 19.9748L88.9904 19.9736L89.0039 19.9712L89.0101 19.9693L89.0211 19.9669L89.0298 19.9651L89.039 19.9627L89.0488 19.9608L89.0568 19.9584C89.3929 19.8764 89.7277 19.6711 90.0626 19.3413L93.8442 15.6103ZM109.764 19.56C109.769 18.4594 109.607 17.5769 109.295 16.91C108.984 16.2432 108.449 15.7567 107.695 15.4493C106.94 15.142 105.899 14.9859 104.581 14.9859C103.397 14.9859 102.409 15.1457 101.617 15.4645C100.825 15.7828 100.24 16.1867 99.8662 16.6805C99.4939 17.1712 99.3074 17.6808 99.3074 18.2037C99.3074 18.5372 99.4317 18.8105 99.6748 19.0231C99.9198 19.2356 100.212 19.3456 100.55 19.3456C100.922 19.3456 101.169 19.28 101.282 19.1451C101.397 19.0103 101.591 18.734 101.865 18.3149C102.14 17.894 102.472 17.5788 102.857 17.3692C103.24 17.1609 103.815 17.0546 104.577 17.0546C105.467 17.0546 106.05 17.2362 106.335 17.603C106.616 17.9656 106.775 18.5408 106.813 19.3231C106.181 19.5041 105.594 19.6553 105.057 19.7829C104.521 19.911 103.869 20.0465 103.115 20.202L101.7 20.4947C100.785 20.6836 100.07 21.0747 99.5474 21.6475C99.0261 22.219 98.7663 22.9078 98.7663 23.7192C98.7663 24.3199 98.9239 24.8762 99.239 25.3913C99.5542 25.9057 100.006 26.3108 100.588 26.6109C101.169 26.9103 101.85 27.0634 102.62 27.0634C103.461 27.0634 104.224 26.9267 104.903 26.6485C105.579 26.371 106.282 25.9549 107.011 25.3986C107.349 25.9397 107.669 26.3515 107.969 26.637C108.269 26.9218 108.574 27.0634 108.883 27.0634C109.25 27.0634 109.578 26.9382 109.87 26.6886C110.16 26.442 110.302 26.162 110.302 25.859C110.302 25.684 110.211 25.2953 110.024 24.6946C109.836 24.0909 109.737 23.5078 109.743 22.9527L109.757 21.3323L109.764 19.56ZM104.892 21.6062C105.733 21.4307 106.373 21.2618 106.813 21.1021V21.5254C106.813 22.5549 106.672 23.2953 106.407 23.7453C106.166 24.1504 105.802 24.4845 105.299 24.7426C104.799 24.9989 104.25 25.1277 103.656 25.1277C103.097 25.1277 102.647 24.968 102.304 24.6533C101.96 24.3381 101.786 23.9567 101.786 23.5078C101.786 23.0712 101.932 22.7322 102.225 22.4887C102.517 22.2476 102.826 22.0818 103.149 21.9992C103.472 21.9166 104.055 21.7817 104.892 21.6062ZM117.576 12.3597V25.0694C117.576 25.6464 117.716 26.0928 117.989 26.4038C118.263 26.7147 118.62 26.8708 119.059 26.8708C119.499 26.8708 119.86 26.7184 120.145 26.4147C120.43 26.1116 120.574 25.6622 120.574 25.0694V12.2704C120.574 11.7444 120.43 11.329 120.145 11.0326C119.86 10.7368 119.499 10.588 119.059 10.588C118.62 10.588 118.263 10.7362 117.989 11.0326C117.715 11.329 117.576 11.7723 117.576 12.3597ZM127.158 24.0539C128 24.0539 128.684 24.7274 128.684 25.5583C128.684 26.3892 128 27.0634 127.158 27.0634C126.315 27.0634 125.633 26.3892 125.633 25.5583C125.633 24.7274 126.315 24.0539 127.158 24.0539ZM149.79 24.0539C150.631 24.0539 151.315 24.728 151.315 25.5583C151.315 26.3898 150.631 27.0634 149.79 27.0634C148.947 27.0634 148.265 26.3898 148.265 25.5583C148.265 24.728 148.947 24.0539 149.79 24.0539Z" fill="white"/>
+                  </svg>
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <nav class="navigation">
+              <div class="container">
+                  <ul class="navigation__list">
+                      <li class="navigation__item">
+                        <a class="button navigation__link" href="index.html">О товаре</a>
+                      </li>
+                      <li class="navigation__item">
+                        <a class="navigation__link" href="details-product.html">Все о товаре</a>
+                      </li>
+                      <li class="navigation__item">
+                        <a class="button navigation__link active" href="characteristic-product.html">Характеристики</a>
+                      </li>
+                      <li class="navigation__item">
+                        <a class="button navigation__link" href="comments-product.html">Отзывы</a>
+                      </li>
+                      <li class="navigation__item">
+                        <a class="button navigation__link" href="stock-product.html">Акции</a>
+                      </li>
+                      <li class="navigation__item">
+                        <a class="button navigation__link" href="delivery-product.html">Доставка</a>
+                      </li>
+                      <li class="navigation__item">
+                        <a class="button navigation__link" href="order-product.html">Заказать</a>
+                      </li>
+                      <li class="navigation__item">
+                        <a class="button navigation__link" href="privacy.html">Конфиденциальность</a>
+                      </li>
+                    </ul>
+              </div>
+
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main class="page-main">
+        <div class="container">
+          <div class="row">
+
+            <!-- slider -->
+
+            <div class="col-12 col-lg-6 col-xl-6">
+              <div class="slider-wrapper slider-wrapper--inner">
+                <div class="slider slider-nav">
+                  <div class="slider__item slider__item--1 slider-nav__item--1">
+
+                    <picture class="slider-image slider-nav-image">
+                      <!-- WEBP -->
+                      <source type="image/webp" media="(min-width: 960px)" srcset="img/slider-img-1.webp">
+                      <source type="image/webp" media="(min-width: 560px)" srcset="img/slider-img-1.webp">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/slider-img-1.webp">
+
+                      <source media="(min-width: 960px)" srcset="img/slider-img-1.jpg">
+                      <source media="(min-width: 560px)" srcset="img/slider-img-1.jpg">
+                      <source media="(min-width: 320px)" srcset="img/slider-img-1.jpg">
+
+
+                      <img src="img/slider-img-1.jpg" alt="Слайд с автомагнитолой">
+                    </picture>
+                  </div>
+                  <div class="slider__item slider__item--2 slider-nav__item--2">
+
+                    <picture class="slider-image slider-nav-image">
+                      <!-- WEBP -->
+                      <source type="image/webp" media="(min-width: 960px)" srcset="img/slider-img-2.webp">
+                      <source type="image/webp" media="(min-width: 560px)" srcset="img/slider-img-2.webp">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/slider-img-2.webp">
+
+                      <source media="(min-width: 960px)" srcset="img/slider-img-2.jpg">
+                      <source media="(min-width: 560px)" srcset="img/slider-img-2.jpg">
+                      <source media="(min-width: 320px)" srcset="img/slider-img-2.jpg">
+
+
+                      <img src="img/slider-img-2.jpg" alt="Слайд с автомагнитолой">
+                    </picture>
+                  </div>
+                  <div class="slider__item slider__item--3 slider-nav__item--3">
+
+                    <picture class="slider-image slider-nav-image">
+                      <!-- WEBP -->
+                      <source type="image/webp" media="(min-width: 960px)" srcset="img/slider-img-3.webp">
+                      <source type="image/webp" media="(min-width: 560px)" srcset="img/slider-img-3.webp">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/slider-img-3.webp">
+
+                      <source media="(min-width: 960px)" srcset="img/slider-img-3.jpg">
+                      <source media="(min-width: 560px)" srcset="img/slider-img-3.jpg">
+                      <source media="(min-width: 320px)" srcset="img/slider-img-3.jpg">
+
+
+                      <img src="img/slider-img-3.jpg" alt="Слайд с автомагнитолой">
+                    </picture>
+                  </div>
+                  <div class="slider__item slider__item--4 slider-nav__item--4">
+
+                    <picture class="slider-image slider-nav-image">
+                      <!-- WEBP -->
+                      <source type="image/webp" media="(min-width: 960px)" srcset="img/slider-img-4.webp">
+                      <source type="image/webp" media="(min-width: 560px)" srcset="img/slider-img-4.webp">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/slider-img-4.webp">
+
+                      <source media="(min-width: 960px)" srcset="img/slider-img-4.jpg">
+                      <source media="(min-width: 560px)" srcset="img/slider-img-4.jpg">
+                      <source media="(min-width: 320px)" srcset="img/slider-img-4.jpg">
+
+
+                      <img src="img/slider-img-4.jpg" alt="Слайд с автомагнитолой">
+                    </picture>
+                  </div>
+                  <div class="slider__item slider__item--5 slider-nav__item--5">
+
+                    <picture class="slider-image slider-nav-image">
+                      <!-- WEBP -->
+                      <source type="image/webp" media="(min-width: 960px)" srcset="img/slider-img-5.webp">
+                      <source type="image/webp" media="(min-width: 560px)" srcset="img/slider-img-5.webp">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/slider-img-5.webp">
+
+                      <source media="(min-width: 960px)" srcset="img/slider-img-5.jpg">
+                      <source media="(min-width: 560px)" srcset="img/slider-img-5.jpg">
+                      <source media="(min-width: 320px)" srcset="img/slider-img-5.jpg">
+
+
+                      <img src="img/slider-img-5.jpg" alt="Слайд с автомагнитолой">
+                    </picture>
+                  </div>
+                  <div class="slider__item slider__item--6 slider-nav__item--6">
+
+                    <picture class="slider-image slider-nav-image">
+                      <!-- WEBP -->
+                      <source type="image/webp" media="(min-width: 960px)" srcset="img/slider-img-6.webp">
+                      <source type="image/webp" media="(min-width: 560px)" srcset="img/slider-img-6.webp">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/slider-img-6.webp">
+
+                      <source media="(min-width: 960px)" srcset="img/slider-img-6.jpg">
+                      <source media="(min-width: 560px)" srcset="img/slider-img-6.jpg">
+                      <source media="(min-width: 320px)" srcset="img/slider-img-6.jpg">
+
+
+                      <img src="img/slider-img-6.jpg" alt="Слайд с автомагнитолой">
+                    </picture>
+                  </div>
+                  <div class="slider__item slider__item--7 slider-nav__item--7">
+
+                    <picture class="slider-image slider-nav-image">
+                      <!-- WEBP -->
+                      <source type="image/webp" media="(min-width: 960px)" srcset="img/slider-img-7.webp">
+                      <source type="image/webp" media="(min-width: 560px)" srcset="img/slider-img-7.webp">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/slider-img-7.webp">
+
+                      <source media="(min-width: 960px)" srcset="img/slider-img-7.jpg">
+                      <source media="(min-width: 560px)" srcset="img/slider-img-7.jpg">
+                      <source media="(min-width: 320px)" srcset="img/slider-img-7.jpg">
+
+
+                      <img src="img/slider-img-7.jpg" alt="Слайд с автомагнитолой">
+                    </picture>
+                  </div>
+                  <div class="slider__item slider__item--8 slider-nav__item--8">
+                    <button class="button svg-wrapper svg-wrapper--nav">
+                      <svg class="icon-video" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.03324 9.58808H16.0414C17.1599 9.58808 18.0746 10.5044 18.0746 11.6249V15.2898L20.5371 12.6578L23 10.0263V15.2898V20.5533L20.5371 17.9218L18.0746 15.2898V18.9542C18.0746 20.0747 17.1599 20.991 16.0414 20.991H3.03324C1.91475 20.991 1 20.0747 1 18.9542V11.6249C1 10.5044 1.91475 9.58808 3.03324 9.58808ZM12.3829 1.25537C14.0754 1.25537 15.4472 2.62965 15.4472 4.3251C15.4472 6.02055 14.0754 7.39483 12.3829 7.39483C10.6904 7.39483 9.31858 6.02055 9.31858 4.3251C9.31858 2.62965 10.6904 1.25537 12.3829 1.25537ZM4.06433 1.25537C5.7568 1.25537 7.12866 2.62965 7.12866 4.3251C7.12866 6.02055 5.7568 7.39483 4.06433 7.39483C2.37187 7.39483 1 6.02055 1 4.3251C1 2.62965 2.37187 1.25537 4.06433 1.25537Z" stroke="#2898FF" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="slider slider-for">
+                  <div class="slider__item slider__item--1">
+                    <div class="slider__background">
+                      <div class="slider__background__item slider__background__item--1">
+                        <p class="slider__top-text">Топ продаж</p>
+                      </div>
+                      <div class="slider__background__item slider__background__item--2">
+                        <button class="button svg-wrapper svg-wrapper--video">
+                          <svg class="icon-video" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.03324 9.58808H16.0414C17.1599 9.58808 18.0746 10.5044 18.0746 11.6249V15.2898L20.5371 12.6578L23 10.0263V15.2898V20.5533L20.5371 17.9218L18.0746 15.2898V18.9542C18.0746 20.0747 17.1599 20.991 16.0414 20.991H3.03324C1.91475 20.991 1 20.0747 1 18.9542V11.6249C1 10.5044 1.91475 9.58808 3.03324 9.58808ZM12.3829 1.25537C14.0754 1.25537 15.4472 2.62965 15.4472 4.3251C15.4472 6.02055 14.0754 7.39483 12.3829 7.39483C10.6904 7.39483 9.31858 6.02055 9.31858 4.3251C9.31858 2.62965 10.6904 1.25537 12.3829 1.25537ZM4.06433 1.25537C5.7568 1.25537 7.12866 2.62965 7.12866 4.3251C7.12866 6.02055 5.7568 7.39483 4.06433 7.39483C2.37187 7.39483 1 6.02055 1 4.3251C1 2.62965 2.37187 1.25537 4.06433 1.25537Z" stroke="#2898FF" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="slider__background__item slider__background__item--3">
+                        <p class="slider__discount-text">-50%</p>
+                      </div>
+                    </div>
+                    <picture class="slider-image">
+                      <!-- WEBP -->
+                      <source type="image/webp" media="(min-width: 960px)" srcset="img/slider-img-1.webp">
+                      <source type="image/webp" media="(min-width: 560px)" srcset="img/slider-img-1.webp">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/slider-img-1.webp">
+
+                      <source media="(min-width: 960px)" srcset="img/slider-img-1.jpg">
+                      <source media="(min-width: 560px)" srcset="img/slider-img-1.jpg">
+                      <source media="(min-width: 320px)" srcset="img/slider-img-1.jpg">
+
+
+                      <img src="img/slider-img-1.jpg" alt="Слайд с автомагнитолой">
+                    </picture>
+                  </div>
+                  <div class="slider__item slider__item--2">
+                    <div class="slider__background">
+                      <div class="slider__background__item slider__background__item--1">
+                        <p class="slider__top-text">Топ продаж</p>
+                      </div>
+                      <div class="slider__background__item slider__background__item--2">
+                        <button class="button svg-wrapper svg-wrapper--video">
+                          <svg class="icon-video" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.03324 9.58808H16.0414C17.1599 9.58808 18.0746 10.5044 18.0746 11.6249V15.2898L20.5371 12.6578L23 10.0263V15.2898V20.5533L20.5371 17.9218L18.0746 15.2898V18.9542C18.0746 20.0747 17.1599 20.991 16.0414 20.991H3.03324C1.91475 20.991 1 20.0747 1 18.9542V11.6249C1 10.5044 1.91475 9.58808 3.03324 9.58808ZM12.3829 1.25537C14.0754 1.25537 15.4472 2.62965 15.4472 4.3251C15.4472 6.02055 14.0754 7.39483 12.3829 7.39483C10.6904 7.39483 9.31858 6.02055 9.31858 4.3251C9.31858 2.62965 10.6904 1.25537 12.3829 1.25537ZM4.06433 1.25537C5.7568 1.25537 7.12866 2.62965 7.12866 4.3251C7.12866 6.02055 5.7568 7.39483 4.06433 7.39483C2.37187 7.39483 1 6.02055 1 4.3251C1 2.62965 2.37187 1.25537 4.06433 1.25537Z" stroke="#2898FF" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="slider__background__item slider__background__item--3">
+                        <p class="slider__discount-text">-50%</p>
+                      </div>
+                    </div>
+                    <picture class="slider-image">
+                      <!-- WEBP -->
+                      <source type="image/webp" media="(min-width: 960px)" srcset="img/slider-img-2.webp">
+                      <source type="image/webp" media="(min-width: 560px)" srcset="img/slider-img-2.webp">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/slider-img-2.webp">
+
+                      <source media="(min-width: 960px)" srcset="img/slider-img-2.jpg">
+                      <source media="(min-width: 560px)" srcset="img/slider-img-2.jpg">
+                      <source media="(min-width: 320px)" srcset="img/slider-img-2.jpg">
+
+
+                      <img src="img/slider-img-2.jpg" alt="Слайд с автомагнитолой">
+                    </picture>
+                  </div>
+                  <div class="slider__item slider__item--3">
+                    <div class="slider__background">
+                      <div class="slider__background__item slider__background__item--1">
+                        <p class="slider__top-text">Топ продаж</p>
+                      </div>
+                      <div class="slider__background__item slider__background__item--2">
+                        <button class="button svg-wrapper svg-wrapper--video">
+                          <svg class="icon-video" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.03324 9.58808H16.0414C17.1599 9.58808 18.0746 10.5044 18.0746 11.6249V15.2898L20.5371 12.6578L23 10.0263V15.2898V20.5533L20.5371 17.9218L18.0746 15.2898V18.9542C18.0746 20.0747 17.1599 20.991 16.0414 20.991H3.03324C1.91475 20.991 1 20.0747 1 18.9542V11.6249C1 10.5044 1.91475 9.58808 3.03324 9.58808ZM12.3829 1.25537C14.0754 1.25537 15.4472 2.62965 15.4472 4.3251C15.4472 6.02055 14.0754 7.39483 12.3829 7.39483C10.6904 7.39483 9.31858 6.02055 9.31858 4.3251C9.31858 2.62965 10.6904 1.25537 12.3829 1.25537ZM4.06433 1.25537C5.7568 1.25537 7.12866 2.62965 7.12866 4.3251C7.12866 6.02055 5.7568 7.39483 4.06433 7.39483C2.37187 7.39483 1 6.02055 1 4.3251C1 2.62965 2.37187 1.25537 4.06433 1.25537Z" stroke="#2898FF" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="slider__background__item slider__background__item--3">
+                        <p class="slider__discount-text">-50%</p>
+                      </div>
+                    </div>
+                    <picture class="slider-image">
+                      <!-- WEBP -->
+                      <source type="image/webp" media="(min-width: 960px)" srcset="img/slider-img-3.webp">
+                      <source type="image/webp" media="(min-width: 560px)" srcset="img/slider-img-3.webp">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/slider-img-3.webp">
+
+                      <source media="(min-width: 960px)" srcset="img/slider-img-3.jpg">
+                      <source media="(min-width: 560px)" srcset="img/slider-img-3.jpg">
+                      <source media="(min-width: 320px)" srcset="img/slider-img-3.jpg">
+
+
+                      <img src="img/slider-img-3.jpg" alt="Слайд с автомагнитолой">
+                    </picture>
+                  </div>
+                  <div class="slider__item slider__item--4">
+                    <div class="slider__background">
+                      <div class="slider__background__item slider__background__item--1">
+                        <p class="slider__top-text">Топ продаж</p>
+                      </div>
+                      <div class="slider__background__item slider__background__item--2">
+                        <button class="button svg-wrapper svg-wrapper--video">
+                          <svg class="icon-video" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.03324 9.58808H16.0414C17.1599 9.58808 18.0746 10.5044 18.0746 11.6249V15.2898L20.5371 12.6578L23 10.0263V15.2898V20.5533L20.5371 17.9218L18.0746 15.2898V18.9542C18.0746 20.0747 17.1599 20.991 16.0414 20.991H3.03324C1.91475 20.991 1 20.0747 1 18.9542V11.6249C1 10.5044 1.91475 9.58808 3.03324 9.58808ZM12.3829 1.25537C14.0754 1.25537 15.4472 2.62965 15.4472 4.3251C15.4472 6.02055 14.0754 7.39483 12.3829 7.39483C10.6904 7.39483 9.31858 6.02055 9.31858 4.3251C9.31858 2.62965 10.6904 1.25537 12.3829 1.25537ZM4.06433 1.25537C5.7568 1.25537 7.12866 2.62965 7.12866 4.3251C7.12866 6.02055 5.7568 7.39483 4.06433 7.39483C2.37187 7.39483 1 6.02055 1 4.3251C1 2.62965 2.37187 1.25537 4.06433 1.25537Z" stroke="#2898FF" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="slider__background__item slider__background__item--3">
+                        <p class="slider__discount-text">-50%</p>
+                      </div>
+                    </div>
+                    <picture class="slider-image">
+                      <!-- WEBP -->
+                      <source type="image/webp" media="(min-width: 960px)" srcset="img/slider-img-4.webp">
+                      <source type="image/webp" media="(min-width: 560px)" srcset="img/slider-img-4.webp">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/slider-img-4.webp">
+
+                      <source media="(min-width: 960px)" srcset="img/slider-img-4.jpg">
+                      <source media="(min-width: 560px)" srcset="img/slider-img-4.jpg">
+                      <source media="(min-width: 320px)" srcset="img/slider-img-4.jpg">
+
+
+                      <img src="img/slider-img-4.jpg" alt="Слайд с автомагнитолой">
+                    </picture>
+                  </div>
+                  <div class="slider__item slider__item--5">
+                    <div class="slider__background">
+                      <div class="slider__background__item slider__background__item--1">
+                        <p class="slider__top-text">Топ продаж</p>
+                      </div>
+                      <div class="slider__background__item slider__background__item--2">
+                        <button class="button svg-wrapper svg-wrapper--video">
+                          <svg class="icon-video" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.03324 9.58808H16.0414C17.1599 9.58808 18.0746 10.5044 18.0746 11.6249V15.2898L20.5371 12.6578L23 10.0263V15.2898V20.5533L20.5371 17.9218L18.0746 15.2898V18.9542C18.0746 20.0747 17.1599 20.991 16.0414 20.991H3.03324C1.91475 20.991 1 20.0747 1 18.9542V11.6249C1 10.5044 1.91475 9.58808 3.03324 9.58808ZM12.3829 1.25537C14.0754 1.25537 15.4472 2.62965 15.4472 4.3251C15.4472 6.02055 14.0754 7.39483 12.3829 7.39483C10.6904 7.39483 9.31858 6.02055 9.31858 4.3251C9.31858 2.62965 10.6904 1.25537 12.3829 1.25537ZM4.06433 1.25537C5.7568 1.25537 7.12866 2.62965 7.12866 4.3251C7.12866 6.02055 5.7568 7.39483 4.06433 7.39483C2.37187 7.39483 1 6.02055 1 4.3251C1 2.62965 2.37187 1.25537 4.06433 1.25537Z" stroke="#2898FF" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="slider__background__item slider__background__item--3">
+                        <p class="slider__discount-text">-50%</p>
+                      </div>
+                    </div>
+                    <picture class="slider-image">
+                      <!-- WEBP -->
+                      <source type="image/webp" media="(min-width: 960px)" srcset="img/slider-img-5.webp">
+                      <source type="image/webp" media="(min-width: 560px)" srcset="img/slider-img-5.webp">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/slider-img-5.webp">
+
+                      <source media="(min-width: 960px)" srcset="img/slider-img-5.jpg">
+                      <source media="(min-width: 560px)" srcset="img/slider-img-5.jpg">
+                      <source media="(min-width: 320px)" srcset="img/slider-img-5.jpg">
+
+
+                      <img src="img/slider-img-5.jpg" alt="Слайд с автомагнитолой">
+                    </picture>
+                  </div>
+                  <div class="slider__item slider__item--6">
+                    <div class="slider__background">
+                      <div class="slider__background__item slider__background__item--1">
+                        <p class="slider__top-text">Топ продаж</p>
+                      </div>
+                      <div class="slider__background__item slider__background__item--2">
+                        <button class="button svg-wrapper svg-wrapper--video">
+                          <svg class="icon-video" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.03324 9.58808H16.0414C17.1599 9.58808 18.0746 10.5044 18.0746 11.6249V15.2898L20.5371 12.6578L23 10.0263V15.2898V20.5533L20.5371 17.9218L18.0746 15.2898V18.9542C18.0746 20.0747 17.1599 20.991 16.0414 20.991H3.03324C1.91475 20.991 1 20.0747 1 18.9542V11.6249C1 10.5044 1.91475 9.58808 3.03324 9.58808ZM12.3829 1.25537C14.0754 1.25537 15.4472 2.62965 15.4472 4.3251C15.4472 6.02055 14.0754 7.39483 12.3829 7.39483C10.6904 7.39483 9.31858 6.02055 9.31858 4.3251C9.31858 2.62965 10.6904 1.25537 12.3829 1.25537ZM4.06433 1.25537C5.7568 1.25537 7.12866 2.62965 7.12866 4.3251C7.12866 6.02055 5.7568 7.39483 4.06433 7.39483C2.37187 7.39483 1 6.02055 1 4.3251C1 2.62965 2.37187 1.25537 4.06433 1.25537Z" stroke="#2898FF" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="slider__background__item slider__background__item--3">
+                        <p class="slider__discount-text">-50%</p>
+                      </div>
+                    </div>
+                    <picture class="slider-image">
+                      <!-- WEBP -->
+                      <source type="image/webp" media="(min-width: 960px)" srcset="img/slider-img-6.webp">
+                      <source type="image/webp" media="(min-width: 560px)" srcset="img/slider-img-6.webp">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/slider-img-6.webp">
+
+                      <source media="(min-width: 960px)" srcset="img/slider-img-6.jpg">
+                      <source media="(min-width: 560px)" srcset="img/slider-img-6.jpg">
+                      <source media="(min-width: 320px)" srcset="img/slider-img-6.jpg">
+
+
+                      <img src="img/slider-img-6.jpg" alt="Слайд с автомагнитолой">
+                    </picture>
+                  </div>
+                  <div class="slider__item slider__item--7">
+                    <div class="slider__background">
+                      <div class="slider__background__item slider__background__item--1">
+                        <p class="slider__top-text">Топ продаж</p>
+                      </div>
+                      <div class="slider__background__item slider__background__item--2">
+                        <button class="button svg-wrapper svg-wrapper--video">
+                          <svg class="icon-video" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.03324 9.58808H16.0414C17.1599 9.58808 18.0746 10.5044 18.0746 11.6249V15.2898L20.5371 12.6578L23 10.0263V15.2898V20.5533L20.5371 17.9218L18.0746 15.2898V18.9542C18.0746 20.0747 17.1599 20.991 16.0414 20.991H3.03324C1.91475 20.991 1 20.0747 1 18.9542V11.6249C1 10.5044 1.91475 9.58808 3.03324 9.58808ZM12.3829 1.25537C14.0754 1.25537 15.4472 2.62965 15.4472 4.3251C15.4472 6.02055 14.0754 7.39483 12.3829 7.39483C10.6904 7.39483 9.31858 6.02055 9.31858 4.3251C9.31858 2.62965 10.6904 1.25537 12.3829 1.25537ZM4.06433 1.25537C5.7568 1.25537 7.12866 2.62965 7.12866 4.3251C7.12866 6.02055 5.7568 7.39483 4.06433 7.39483C2.37187 7.39483 1 6.02055 1 4.3251C1 2.62965 2.37187 1.25537 4.06433 1.25537Z" stroke="#2898FF" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="slider__background__item slider__background__item--3">
+                        <p class="slider__discount-text">-50%</p>
+                      </div>
+                    </div>
+                    <picture class="slider-image">
+                      <!-- WEBP -->
+                      <source type="image/webp" media="(min-width: 960px)" srcset="img/slider-img-7.webp">
+                      <source type="image/webp" media="(min-width: 560px)" srcset="img/slider-img-7.webp">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/slider-img-7.webp">
+
+                      <source media="(min-width: 960px)" srcset="img/slider-img-7.jpg">
+                      <source media="(min-width: 560px)" srcset="img/slider-img-7.jpg">
+                      <source media="(min-width: 320px)" srcset="img/slider-img-7.jpg">
+
+
+                      <img src="img/slider-img-7.jpg" alt="Слайд с автомагнитолой">
+                    </picture>
+                  </div>
+                  <div class="slider__item slider__item--8">
+                    <video class="slider-video" id="player" poster="img/video-poster.jpg" playsinline controls>
+                      <source src="video/video_1.mp4" type="video/mp4">
+
+                      I'm sorry; your browser doesn't support HTML5 video.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6 col-xl-6">
+
+              <!-- e-book -->
+
+              <div class="e-book__title-wrapper">
+                <a class="button e-book__title-button" href="/">
+                  <h2 class="e-book__title">Android автомагнитола Shuttle NP 350</h2>
+                </a>
+
+                <div class="availability-wrapper">
+                  <p class="availability availability--top">Заканчивается</p>
+
+                  <a class="button svg-wrapper svg-wrapper--share" href="https://www.facebook.com/sharer/sharer.php?u=http://airbook.chipshop.in.ua/index.html" target="_blank">
+                    <svg class="icon-share" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="30" height="30" rx="2" fill="#0D54AF"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4953 10.0301V12.8481H12.8574V17.1564H16.4953V29.9999H21.1528V29.9187C21.1528 29.8564 21.1528 17.1564 21.1528 17.1564H24.8574C24.8574 16.8362 24.8227 15.8136 24.8574 15.4285V12.8481H21.1528V10.0029C21.1528 9.5595 21.319 9.17823 21.5783 8.96604C21.6864 8.87777 22.0728 8.72571 22.0728 8.72571C22.0728 8.72571 22.4877 8.64168 22.728 8.60889C23.008 8.57081 25.7098 8.58924 26.2546 8.59409C26.3922 8.59531 26.5717 8.63378 26.5717 8.5127V4.28564H22.7319C21.6294 4.28564 20.3019 4.51909 19.3371 5.05585C18.8759 5.3126 18.8252 5.36421 18.4256 5.66347C17.9251 6.03845 17.2317 6.98502 16.9997 7.604C16.9769 7.66535 16.9786 7.67466 16.9564 7.72588C16.7788 8.13509 16.5771 8.92495 16.5523 9.35177C16.5389 9.58177 16.4953 9.7642 16.4953 10.0301Z" fill="white"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- e-book stars -->
+
+              <div class="e-book-wrapper">
+                <p class="discount--top">Акция</p>
+
+                <p class="article-product">
+                  Код  <span class="article-product-number">72016107</span>
+                </p>
+
+                <div class="stars-wrapper">
+                  <span class="stars star--1" title="Звёздочка"></span>
+                  <span class="stars star--2" title="Звёздочка"></span>
+                  <span class="stars star--3" title="Звёздочка"></span>
+                  <span class="stars star--4" title="Звёздочка"></span>
+                  <span class="stars star--5" title="Звёздочка"></span>
+                </div>
+
+                <a class="button count-comments" href="comments-product.html">
+                  <span class="count-comments-number">25</span> отзывов
+                </a>
+
+                <p class="like like--top">
+                  <button class="button like-button like-button--top" type="button" name="like-button">Like</button>
+                </p>
+              </div>
+
+              <!-- price -->
+
+              <div class="price-section price-section--inner">
+                <div class="price-wrapper">
+                  <p class="old-price">2680 грн.</p>
+                  <p class="new-price"><span class="offers__price-product">1340</span> грн.</p>
+                </div>
+
+                <p class="availability availability--bottom">Заканчивается</p>
+
+                <p class="buy buy--top">
+                  <a class="button blue-button buy-single" href="order-product.html">Купить сейчас</a>
+                </p>
+              </div>
+
+
+              <!-- description -->
+
+              <p class="description description--inner">
+                Позвольте себе почувствовать, что такое настоящий автозвук с помощью магнитолы SHUTTLE NP 350, которая предусматривает все потребности любого автомобилиста.
+                Отличная бюджетная версия, которая поддерживает камеру заднего хода с проекцией, а также данная магнитола порадует сенсорным емкостным дисплеем.
+                Качественная озвучка сделает ваше вождение еще приятнее, а с помощью сенсорного экрана Вы сможете мгновенно вывести на экран все необходимое не отвлекаясь от вождения!
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- characteristic section -->
+
+        <section class="characteristic">
+          <div class="container">
+
+            <!-- characteristic title -->
+
+            <div class="row">
+              <div class="col-12">
+                <h2 class="characteristic__title visually-hidden">Таблица характеристик</h2>
+              </div>
+            </div>
+
+            <!-- characteristic table -->
+
+            <div class="row">
+
+                <!-- image section -->
+
+              <div class="col-12 col-lg-6 col-xl-6">
+                <div class="img-wrapper img-wrapper--characteristic">
+                      <picture class="details-image">
+                        <!-- WEBP -->
+                        <source type="image/webp" media="(min-width: 960px)" srcset="img/product.webp">
+                        <source type="image/webp" media="(min-width: 560px)" srcset="img/product.webp">
+                        <source type="image/webp" media="(min-width: 320px)" srcset="img/product.webp">
+
+                        <source media="(min-width: 960px)" srcset="img/product.png">
+                        <source media="(min-width: 560px)" srcset="img/product.png">
+                        <source media="(min-width: 320px)" srcset="img/product.png">
+
+
+                        <img src="img/product.png" alt="Магнитола">
+                      </picture>
+                    </div>
+
+              </div>
+              <div class="col-12 col-lg-6 col-xl-6">
+                <table class="characteristic__table">
+                  <tr class="characteristic__row characteristic__row--1">
+                    <td class="characteristic__column characteristic__column--1">Диагональ экрана:</td>
+                    <td class="characteristic__column characteristic__column--2">7"-дюймовый цифровой</td>
+                  </tr>
+                  <tr class="characteristic__row characteristic__row--2">
+                    <td class="characteristic__column characteristic__column--1">Тип экрана:</td>
+                    <td class="characteristic__column characteristic__column--2">TFT емкостный сенсорный экран</td>
+                  </tr>
+                  <tr class="characteristic__row characteristic__row--3">
+                    <td class="characteristic__column characteristic__column--1">Разрешение экрана:</td>
+                    <td class="characteristic__column characteristic__column--2">1024 х 600</td>
+                  </tr>
+                  <tr class="characteristic__row characteristic__row--4">
+                    <td class="characteristic__column characteristic__column--1">Операционная система:</td>
+                    <td class="characteristic__column characteristic__column--2">Android 5.1.1</td>
+                  </tr>
+                  <tr class="characteristic__row characteristic__row--5">
+                    <td class="characteristic__column characteristic__column--1">Поддержка камер заднего вида:</td>
+                    <td class="characteristic__column characteristic__column--2">до 1080р</td>
+                  </tr>
+                  <tr class="characteristic__row characteristic__row--6">
+                    <td class="characteristic__column characteristic__column--1">Bluetoth:</td>
+                    <td class="characteristic__column characteristic__column--2">Bluetoth 4.0</td>
+                  </tr>
+                  <tr class="characteristic__row characteristic__row--7">
+                    <td class="characteristic__column characteristic__column--1"><span class="characteristic__uppercase">AUX</span> вход</td>
+                    <td class="characteristic__column characteristic__column--2">Есть</td>
+                  </tr>
+                  <tr class="characteristic__row characteristic__row--8">
+                    <td class="characteristic__column characteristic__column--1">Запоминание режима воспроизведения:</td>
+                    <td class="characteristic__column characteristic__column--2"><span class="characteristic__uppercase">FM/TF/USB</span> режим</td>
+                  </tr>
+                  <tr class="characteristic__row characteristic__row--9">
+                    <td class="characteristic__column characteristic__column--1">TF слот для карты:</td>
+                    <td class="characteristic__column characteristic__column--2">с USB 2.0 порт до 32 <span class="characteristic__uppercase">ГБ</span></td>
+                  </tr>
+                  <tr class="characteristic__row characteristic__row--10">
+                    <td class="characteristic__column characteristic__column--1">Поддерживаемые видео:</td>
+                    <td class="characteristic__column characteristic__column--2"><span class="characteristic__uppercase">RMVB / RM / FLV / 3GP / MPEG / DVIX / XVID / ДТА / VOB / AVI</span></td>
+                  </tr>
+                  <tr class="characteristic__row characteristic__row--11">
+                    <td class="characteristic__column characteristic__column--1">FM диапазон:</td>
+                    <td class="characteristic__column characteristic__column--2">87.5 мГц - 108.00 мГц (Европа)</td>
+                  </tr>
+                  <tr class="characteristic__row characteristic__row--12">
+                    <td class="characteristic__column characteristic__column--1">Усилитель mosfet:</td>
+                    <td class="characteristic__column characteristic__column--2">45 Вт X 4max Выходная мощность</td>
+                  </tr>
+                  <tr class="characteristic__row characteristic__row--13">
+                    <td class="characteristic__column characteristic__column--1">Поддержка аудио:</td>
+                    <td class="characteristic__column characteristic__column--2"><span class="characteristic__uppercase">MP3 / WMA / WMV / OGG / APE / ACC / FLAC</span></td>
+                  </tr>
+                  <tr class="characteristic__row characteristic__row--14">
+                    <td class="characteristic__column characteristic__column--1">Поддержка GPS навигации:</td>
+                    <td class="characteristic__column characteristic__column--2">Встроенная антенна</td>
+                  </tr>
+                  <tr class="characteristic__row characteristic__row--15">
+                    <td class="characteristic__column characteristic__column--1">Размеры:</td>
+                    <td class="characteristic__column characteristic__column--2">180 х 75 х 103 мм</td>
+                  </tr>
+                  <tr class="characteristic__row characteristic__row--16">
+                    <td class="characteristic__column characteristic__column--1">Дистанционное управление:</td>
+                    <td class="characteristic__column characteristic__column--2">Пульт ДУ</td>
+                  </tr>
+                  <tr class="characteristic__row characteristic__row--17">
+                    <td class="characteristic__column characteristic__column--1">Звук:</td>
+                    <td class="characteristic__column characteristic__column--2">Bass и treble, L&R канал стабилизатор</td>
+                  </tr>
+                  <tr class="characteristic__row characteristic__row--18">
+                    <td class="characteristic__column characteristic__column--1">Видео вход:</td>
+                    <td class="characteristic__column characteristic__column--2">Подключение камеры заднего вида</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="page-main-bottom">
+            <div class="container">
+                <!-- stock -->
+
+                <div class="row">
+                  <div class="col-12">
+
+                    <p class="stock">
+                      <a class="button arrow-link stock__link" href="stock-product.html">Акция</a>
+                    </p>
+
+
+
+                    <!-- price -->
+
+                    <div class="price-section">
+                      <div class="price-wrapper">
+                        <p class="old-price">2680 грн.</p>
+                        <p class="new-price"><span class="offers__price-product">1340</span> грн.</p>
+                      </div>
+
+                      <p class="availability availability--bottom">Заканчивается</p>
+
+                      <p class="buy buy--top">
+                        <a class="button blue-button buy-single" href="order-product.html">Купить сейчас</a>
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- like & buy -->
+
+                <div class="row">
+                  <div class="col-4">
+                    <p class="like">
+                      <button class="button like-button" type="button" name="like-button">Like</button>
+                    </p>
+                  </div>
+                  <div class="col-8">
+                    <p class="buy">
+                      <a class="button blue-button buy-single" href="order-product.html">Купить сейчас</a>
+                    </p>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </main>
+
+      <footer class="page-footer">
+          <div class="container">
+
+            <div class="row">
+
+              <div class="col-12">
+                <div class="footer-wrapper">
+                  <!-- delivery -->
+
+                  <p class="delivery">
+                    <a class="button arrow-link delivery__link" href="delivery-product.html">Доставка и оплата</a>
+                  </p>
+
+                  <!-- privacy -->
+
+                  <p class="privacy">
+                    <a class="button arrow-link privacy__link" href="privacy.html">Политика конфиденциальности</a>
+                  </p>
+
+                  <!-- address -->
+
+                  <p class="address">
+                    Украина, Днепропетровская область, г. Кривой Рог, пл. Горького, д. 10, офис 9, ООО "Логос"
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+
+        <div class="arrow-up"></div>
+
+        <div class="popup-overlay"></div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script defer src="add/slick/slick.min.js"></script>
+    <script defer src="add/plyr/plyr.js"></script>
+    <script defer src="js/cookie.min.js"></script>
+    <script defer src="js/script.min.js"></script>
+  </body>
+</html>

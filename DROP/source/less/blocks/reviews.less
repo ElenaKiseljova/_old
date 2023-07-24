@@ -1,0 +1,131 @@
+.reviews {
+  .w100();
+
+  padding-bottom: 250px;
+
+  background-color: #ffffff;
+
+  color: #000000;
+
+  background-image: url("../img/bg-5.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% + 2px) calc(100% + 2px);
+  background-size: calc(100% + 2px);
+}
+
+.reviews__wrapper {
+  overflow: hidden;
+}
+
+.reviews__header {
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  .w100();
+
+  margin-bottom: 80px;
+}
+
+.reviews__title {
+  margin-bottom: 0;
+
+  color: #716EFE;
+}
+
+.reviews__arrows .button {
+  stroke: #000000;
+}
+
+.reviews__list-container {
+  .w100();
+
+  overflow: hidden;
+}
+
+.reviews__list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.reviews__item {
+  padding: 0;
+  margin: 0;
+
+  padding-right: 30px;
+
+  outline: none;
+
+  &:hover {
+    outline: none;
+  }
+}
+
+.reviews__text {
+  .w100();
+
+  padding-bottom: 20px;
+
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130%;
+  /* or 23px */
+
+  color: #000000;
+}
+
+.reviews__name {
+  .w100();
+
+  padding: 10px 0 10px 70px;
+
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 130%;
+  /* or 31px */
+
+  color: #716EFE;
+
+  background-image: url("../img/shark.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
+@media (max-width: 1199px) and (min-width: 1024px) {
+
+}
+
+@media (max-width: 1023px) {
+  .reviews {
+    padding-bottom: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  .reviews {
+    padding-bottom: 100px;
+  }
+
+  .reviews__header {
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-bottom: 50px;
+  }
+
+  .reviews__title {
+    margin-right: 0;
+
+    margin-bottom: 30px;
+  }
+
+  .reviews__item {
+    padding: 0;
+  }
+}

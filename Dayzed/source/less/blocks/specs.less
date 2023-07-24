@@ -1,0 +1,177 @@
+.specs {
+  position: relative;
+
+  .w100();
+
+  padding-bottom: 40px;
+
+  overflow: hidden;
+}
+
+.specs__list-button {
+  position: relative;
+
+  left: 0;
+
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  .w100();
+
+  list-style: none;
+}
+
+.specs__list-button {
+  margin-bottom: 40px;
+
+  border-bottom: 1px solid #816455;
+}
+
+.specs__item-button,
+.specs__item-text {
+  padding: 0;
+  margin: 0;
+}
+
+.specs__item-button {
+  flex-shrink: 0;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  & label {
+    position: relative;
+
+    display: block;
+
+    padding: 0;
+    margin: 0;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    margin-right: 70px;
+
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 300;
+
+    color: #585858;
+
+    text-align: left;
+    vertical-align: middle;
+
+    cursor: pointer;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: 0;
+
+      width: 100%;
+      height: 3px;
+
+      background-color: #816455;
+
+      opacity: 0;
+
+      transition: all 0.5s;
+    }
+  }
+
+  & input:checked + label {
+    font-weight: 400;
+
+    color: #000000;
+
+    &::after {
+      opacity: 1;
+
+      transition: all 0.5s;
+    }
+  }
+}
+
+.specs__list-text {
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  transition: all 0.5s;
+}
+
+.specs__item-text {
+  flex-shrink: 0;
+
+  width: 25%;
+
+  padding: 0;
+  margin: 0;
+
+  overflow: hidden;
+
+  & > p {
+    .w100();
+
+    margin-bottom: 20px;
+
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+
+    color: #585858;
+
+    text-align: left;
+    vertical-align: middle;
+
+    & > span {
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+
+
+}
+
+@media (max-width: 607px) {
+  .specs__list-button {
+    overflow: scroll;
+
+      /* width */
+    &::-webkit-scrollbar {
+      width: 0px;
+      height: 1px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #816455;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #ab875f;
+    }
+  }
+
+  .specs__item-button {
+    & label {
+      margin-right: 20px;
+    }
+  }
+}

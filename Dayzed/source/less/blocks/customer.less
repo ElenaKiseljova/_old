@@ -1,0 +1,173 @@
+.customer {
+  .w100();
+
+  margin-bottom: 115px;
+
+  &--address {
+    margin-bottom: 45px;
+  }
+}
+
+.customer__wrapper {
+  .wrapper();
+
+  align-items: flex-start;
+}
+
+.customer__navigation {
+  width: 262px;
+  max-width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  padding: 12px 30px 22px;
+
+  margin-right: 15px;
+
+  border: 1px solid #383838;
+}
+
+.customer__list {
+  .w100();
+
+  list-style: none;
+}
+
+.customer__item {
+  .w100();
+
+  & > a {
+    padding-top: 10.5px;
+    padding-bottom: 10.5px;
+
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 300;
+
+    text-align: left;
+
+    color: #000000;
+
+    transition: all 0.5s;
+
+    &.active {
+      font-weight: 500;
+
+      color: #ab875f;
+    }
+
+    &:hover {
+      color: #ab875f;
+
+      transition: all 0.5s;
+    }
+  }
+}
+
+.customer__content {
+  width: 840px;
+  max-width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  & > button[name="add"] {
+    .w100();
+
+    padding-left: 35px;
+
+    font-size: 18px;
+    line-height: 42px;
+    font-weight: 300;
+
+    color: #ffffff;
+
+    background-color: #ab875f;
+
+    text-align: left;
+  }
+}
+
+@media (max-width: 1146px) {
+  .customer__navigation {
+    width: 100%;
+
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .customer__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+  }
+
+  .customer__item {
+    width: 33%;
+  }
+
+  .customer__content {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .customer__navigation {
+    padding: 10px;
+  }
+
+  .customer__item > a {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+  }
+
+  .customer__content {
+    max-width: 90%;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .customer__navigation {
+    margin-bottom: 30px;
+  }
+
+  .customer__item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  .customer__wrapper {
+    justify-content: space-around;
+  }
+
+  .customer__navigation {
+    width: 95%;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .customer__item {
+    width: 100%;
+  }
+
+  .customer__content {
+    max-width: 95%;
+
+    &--favourite {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .customer__content {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,48 @@
+.page-main {
+  .w100();
+
+  background-color: #FFEFE7;
+
+  color: #000000;
+
+  padding-top: 115px;
+
+  &--index {
+    padding-top: 0px;
+  }
+
+  &--publication {
+
+    background-image: url("../img/bg-2.svg"), url("../img/bg-1.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: -30% 0, 120% 20%;
+    background-size: 1200px 600px, 1000px 1000px;
+  }
+
+  &--search {
+    background-repeat: no-repeat, no-repeat;
+    background-image: url("../img/bg-2.svg"), url("../img/bg-1.svg");
+    background-position: -20% 0, 120% 100%;
+    background-size: 1000px 600px, 1000px 1000px;
+  }
+
+  &--faq {
+    background-image: url("../img/bg-6.svg");
+    background-repeat: no-repeat;
+    background-position: 85% -10%;
+    background-size: 731px 731px;
+  }
+
+  &--pruff {
+    background-repeat: no-repeat, no-repeat;
+    background-image: url("../img/bg-1.svg"), url("../img/bg-2.svg");
+    background-position: -65% -5%, 120% 50%;
+    background-size: 1500px 900px, 800px 800px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-main {
+    padding-top: 55px;
+  }
+}

@@ -1,0 +1,331 @@
+.promo {
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  .w100();
+
+  height: 100vh;
+  min-height: 756px;
+
+  margin-bottom: 52px;
+
+  overflow: hidden;
+}
+
+.promo__wrapper {
+  .wrapper();
+}
+
+.promo__list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: center;
+
+  align-content: flex-start;
+
+  .w100();
+
+  margin-bottom: 50px;
+
+  list-style: none;
+}
+
+.promo__item {
+  display: flex;
+
+  align-items: center;
+
+  width: 50%;
+
+  padding: 0;
+  margin: 0;
+
+  &--center {
+    position: relative;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    align-content: flex-start;
+
+    width: 100%;
+  }
+
+  &--first,
+  &--bottom {
+    justify-content: flex-start;
+  }
+
+  &--first {
+    padding-left: 40px;
+  }
+
+  &--second {
+    justify-content: flex-end;
+
+    padding-right: 105px;
+
+    margin-bottom: -29px;
+  }
+
+  &--bottom {
+    padding-left: 96px;
+  }
+}
+
+.promo__title {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  align-content: flex-start;
+
+  .w100();
+
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 100%;
+  /* identical to box height, or 64px */
+
+  text-align: center;
+  vertical-align: middle;
+
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.promo__title-row {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  .w100();
+
+  &--center {
+    flex-direction: row-reverse;
+
+    &::after {
+      margin-left: 0;
+      margin-right: 32px;
+    }
+  }
+
+  &::after {
+    content: "";
+
+    width: 200px;
+    height: 1px;
+
+    margin-left: 32px;
+
+    background-color: #000000;
+  }
+}
+
+.promo__image {
+  .picture();
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  z-index: 0;
+
+  transform: translate(-50%, -50%);
+}
+
+.promo__bottom {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: center;
+
+  align-content: flex-start;
+
+  .w100();
+}
+
+.promo__created {
+  position: fixed;
+
+  bottom: 32.04px;
+  left: 56px;
+
+  z-index: 4;
+
+  padding: 0;
+  margin: 0;
+}
+
+.promo__created-link {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.promo__created-svg {
+  fill: rgba(0, 0, 0, 1);
+}
+
+.promo__created-title {
+  .w100();
+
+  margin-bottom: 8px;
+
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 100%;
+  /* or 12px */
+
+
+  color: #000000;
+}
+
+@media (max-width: 1135px) {
+  .promo {
+    padding-top: 86px;
+    padding-bottom: 80px;
+  }
+
+  .promo__title {
+    font-size: 56px;
+    line-height: 100%;
+  }
+
+  .promo__list {
+    margin-bottom: 0;
+  }
+
+  .promo__item {
+    &--first {
+      padding-left: 0;
+
+      margin-bottom: 22px;
+    }
+
+    &--second {
+      padding-right: 0;
+
+      margin-bottom: -29px;
+    }
+
+    &--center {
+      margin-bottom: 102px;
+    }
+
+    &--bottom {
+      padding-left: 42px;
+    }
+  }
+
+  .promo__bottom {
+    align-items: flex-end;
+  }
+
+  .promo__created {
+    padding-top: 61px;
+    min-height: 93px;
+  }
+}
+
+@media (max-width: 767px) {
+  .promo {
+    flex-wrap: wrap;
+
+    align-content: flex-start;
+
+    height: auto;
+    min-height: auto;
+
+    padding-top: 11px;
+    padding-bottom: 0px;
+
+    margin-bottom: 0px;
+  }
+
+  .promo__list {
+    order: 1;
+
+    margin-bottom: 0px;
+  }
+
+  .promo__item {
+    margin-bottom: 0;
+  }
+
+  .promo__bottom {
+    order: 0;
+
+    align-items: flex-start;
+
+    margin-bottom: 102px;
+  }
+
+  .promo__title {
+    font-size: 32px;
+    line-height: 100%;
+  }
+
+  .promo__title-row {
+    margin-bottom: 19px;
+
+    &::after {
+      width: 80px;
+
+      margin-left: 24px;
+    }
+
+    &--center::after {
+      margin-right: 24px;
+    }
+  }
+
+  .promo__created {
+    left: 18px;
+    top: 80px;
+    bottom: auto;
+
+    padding-top: 0;
+
+    min-height: 0;
+  }
+
+  .promo__created-title {
+    font-size: 10px;
+    line-height: 100%;
+  }
+
+  .promo__created-svg {
+    width: 82px;
+    height: 12px;
+  }
+}

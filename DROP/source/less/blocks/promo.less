@@ -1,0 +1,143 @@
+.promo {
+  .w100();
+
+  padding-bottom: 100px;
+
+  color: #FFFFFF;
+
+  background-color: #7C59E1;
+  background-image: url("../img/bg-1.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+}
+
+.promo__wrapper {
+
+}
+
+.promo__title {
+  .w100();
+
+  margin-bottom: 24px;
+
+  text-align: left;
+
+  & a {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.promo__text {
+  .w100();
+
+  margin-bottom: 66px;
+
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130%;
+  /* or 23px */
+
+  color: #FFFFFF;
+
+  text-align: left;
+  vertical-align: middle;
+}
+
+.promo__img-container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+
+  padding-bottom: 20px;
+
+  background-image: url("../img/water.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+
+  transform: scale(-1, 1);
+}
+
+@media (max-width: 1365px) and (min-width: 1200px) {
+  .promo__title svg {
+    width: 550px;
+    height: auto;
+  }
+
+  .promo__img-container img {
+    width: 550px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .promo__title svg {
+    width: 460px;
+    height: auto;
+  }
+
+  .promo__img-container img {
+    width: 460px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1023px) {
+  .promo__wrapper {
+    justify-content: center;
+  }
+
+  .promo__button {
+    position: relative;
+
+    z-index: 2;
+  }
+
+  .promo__img-container {
+    position: relative;
+
+    z-index: 1;
+
+    margin-top: -130px;
+  }
+}
+
+@media (max-width: 767px) {
+  .promo__title {
+    margin-bottom: 30px;
+
+    & svg {
+      width: 345px;
+      height: 72px;
+    }
+  }
+
+  .promo__text {
+    margin-bottom: 30px;
+  }
+
+  .promo__button {
+    margin-bottom: 16px;
+  }
+
+  .promo__img-container {
+    margin-top: -100px;
+  }
+}
+
+@media (max-width: 350px) {
+  .promo__title {
+    & svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+.page-header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 998;
+
+  .w100();
+
+  padding: 20px 0;
+
+  color: #ffffff;
+
+  font-family: "Inter", Arial, sans-serif;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+
+  vertical-align: middle;
+  text-align: left;
+
+  background-color: #7C59E1;
+
+  background-image: linear-gradient(to bottom, #ffffff 0px, #ffffff 5px, #7C59E1 5px);
+}
+
+.page-header__logo {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.page-header__button {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media (max-width: 1365px) and (min-width: 1200px) {
+  .page-header__logo svg {
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1023px) {
+  .page-header {
+    justify-content: flex-start;
+  }
+
+  .page-header__logo {
+    order: 2;
+
+    margin-right: 162px;
+  }
+
+  .page-header__navigation {
+    order: 1;
+  }
+
+  .page-header__lang {
+    order: 3;
+  }
+
+  .page-header__login {
+    order: 4;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .page-header__logo {
+    margin-right: 17px;
+
+    & svg {
+      width: 155px;
+      height: 40px;
+    }
+  }
+
+  .page-header__button {
+    padding: 8px 17.5px;
+  }
+}
+
+@media (max-width: 350px) {
+  .page-header__login .button-line {
+    font-size: 12px;
+    line-height: 130%;
+  }
+}

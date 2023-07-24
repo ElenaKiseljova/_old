@@ -1,0 +1,161 @@
+
+.tovar-1 {
+  .w100();
+
+  padding-top: 90px;
+  padding-bottom: 30px;
+
+  color: #ffffff;
+
+  background-color: #251A3C;
+}
+
+.tovar-1__wrapper {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 910px;
+  max-width: 100%;
+
+  margin: 0 auto;
+  padding: 0;
+}
+
+.tovar-1__text {
+  width: 100%;
+
+  margin-bottom: 100px;
+
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 119% */
+
+
+  color: #FFFFFF;
+}
+
+.tovar-1__list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  align-content: flex-start;
+
+  width: 850px;
+
+  max-width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  &.active .tovar-1__yellow {
+    animation-name: scale_X;
+  }
+}
+
+.tovar-1__item {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+
+  margin-bottom: 70px;
+
+  &:last-of-type {
+    width: 100%;
+  }
+}
+
+.tovar-1__yellow {
+  .w100();
+
+  margin-bottom: 15px;
+
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 100%;
+  /* or 45% */
+
+  color: #FFA800;
+
+  text-transform: uppercase;
+
+  text-align: center;
+
+  opacity: 0;
+
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.tovar-1__yellow-text {
+  .w100();
+
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 100%;
+  /* identical to box height, or 79% */
+
+  color: #FFFFFF;
+
+  text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .tovar-1__wrapper {
+    width: 738px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .tovar-1__text {
+    text-align: center;
+  }
+
+  .tovar-1__yellow {
+    font-size: 50px;
+  }
+
+  .tovar-1__list {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 767px) {
+  .tovar-1__yellow {
+    font-size: 25px;
+  }
+
+  .tovar-1__wrapper {
+
+  }
+
+  .tovar-1__list.active .tovar-1__yellow {
+    animation-name: none;
+
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 350px) {
+  .tovar-1__yellow {
+    font-size: 22px;
+  }
+}

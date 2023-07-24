@@ -1,0 +1,51 @@
+.close {
+  .button();
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    & .close__svg {
+      fill: rgba(0, 0, 0, 0.5);
+
+      transition: all 0.5s;
+    }
+  }
+
+  &--popup {
+    width: 23px;
+    height: 23px;
+  }
+
+  &--search {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.close__svg {
+  fill: rgba(0, 0, 0, 1);
+
+  transition: all 0.5s;
+}
+
+@media (max-width: 919px) {
+  .close {
+    &--search {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .close {
+
+    &--popup {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}

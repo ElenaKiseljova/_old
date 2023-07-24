@@ -1,0 +1,161 @@
+.page-footer {
+  .w100();
+
+  padding-top: 54px;
+  padding-bottom: 54px;
+
+  background-color: #FFEFE7;
+
+  color: #000000;
+
+  &.active {
+    background-color: #FFDE6A;
+  }
+}
+
+.page-footer__wrapper {
+  .wrapper();
+
+  justify-content: space-between;
+}
+
+.page-footer__left,
+.page-footer__right {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  align-content: flex-start;
+
+  padding: 0;
+  margin: 0;
+}
+
+.page-footer__left {
+  margin-right: 32px;
+}
+
+.page-footer__copyright,
+.page-footer__politics,
+.page-footer__partners  {
+  padding: 0;
+  margin: 0;
+
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 14px;
+
+  text-align: left;
+  vertical-align: middle;
+
+  color: #000000;
+}
+
+.page-footer__greenpeace-link {
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.page-footer__greenpeace,
+.page-footer__partners  {
+  margin-right: 48px;
+}
+
+.page-footer__greenpeace {
+  fill: #000000;
+}
+
+.page-footer__copyright {
+  margin-right: 32px;
+}
+
+.page-footer__politics {
+  & a {
+    position: relative;
+
+    z-index: 5;
+
+    color: #000000;
+
+    text-decoration: none;
+
+    &:hover {
+      color: #000000;
+
+      text-decoration: none;
+    }
+  }
+}
+
+.page-footer__vk,
+.page-footer__afisha {
+  position: relative;
+
+  z-index: 5;
+
+  .button();
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.page-footer__vk {
+  margin-right: 32px;
+}
+
+@media (max-width: 1152px) {
+  .page-footer__wrapper {
+      justify-content: center;
+  }
+
+  .page-footer__left {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-footer {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .page-footer__copyright,
+  .page-footer__politics,
+  .page-footer__partners,
+  .page-footer__greenpeace {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 406px) {
+  .page-footer__right,
+  .page-footer__left {
+    width: 100%;
+  }
+
+  .page-footer__partners {
+    width: 100%;
+
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}

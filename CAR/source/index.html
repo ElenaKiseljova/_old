@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+    <link type="text/css" rel="stylesheet" href="plugins/plugins.css"/>
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <title>Машинка-перевертыш</title>
+  </head>
+  <body>
+    <svg class="sprite" style="display: none;">
+      <symbol id="icon-cart" viewBox="0 0 36 29">
+        <path d="M30.5353 20.7654C32.9123 20.7654 34.7408 22.5556 34.7408 24.8827C34.7408 27.2099 32.9123 29 30.5353 29C28.524 29 26.8784 27.7469 26.5127 25.9568H18.1018C17.7361 27.7469 16.0905 29 14.0792 29C11.885 29 9.8737 27.2099 9.8737 24.8827C9.8737 23.9877 10.2394 23.0926 10.7879 22.3765L6.21678 3.58025H0.914232C0.365693 3.58025 0 3.22222 0 2.68518V0.895062C0 0.358025 0.365693 0 0.914232 0H8.22809C8.41093 0 8.41093 0 8.59378 0C8.95947 0.358025 9.14232 0.716049 9.14232 0.895062L10.0566 4.65432H34.558C36.0207 4.65432 36.2036 5.37037 35.8379 6.62346C34.558 10.3827 33.278 14.321 31.9981 18.2593C31.6324 19.3333 30.901 19.8704 29.9868 19.8704H14.0792L14.262 20.9444C15.5419 20.9444 16.639 21.4815 17.3704 22.3765H27.427C28.1583 21.3025 29.2554 20.7654 30.5353 20.7654Z"/>
+      </symbol>
+      <symbol id="l-1" viewBox="0 0 222 114">
+        <path d="M128.846 91.896L82.2279 29.745L33.138 110.965L220.669 111.318M56.8001 17.7385L59.2722 40.3389M56.8001 17.7385L36.6697 25.1543M56.8001 17.7385L1 112.378M132.024 40.3389L141.56 48.4609L162.75 31.8638L180.055 44.2234M63.157 61.1736L74.4583 68.9425L89.9976 53.7579L108.009 63.9987M114.013 71.7675L154.274 1.84766L220.669 111.671" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="l-2" viewBox="0 0 174 100">
+        <path d="M132.731 1H141.913C150.036 1 156.746 8.06261 156.746 16.8909C156.746 21.4816 155.333 30.663 159.924 30.663H167.694C170.519 30.663 172.991 33.1349 172.991 36.3131V63.151C172.991 66.3291 170.519 68.801 167.694 68.801C166.281 68.801 162.75 68.801 160.984 68.801C157.805 69.1542 156.746 71.9792 156.746 75.5105V82.9263C156.746 91.7545 150.036 98.8171 141.913 98.8171H15.8329C7.71012 98.8171 1 91.7545 1 82.9263V16.8909C1 8.06261 7.71012 1 15.8329 1H132.731ZM112.953 20.069H135.909C139.087 20.069 141.913 22.8941 141.913 26.4254V73.3918C141.913 76.9231 139.087 79.7481 135.909 79.7481H21.8367C18.6582 79.7481 15.8329 76.9231 15.8329 73.3918V26.4254C15.8329 22.8941 18.6582 20.069 21.8367 20.069H112.953V20.069ZM105.184 29.6036H129.552C131.318 29.6036 132.731 31.0161 132.731 33.1349V66.6823C132.731 68.4479 131.318 70.2136 129.552 70.2136H105.184C103.418 70.2136 102.005 68.8011 102.005 66.6823V33.1349C102.005 31.0161 103.418 29.6036 105.184 29.6036ZM28.1937 29.6036H52.5621C54.3279 29.6036 55.7406 31.0161 55.7406 33.1349V66.6823C55.7406 68.4479 54.3279 70.2136 52.5621 70.2136H28.1937C26.4279 70.2136 25.0152 68.8011 25.0152 66.6823V33.1349C25.0152 31.0161 26.4279 29.6036 28.1937 29.6036ZM66.6887 29.6036H91.0571C92.8229 29.6036 94.2355 31.0161 94.2355 33.1349V66.6823C94.2355 68.4479 92.8229 70.2136 91.0571 70.2136H66.6887C64.9229 70.2136 63.5102 68.8011 63.5102 66.6823V33.1349C63.5102 31.0161 64.9229 29.6036 66.6887 29.6036Z" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="l-3" viewBox="0 0 135 137">
+        <path d="M67.395 68.8662L117.898 45.9128M45.4988 90.7603C45.4988 90.7603 39.6872 96.4335 35.9633 100.295C28.1937 92.1728 23.2494 81.2258 23.2494 68.8662C23.2494 44.1471 43.0266 24.3718 67.395 24.3718M88.9381 90.7603C88.9381 90.7603 94.7497 96.4335 98.4735 100.295C106.243 92.526 111.541 80.8726 111.541 68.8662C111.541 44.5002 91.7634 24.3718 67.395 24.3718M35.9633 37.4377L45.4988 47.3253M98.4735 37.4377L88.9381 47.3253M67.395 24.3718V38.1439M111.187 68.8662H97.4141M36.6697 68.8662H22.8962M67.395 1.77148C103.771 1.77148 133.437 31.7875 133.437 68.8662C133.437 105.945 103.771 135.961 67.395 135.961C30.6659 135.961 1 105.945 1 68.8662C1 31.7875 30.6659 1.77148 67.395 1.77148ZM56.4469 101.354H77.99C82.228 101.354 85.4064 104.886 85.4064 109.123C85.4064 113.361 81.8748 116.892 77.99 116.892H56.4469C52.2089 116.892 49.0304 113.361 49.0304 109.123C49.0304 104.532 52.2089 101.354 56.4469 101.354Z" stroke-width="2" stroke-miterlimit="22.9256"
+        stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="l-4" viewBox="0 0 126 153">
+        <path d="M64.0568 113.964L17.5568 151.374L53.4886 47.4575C49.9659 44.6864 47.8523 40.5297 47.8523 35.6803C47.8523 27.367 54.5455 20.7857 63 20.7857C71.4546 20.7857 78.1477 27.367 78.1477 35.6803C78.1477 40.5297 76.0341 44.6864 72.5114 47.4575M37.9886 92.1414L108.091 151.72M11.2159 69.6262C4.52273 59.9274 1 48.1503 1 35.6803C1 23.2104 4.875 11.4332 11.2159 1.73438M114.784 1.73438C121.125 11.4332 125 23.2104 125 35.6803C125 47.8039 121.477 59.581 115.136 68.9335M92.2386 16.9754C99.6364 28.4062 99.6364 42.9545 92.2386 54.3852M34.1136 54.3852C26.3636 42.9545 26.3636 27.7134 34.1136 16.2826M72.1591 47.1111L108.091 151.374" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="l-5" viewBox="0 0 159 120">
+        <path d="M101.652 49.8057H122.136V40.6243L141.207 35.3273V79.1155L122.136 84.4124V69.2278H101.652C98.1204 79.4686 88.5849 86.5312 77.6368 86.5312C66.6887 86.5312 57.5064 79.1155 53.6216 69.2278H34.1975V81.9405H15.1266V37.4461H34.1975V49.8057H53.6216C57.1532 39.5649 66.6887 32.5023 77.6368 32.5023C88.5849 32.5023 97.7672 39.918 101.652 49.8057Z" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M38.7887 90.4156C45.1456 90.4156 50.4431 95.7125 50.4431 102.422C50.4431 109.131 45.4988 114.428 38.7887 114.428H12.6545C6.29749 114.428 1 109.131 1 102.422C1 95.7125 6.29749 90.4156 12.6545 90.4156H38.7887Z" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M148.623 24.7334C154.627 22.9678 158.512 16.2583 156.746 9.90195C155.333 3.54561 148.976 -0.338825 142.619 1.42683L117.544 8.48943C111.541 10.2551 107.656 16.9646 109.422 23.3209C111.188 29.6772 117.544 33.5617 123.548 31.796L148.623 24.7334Z" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M148.623 110.544C154.627 108.778 158.512 102.069 156.746 95.7126C155.333 89.3562 148.976 85.4718 142.619 87.2374L117.544 94.3C111.541 96.0657 107.656 102.775 109.422 109.132C111.188 115.488 117.544 119.372 123.548 117.607L148.623 110.544Z" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M38.7887 4.605C45.1456 4.605 50.4431 9.90196 50.4431 16.6114C50.4431 23.3209 45.4988 28.6179 38.7887 28.6179H12.6545C6.29749 28.6179 1 23.3209 1 16.6114C1 9.90196 6.29749 4.605 12.6545 4.605H38.7887Z" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="l-6" viewBox="0 0 183 155">
+        <path d="M181.114 70.4846C149.152 70.8394 109.294 68.3559 76.9563 27.5562C44.6185 -13.2435 1 5.15688 1 67.1508M1 84.6758C11.1526 78.9993 21.3051 77.5802 32.5858 78.2898M24.6893 153.503H60.7873M43.8664 142.505H85.6048M75.4522 119.444V142.505L55.1469 142.506L55.147 113.413V88.5784C50.6348 88.5784 47.2506 88.5784 44.2424 88.2236C37.098 87.1593 33.3378 85.0306 33.3378 78.2898C33.3378 70.4846 33.3378 62.3247 33.3378 54.5195C33.3378 51.6812 35.594 49.1978 38.6021 49.1978C41.6103 49.1978 43.8664 51.6812 43.8664 54.5195V71.1942C43.8664 74.0324 46.1225 76.5159 49.1307 76.5159C52.1388 76.5159 54.395 74.0324 54.395 71.1942V47.0691C54.395 41.0378 59.2833 36.4257 65.2996 36.4257C71.3159 36.4257 76.2042 41.3926 76.2042 47.0691V86.8045V89.9975C76.2042 92.8357 78.4604 95.3192 81.4685 95.3192C84.4767 95.3192 86.7328 92.8357 86.7328 89.9975V89.288V70.4846C86.7328 67.6464 88.989 65.1629 91.9971 65.1629C95.0053 65.1629 97.2614 67.6464 97.2614 70.4846V91.4166M75.4522 119.444V106.317C79.5884 106.317 83.3486 106.317 86.3568 105.963C93.5012 105.253 97.2614 102.77 97.2614 95.674V91.4166M75.4522 119.444C85.9808 121.928 97.6375 123.347 108.166 122.992C130.727 121.928 158.553 97.8027 181.114 96.7383M97.2614 91.4166C103.654 92.481 110.046 93.1905 116.438 93.1905C126.62 93.3718 135.722 90.1905 146 84.649M142.384 127.249H152.536M115.686 144.634H135.992M15.2888 121.218H27.3215M1 104.898C20.1771 103.834 35.9699 108.801 54.019 113.768M143.136 1.65723C155.545 1.65723 165.321 11.2363 165.321 23.2988C165.321 35.3614 155.545 44.9404 143.136 44.9404C130.727 44.9404 120.951 35.3614 120.951 23.2988C120.951 11.2363 131.103 1.65723 143.136 1.65723Z" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="l-7" viewBox="0 0 195 153">
+        <path d="M135.368 41.8246L177.041 24.5212L142.785 67.25L193.287 97.2662L137.134 98.6787L142.431 151.295L106.762 109.979L101.111 137.523L88.7502 109.273L52.0211 133.639L73.9173 91.263M117.357 47.1216L91.5756 53.1248L80.6275 75.3721L85.5718 81.7284L94.0477 92.6755C96.1667 95.5005 100.405 95.8536 103.23 93.7349L129.011 72.547C131.836 70.4282 132.19 66.1906 130.071 63.3656L121.948 52.7717L117.357 47.1216ZM74.9768 67.6031L80.9806 55.2436L67.9135 58.4218C59.0844 65.4844 35.7755 78.5502 35.7755 78.5502L2.578 105.388C0.812173 106.801 0.459019 109.273 1.87168 111.391L9.6413 121.279C11.054 123.045 13.5261 123.398 15.292 121.985L48.4895 95.1474C48.4895 95.1474 66.1477 75.0189 74.9768 67.6031ZM102.877 29.465L96.873 42.5309L111 39.7058L115.238 36.1745C116.297 35.4683 116.297 33.7026 115.591 32.6432L110.647 26.2869C109.94 25.2275 108.174 24.8743 107.115 25.9337L102.877 29.465ZM61.5565 50.6529L85.925 45.0028L97.5794 21.3431L92.6351 14.9867L84.5123 4.03964C82.3933 1.21459 78.1553 0.861451 75.6831 2.98024L49.9021 24.1681C47.0768 26.2869 46.7236 30.5244 48.8426 33.3495L61.5565 50.6529Z" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="icon-ok" viewBox="0 0 20 19">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75515 12.6504C6.68784 12.6068 6.66702 12.5962 6.60707 12.5368C6.54628 12.4769 6.51242 12.4612 6.45395 12.4084L5.11726 11.2511C5.05669 11.1913 5.02261 11.1754 4.96414 11.1226L3.77069 10.0837C3.42827 9.77508 3.06123 9.49253 2.71922 9.18428C2.52613 9.01018 2.30654 8.84301 2.11766 8.65954C2.07097 8.61407 2.01123 8.56984 1.95928 8.5362C1.86358 8.59817 0.989841 9.44788 0.852281 9.59956C0.804956 9.65154 0.794859 9.67539 0.740172 9.72819C0.542877 9.9184 0.129777 10.267 0 10.4548C0.0273437 10.554 0.162169 10.6297 0.227583 10.709C0.340534 10.8462 0.477463 10.9518 0.596723 11.0831C0.644049 11.1351 0.654145 11.1589 0.708832 11.2117L1.19891 11.7059C1.24456 11.7501 1.27674 11.7801 1.32175 11.8241C1.37707 11.8784 1.39011 11.9097 1.44354 11.9636C1.53146 12.052 1.61138 12.1214 1.69951 12.2098C1.75042 12.2612 1.75988 12.2879 1.81078 12.3393C1.85874 12.3874 1.89513 12.4202 1.94392 12.4675L2.67863 13.2192C2.72427 13.2634 2.75498 13.2936 2.80104 13.3376L6.60728 17.2245C6.76777 17.3788 7.73573 18.4344 7.8571 18.4658C7.89054 18.3445 8.09709 18.0224 8.17197 17.9005C8.23339 17.8006 8.27609 17.7258 8.3333 17.6218L8.82506 16.7929C8.94327 16.599 9.04739 16.4198 9.16434 16.2319L10.1721 14.5975C10.7913 13.599 11.4343 12.6096 12.1021 11.6417C12.1629 11.5536 12.2129 11.47 12.2775 11.3766L13.3755 9.80994C13.4979 9.63014 13.6251 9.47887 13.7469 9.29967C14.3037 8.48238 15.2424 7.35644 15.8951 6.57523L16.0974 6.33609C16.3418 6.06516 16.5694 5.76059 16.8317 5.50494C16.8826 5.4552 16.8893 5.43481 16.9339 5.38629L18.2189 4.00103C18.6633 3.55355 19.0935 3.09506 19.5459 2.65655C19.5983 2.60578 20 2.23067 20 2.20641C20 2.08756 19.7331 1.4827 19.6733 1.33612C19.5692 1.07986 19.4531 0.697614 19.3265 0.46582C19.1917 0.496196 18.5096 0.99546 18.3876 1.07884C17.7757 1.49717 17.1836 1.94119 16.5831 2.37603L15.4898 3.21534C15.4166 3.27059 15.3537 3.32645 15.2771 3.38495L12.7806 5.5345C12.7064 5.60748 12.6492 5.64092 12.5764 5.71227L11.413 6.87939C11.1619 7.11995 10.3138 8.06018 10.1224 8.2987L9.41295 9.13413C8.93717 9.69761 8.4961 10.269 8.04367 10.8533L7.554 11.5061C7.44295 11.6519 6.78964 12.525 6.75515 12.6504Z"/>
+      </symbol>
+    </svg>
+
+    <header class="page-header">
+      <nav class="page-navigation">
+        <div class="page-navigation__wrapper container">
+          <button class="page-navigation__menu button button-menu" type="button" name="menu">
+            <span class="visually-hidden">Меню</span>
+            <span class="button-menu__line"></span>
+          </button>
+          <div class="navigation-list-wrapper">
+            <ul class="navigation__list navigation__list--header">
+              <li class="navigation__item navigation__item--1">
+                <a class="button navigation__link navigation__link--1" href="#s1">Преимущества</a>
+              </li>
+              <li class="navigation__item navigation__item--2">
+                <a class="button navigation__link navigation__link--2" href="#s2">Характеристики</a>
+              </li>
+              <li class="navigation__item navigation__item--3">
+                <a class="button navigation__link navigation__link--3" href="#s3">Комплектация</a>
+              </li>
+              <li class="navigation__item navigation__item--4">
+                <a class="button navigation__link navigation__link--4" href="#s4">Отзывы</a>
+              </li>
+              <li class="navigation__item navigation__item--5">
+                <a class="button navigation__link navigation__link--5" href="#s5">Доставка</a>
+              </li>
+              <li class="navigation__item navigation__item--6 navigation__item--order">
+                <a class="button navigation__link navigation__link--6" href="#s7">Заказать</a>
+              </li>
+            </ul>
+          </div>
+
+          <img class="logo" width="123" height="25" src="img/icon-logo.svg" alt="Лого">
+
+          <div class="order-wrapper order-wrapper--navigation">
+            <a class="button navigation__link navigation__link--order" href="#s7">Заказать</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <h1 class="visually-hidden">Сайт по продажам машинок-перевертышей</h1>
+
+      <section class="promo">
+        <div class="promo__wrapper container">
+          <h2 class="visually-hidden">Информация о спец-предложении</h2>
+
+          <div class="promo__description">
+
+            <h3 class="title-product">
+              <span class="title-product--small">Машинка-перевертыш</span>
+
+              <span class="title-product--big">Leopard</span>
+            </h3>
+
+            <div class="price price--promo">
+              <p class="sale sale--promo">-50%</p>
+
+              <div class="price__wrapper price__wrapper--promo">
+                <p class="price__old price__old--promo">1000грн</p>
+                <p class="price__new price__new--promo">508грн</p>
+              </div>
+            </div>
+
+            <div class="button-wrapper button-wrapper--promo">
+              <a class="button button-buy button-buy--promo" href="#s7">
+                <svg class="inline-svg-icon cart" width="36" height="29">
+                  <use xlink:href="#icon-cart"></use>
+                </svg>
+                Купить
+              </a>
+            </div>
+
+            <p class="promo__description-text">
+              Машинка-трансформер вездеход (перевёртыш) Leopard King на радиоуправлении  - развивает моторику и пространственное мышление вашего ребенка. Ездит по стенам и при этом оставляет их чистыми. Безопасные, качественные материалы игрушки - позволяет играть как одному, так и всей семьей.
+            </p>
+
+            <div class="promo__description-gallery">
+              <div class="img-wrapper img-wrapper--promo img-wrapper--1">
+                <a data-fancybox="gallery" href="img/g-1.jpg">
+                  <p class="img-mask img-mask--promo"></p>
+                  <picture class="image-item image-item--1">
+                    <!-- WEBP -->
+                    <source type="image/webp" media="(min-width: 150px)" srcset="img/g-1.webp">
+
+                    <img src="img/g-1.jpg" alt="Машинка">
+                  </picture>
+                </a>
+              </div>
+              <div class="img-wrapper img-wrapper--promo img-wrapper--2">
+                <a data-fancybox="gallery" href="img/g-2.jpg">
+                  <p class="img-mask img-mask--promo"></p>
+                  <picture class="image-item image-item--2">
+                    <!-- WEBP -->
+
+                    <source type="image/webp" media="(min-width: 150px)" srcset="img/g-2.webp">
+
+                    <img src="img/g-2.jpg" alt="Машинка">
+                  </picture>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="promo__video">
+            <div class="svg-wrapper svg-wrapper--play">
+              <svg id="icon-play" width="40" height="54" viewBox="0 0 40 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M38.1759 28.6356C39.3078 27.8389 39.3078 26.161 38.1759 25.3644L20.2504 12.749L3.15079 0.717107C1.82568 -0.215291 -0.00012207 0.7325 -0.00012207 2.35277V27V51.6472C-0.00012207 53.2675 1.82569 54.2153 3.15079 53.2829L20.2504 41.251L38.1759 28.6356Z" fill="#FFF500"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="order order--1" id="s7">
+        <div class="order__wrapper container order__wrapper--1">
+          <h3 class="title-product title-product--order">
+            <span class="title-product--small title-product--small--order">Машинка-перевертыш</span>
+
+            <span class="title-product--big title-product--big--order">Leopard</span>
+          </h3>
+
+          <div class="img-wrapper img-wrapper--order img-wrapper--3">
+            <picture class="image-item image-item--3">
+              <!-- WEBP -->
+
+              <source type="image/webp" media="(min-width: 150px)" srcset="img/1.webp">
+
+              <img src="img/1.jpg" alt="Машинка">
+            </picture>
+          </div>
+
+          <div class="order__right order__right--1">
+            <p class="order__right-title">До конца <span>акции</span>:</p>
+
+            <div class="timer_wrap">
+              <div class="clock">
+               <div class='clock__item day'>
+                    <p class="time"><span class='day0'></span></p>
+                    <p class="time"><span class='day1'></span></p>
+                    <p class="text">Дней</p>
+               </div>
+               <div class="razd">
+               :
+               </div>
+               <div class='clock__item hour'>
+                 <p class="time"><span class='hour0'></span></p>
+                 <p class="time"><span class='hour1'></span></p>
+                 <p class="text">Часов</p>
+               </div>
+               <div class="razd">
+               :
+               </div>
+               <div class='clock__item min'>
+                 <p class="time"><span class='min0'></span></p>
+                 <p class="time"><span class='min1'></span></p>
+                 <p class="text">Минут</p>
+               </div>
+               <div class="razd">
+               :
+               </div>
+               <div class='clock__item sec'>
+                 <p class="time"><span class='sec0'></span></p>
+                 <p class="time"><span class='sec1'></span></p>
+                 <p class="text">Секунд</p>
+               </div>
+             </div>
+           </div>
+
+           <form class="form order__right-form" action="zakaz.php" method="post">
+             <h3 class="form__title order__right-title">Оформить заказ</h3>
+
+             <label class="visually-hidden" for="name-1">Введите своё имя:</label>
+             <input class="form__input" type="text" name="name" id="name-1" placeholder="Имя" required>
+             <label class="visually-hidden" for="phone-1">Введите свой номер телефона:</label>
+             <input class="form__input" type="tel" name="phone" id="phone-1" placeholder="Телефон" required>
+
+             <div class="button-wrapper button-wrapper--submit">
+               <button class="button button-buy button-submit" type="submit" name="button">
+                 <svg class="inline-svg-icon cart" width="36" height="29">
+                   <use xlink:href="#icon-cart"></use>
+                 </svg>
+                 Купить
+               </button>
+
+               <div class="price__wrapper price__wrapper--submit">
+                 <p class="price__old price__old--submit">1000грн</p>
+                 <p class="price__new price__new--submit">508грн</p>
+               </div>
+             </div>
+           </form>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="advantages" id="s1">
+        <div class="advantages__wrapper container">
+          <h2 class="visually-hidden">Преимущества машинки-перевёртыша</h2>
+
+          <ul class="advantages__list">
+            <li class="advantages__item advantages__item--1">
+              <div class="advantages__bg advantages__bg--1"></div>
+              <div class="img-wrapper advantages__img-wrapper advantages__img-wrapper--1">
+                <picture class="image-item">
+                  <!-- WEBP -->
+                  <source type="image/webp" media="(min-width: 150px)" srcset="img/l-1.webp">
+
+                  <img src="img/l-1.jpg" alt="Машинка">
+                </picture>
+              </div>
+
+              <p class="advantages__text  advantages__text--1">
+                Движение под углом 45&deg; и мощный двигатель
+              </p>
+
+              <svg class="inline-svg-icon inline-svg-icon--l" width="219.67" height="110.53">
+                <use xlink:href="#l-1"></use>
+              </svg>
+            </li>
+
+            <li class="advantages__item advantages__item--2">
+              <div class="advantages__bg advantages__bg--2"></div>
+              <div class="img-wrapper advantages__img-wrapper advantages__img-wrapper--2">
+                <picture class="image-item">
+                  <!-- WEBP -->
+                  <source type="image/webp" media="(min-width: 150px)" srcset="img/l-2.webp">
+
+                  <img src="img/l-2.jpg" alt="Машинка">
+                </picture>
+              </div>
+
+              <p class="advantages__text advantages__text--2">
+                Полная зарядка за 90 мин, хватает на 20-25 мин езды в среднем режиме
+              </p>
+
+              <svg class="inline-svg-icon inline-svg-icon--l" width="171.99" height="97.82">
+                <use xlink:href="#l-2"></use>
+              </svg>
+            </li>
+
+            <li class="advantages__item advantages__item--3">
+              <div class="advantages__bg advantages__bg--3"></div>
+              <div class="img-wrapper advantages__img-wrapper advantages__img-wrapper--3">
+                <picture class="image-item">
+                  <!-- WEBP -->
+                  <source type="image/webp" media="(min-width: 150px)" srcset="img/l-3.webp">
+
+                  <img src="img/l-3.jpg" alt="Машинка">
+                </picture>
+              </div>
+
+              <p class="advantages__text advantages__text--3">
+                Развивает скорость 20 км/ч
+              </p>
+
+              <svg class="inline-svg-icon inline-svg-icon--l" width="132.44" height="134.19">
+                <use xlink:href="#l-3"></use>
+              </svg>
+            </li>
+
+            <li class="advantages__item advantages__item--4">
+              <div class="advantages__bg advantages__bg--4"></div>
+              <div class="img-wrapper advantages__img-wrapper advantages__img-wrapper--4">
+                <picture class="image-item">
+                  <!-- WEBP -->
+                  <source type="image/webp" media="(min-width: 150px)" srcset="img/l-4.webp">
+
+                  <img src="img/l-4.jpg" alt="Машинка">
+                </picture>
+              </div>
+
+              <p class="advantages__text advantages__text--4">
+                Усиленная антенна позволяет управлять машинкой в радиусе 60-70 метров
+              </p>
+
+              <svg class="inline-svg-icon inline-svg-icon--l" width="124" height="149.99">
+                <use xlink:href="#l-4"></use>
+              </svg>
+            </li>
+
+            <li class="advantages__item advantages__item--5">
+              <div class="advantages__bg advantages__bg--5"></div>
+              <div class="img-wrapper advantages__img-wrapper advantages__img-wrapper--5">
+                <picture class="image-item">
+                  <!-- WEBP -->
+                  <source type="image/webp" media="(min-width: 150px)" srcset="img/l-5.webp">
+
+                  <img src="img/l-5.jpg" alt="Машинка">
+                </picture>
+              </div>
+
+              <p class="advantages__text advantages__text--5">
+                4 ведущих колеса и возможность менять положение корпуса
+              </p>
+
+              <svg class="inline-svg-icon inline-svg-icon--l" width="156.17" height="117.03">
+                <use xlink:href="#l-5"></use>
+              </svg>
+            </li>
+
+            <li class="advantages__item advantages__item--6">
+              <div class="advantages__bg advantages__bg--6"></div>
+              <div class="img-wrapper advantages__img-wrapper advantages__img-wrapper--6">
+                <picture class="image-item">
+                  <!-- WEBP -->
+                  <source type="image/webp" media="(min-width: 150px)" srcset="img/l-6.webp">
+
+                  <img src="img/l-6.jpg" alt="Машинка">
+                </picture>
+              </div>
+
+              <p class="advantages__text advantages__text--6">
+                Проедет дорожные условия: камни, песок, снег, трава
+              </p>
+
+              <svg class="inline-svg-icon inline-svg-icon--l" width="180.11" height="151.85">
+                <use xlink:href="#l-6"></use>
+              </svg>
+            </li>
+
+            <li class="advantages__item advantages__item--7">
+              <div class="advantages__bg advantages__bg--7"></div>
+              <div class="img-wrapper advantages__img-wrapper advantages__img-wrapper--7">
+                <picture class="image-item">
+                  <!-- WEBP -->
+                  <source type="image/webp" media="(min-width: 150px)" srcset="img/l-7.webp">
+
+                  <img src="img/l-7.jpg" alt="Машинка">
+                </picture>
+              </div>
+
+              <p class="advantages__text advantages__text--7">
+                Корпус изготовлен из высококачественного пластика, колеса из резины
+              </p>
+
+              <svg class="inline-svg-icon inline-svg-icon--l" width="192.29" height="149.68">
+                <use xlink:href="#l-7"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="characteristic" id="s2">
+        <div class="characteristic__wrapper container">
+          <h2 class="characteristic__title characteristic__title--tablet">Характеристики</h2>
+
+          <div class="characteristic__left">
+            <h2 class="characteristic__title characteristic__title--desktop">Характеристики</h2>
+
+            <ul class="characteristic__list">
+              <li class="characteristic__item">
+                <p class="characteristic__text">
+                  <strong>Макс. скорость: </strong>
+                  20 км/ч
+                </p>
+              </li>
+              <li class="characteristic__item">
+                <p class="characteristic__text">
+                  <strong>Вес нетто: </strong>
+                  2.4 кг
+                </p>
+              </li>
+              <li class="characteristic__item">
+                <p class="characteristic__text">
+                  <strong>Питание: </strong>
+                  Li-Ion аккумулятор 9.6V 1000mAh
+                </p>
+              </li>
+              <li class="characteristic__item">
+                <p class="characteristic__text">
+                  <strong>Полный привод: </strong>
+                  4WD
+                </p>
+              </li>
+              <li class="characteristic__item">
+                <p class="characteristic__text">
+                  <strong>Время езды: </strong>
+                  20 мин.
+                </p>
+              </li>
+              <li class="characteristic__item">
+                <p class="characteristic__text">
+                  <strong>Время заряда: </strong>
+                  1.5-2 часа
+                </p>
+              </li>
+              <li class="characteristic__item">
+                <p class="characteristic__text">
+                  <strong>Габаритные размеры машины: </strong>
+                  48*28*13 см
+                </p>
+              </li>
+            </ul>
+
+            <h3 class="characteristic__title characteristic__title--small">Передатчик:</h3>
+
+            <ul class="characteristic__list">
+              <li class="characteristic__item">
+                <p class="characteristic__text">
+                  <strong>Пропорциональное управление</strong>
+
+                </p>
+              </li>
+              <li class="characteristic__item">
+                <p class="characteristic__text">
+                  <strong>Частота: </strong>
+                  2.4 ГГц
+                </p>
+              </li>
+              <li class="characteristic__item">
+                <p class="characteristic__text">
+                  <strong>Батарейки: </strong>
+                  АА 2 штуки
+                </p>
+              </li>
+              <li class="characteristic__item">
+                <p class="characteristic__text">
+                  <strong>Дальность связи: </strong>
+                  40 метров
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="characteristic__image img-wrapper">
+            <picture class="image-item image-item--characteristic">
+              <!-- WEBP -->
+
+              <source type="image/webp" media="(min-width: 150px)" srcset="img/2.webp">
+
+              <img src="img/2.jpg" alt="Машинка">
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="complectation" id="s3">
+        <div class="complectation__wrapper container">
+          <h2 class="complectation__title complectation__title--tablet">Комплектация</h2>
+
+          <div class="complectation__image img-wrapper">
+            <picture class="image-item image-item--characteristic">
+              <!-- WEBP -->
+
+              <source type="image/webp" media="(min-width: 150px)" srcset="img/3.webp">
+
+              <img src="img/3.jpg" alt="Машинка">
+            </picture>
+          </div>
+
+          <div class="complectation__right">
+            <h2 class="complectation__title complectation__title--desktop">Комплектация</h2>
+
+            <ul class="complectation__list">
+              <li class="complectation__item">
+                - Машина
+              </li>
+              <li class="complectation__item">
+                - Пульт ДУ
+              </li>
+              <li class="complectation__item">
+                - Аккумулятор (1 шт.)
+              </li>
+              <li class="complectation__item">
+                - Зарядное устройство
+              </li>
+            </ul>
+
+            <div class="button-wrapper button-wrapper--complectation">
+              <a class="button button-buy button-submit button-buy--complectation" href="#s6">
+                <svg class="inline-svg-icon cart" width="36" height="29">
+                  <use xlink:href="#icon-cart"></use>
+                </svg>
+                Купить
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews" id="s4">
+        <div class="reviews__wrapper container">
+          <h2 class="reviews__title">Отзывы</h2>
+          <div class="reviews__list slider">
+            <div class="reviews__item">
+              <div class="reviews__item-wrapper">
+                <div class="reviews__image img-wrapper">
+                  <picture class="image-item image-item--reviews">
+                    <!-- WEBP -->
+
+                    <source type="image/webp" media="(min-width: 150px)" srcset="img/c-1.webp">
+
+                    <img src="img/c-1.jpg" alt="Машинка">
+                  </picture>
+                </div>
+
+                <div class="reviews__right">
+                  <p class="reviews__information">
+                    <span class="reviews__name">Константин</span>
+                    <span class="reviews__city">\  г. Киев</span>
+                  </p>
+
+                  <p class="reviews__status">
+                    <svg class="inline-svg-icon ok" width="20" height="19">
+                      <use xlink:href="#icon-ok"></use>
+                    </svg>
+
+                    Уже приобрели
+                  </p>
+
+                  <p class="reviews__text">
+                    <b>Мой отзыв: Качественные одеяла, вежливые менеджеры, процесс покупки приятный. Спасибо!</b>
+                    <br>
+                    Заказывали одеяло из лебяжего пуха. Нам очень понравилось. Одеяло очень мягкое, теплое. Все ровно и качественно пошито. У нас квартира угловая, дома такой холод, что цензурными словами не передать. Тоже долго думали, выбирали, и вот купили и очень довольны. Я долго консультировалась, менеджеры вежливо овтетили на все вопросы и помогли оформить заказ, забирали на следующий день после заказа, оплачивали при получении. Большое вам спасибо за хорошее одеяло и такой теплые подход. Спасибо!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="reviews__item">
+              <div class="reviews__item-wrapper">
+                <div class="reviews__image img-wrapper">
+                  <picture class="image-item image-item--reviews">
+                    <!-- WEBP -->
+
+                    <source type="image/webp" media="(min-width: 150px)" srcset="img/c-1.webp">
+
+                    <img src="img/c-1.jpg" alt="Машинка">
+                  </picture>
+                </div>
+
+                <div class="reviews__right">
+                  <p class="reviews__information">
+                    <span class="reviews__name">Константин</span>
+                    <span class="reviews__city">\  г. Киев</span>
+                  </p>
+
+                  <p class="reviews__status">
+                    <svg class="inline-svg-icon ok" width="20" height="19">
+                      <use xlink:href="#icon-ok"></use>
+                    </svg>
+
+                    Уже приобрели
+                  </p>
+
+                  <p class="reviews__text">
+                    <b>Мой отзыв: Качественные одеяла, вежливые менеджеры, процесс покупки приятный. Спасибо!</b>
+                    <br>
+                    Заказывали одеяло из лебяжего пуха. Нам очень понравилось. Одеяло очень мягкое, теплое. Все ровно и качественно пошито. У нас квартира угловая, дома такой холод, что цензурными словами не передать. Тоже долго думали, выбирали, и вот купили и очень довольны. Я долго консультировалась, менеджеры вежливо овтетили на все вопросы и помогли оформить заказ, забирали на следующий день после заказа, оплачивали при получении. Большое вам спасибо за хорошее одеяло и такой теплые подход. Спасибо!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="delivery" id="s5">
+        <div class="delivery__wrapper container">
+          <h2 class="delivery__title">Доставка  и  оплата</h2>
+
+          <ul class="delivery__list">
+            <li class="delivery__item delivery__item--1">
+              <h3 class="delivery__item-title delivery__item-title--1">ЗАЯВКА</h3>
+              <p class="delivery__item-text delivery__item-text--1">Оставляете заявку на сайте</p>
+            </li>
+            <li class="delivery__item delivery__item--2">
+              <h3 class="delivery__item-title delivery__item-title--2">ОТПРАВКА</h3>
+              <p class="delivery__item-text delivery__item-text--2">Доставляем ваш товар в течение 1-2 дней</p>
+            </li>
+            <li class="delivery__item delivery__item--3">
+              <h3 class="delivery__item-title delivery__item-title--3">ОПЛАТА</h3>
+              <p class="delivery__item-text delivery__item-text--3"> Оплачиваете изделия на почте</p>
+            </li>
+            <li class="delivery__item delivery__item--4">
+              <h3 class="delivery__item-title delivery__item-title--4">ПОЛУЧЕНИЕ</h3>
+              <p class="delivery__item-text delivery__item-text--4">Получите изделие на почте</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="order order--2" id="s6">
+        <div class="order__wrapper container order__wrapper--2">
+          <h3 class="title-product title-product--order">
+            <span class="title-product--small title-product--small--order">Машинка-перевертыш</span>
+
+            <span class="title-product--big title-product--big--order">Leopard</span>
+          </h3>
+
+          <div class="img-wrapper img-wrapper--order img-wrapper--3">
+            <picture class="image-item image-item--3">
+              <!-- WEBP -->
+
+              <source type="image/webp" media="(min-width: 150px)" srcset="img/1.webp">
+
+              <img src="img/1.jpg" alt="Машинка">
+            </picture>
+          </div>
+
+          <div class="order__right order__right--2">
+            <p class="order__right-title">До конца <span>акции</span>:</p>
+
+            <div class="timer_wrap">
+              <div class="clock">
+               <div class='clock__item day'>
+                    <p class="time"><span class='day0'></span></p>
+                    <p class="time"><span class='day1'></span></p>
+                    <p class="text">Дней</p>
+               </div>
+               <div class="razd">
+               :
+               </div>
+               <div class='clock__item hour'>
+                 <p class="time"><span class='hour0'></span></p>
+                 <p class="time"><span class='hour1'></span></p>
+                 <p class="text">Часов</p>
+               </div>
+               <div class="razd">
+               :
+               </div>
+               <div class='clock__item min'>
+                 <p class="time"><span class='min0'></span></p>
+                 <p class="time"><span class='min1'></span></p>
+                 <p class="text">Минут</p>
+               </div>
+               <div class="razd">
+               :
+               </div>
+               <div class='clock__item sec'>
+                 <p class="time"><span class='sec0'></span></p>
+                 <p class="time"><span class='sec1'></span></p>
+                 <p class="text">Секунд</p>
+               </div>
+             </div>
+           </div>
+
+           <form class="form order__right-form" action="zakaz.php" method="post">
+             <h3 class="form__title order__right-title">Оформить заказ</h3>
+
+             <label class="visually-hidden" for="name-2">Введите своё имя:</label>
+             <input class="form__input" type="text" name="name" id="name-2" placeholder="Имя" required>
+             <label class="visually-hidden" for="phone-2">Введите свой номер телефона:</label>
+             <input class="form__input" type="tel" name="phone" id="phone-2" placeholder="Телефон" required>
+
+             <div class="button-wrapper button-wrapper--submit">
+               <button class="button button-buy button-submit" type="submit" name="button">
+                 <svg class="inline-svg-icon cart" width="36" height="29">
+                   <use xlink:href="#icon-cart"></use>
+                 </svg>
+                 Купить
+               </button>
+
+               <div class="price__wrapper price__wrapper--submit">
+                 <p class="price__old price__old--submit">1000грн</p>
+                 <p class="price__new price__new--submit">508грн</p>
+               </div>
+             </div>
+           </form>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="footer__wrapper container">
+        <p class="copiright-text">Официальное представительство в Украине ООО "Логос"</p>
+        <p class="copiright-text">Украина, Днепропетровская область, г. Кривой Рог, пл. Горького, 10, офис 9</p>
+        <p class="copiright-text copiright-text--privacy">
+          <a class="privacy" href="politics.html">Политика конфиденциальности</a>
+        </p>
+      </div>
+    </footer>
+
+    <div class="popup popup-video">
+      <video id="plyr" class="popup-video__video" controls="controls">
+        <source src="video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        Тег video не поддерживается вашим браузером.
+      </video>
+
+      <button class="button popup-close"><span class="visually-hidden">Закрыть</span></button>
+    </div>
+    <div class="popup-overlay"></div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="plugins/plugins.js"></script>
+
+    <script defer src="js/script.min.js"></script>
+  </body>
+</html>

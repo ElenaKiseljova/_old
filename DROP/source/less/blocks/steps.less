@@ -1,0 +1,300 @@
+@keyframes step_show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.steps {
+  .w100();
+
+  padding-bottom: 320px;
+
+  background-color: #ffffff;
+
+  background-image: url("../img/bg-3.svg");
+  background-repeat: no-repeat;
+  background-position: center calc(100% + 2px);
+  background-size: calc(100% + 2px);
+
+  color: #000000;
+}
+
+.steps__title {
+  width: 100%;
+
+  color: #716EFE;
+}
+
+.steps__list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: stretch;
+
+  align-content: flex-start;
+
+  .w100();
+
+  list-style: none;
+}
+
+.steps__item {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 17%;
+
+  opacity: 0;
+
+  &:nth-of-type(2) {
+    animation-delay: 0.5s;
+  }
+
+  &:nth-of-type(3) {
+    animation-delay: 1s;
+  }
+
+  &:nth-of-type(4) {
+    animation-delay: 1.5s;
+  }
+
+  &:nth-of-type(5) {
+    animation-delay: 2s;
+  }
+
+  &.active {
+    animation-name: step_show;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+    & .steps__picture {
+      &::before {
+        box-shadow: 0px 10px 40px rgba(93, 91, 182, 0.2);
+
+        transition: all 2s;
+      }
+    }
+  }
+}
+
+.steps__picture {
+  position: relative;
+
+  margin-bottom: 50px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: transparent;
+
+    box-shadow: 0px 0px 0px rgba(93, 91, 182, 0.2);
+    border-radius: 90px;
+
+    transition: all 2s;
+  }
+}
+
+.steps__count {
+  .w100();
+
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 130%;
+  /* or 62px */
+
+  color: #716EFE;
+}
+
+.steps__name {
+  .w100();
+
+  min-height: 95px;
+
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 130%;
+  /* or 31px */
+
+
+  color: #000000;
+
+  &--tablet {
+    display: none;
+  }
+}
+
+.steps__text {
+  flex-grow: 1;
+
+  .w100();
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+  /* or 21px */
+
+
+  color: #000000;
+}
+
+.steps__arrow {
+  position: absolute;
+
+  top: 88.5px;
+  right: -14.5px;
+}
+
+@media (max-width: 1365px) and (min-width: 1200px) {
+  .steps__count {
+    font-size: 40px;
+    line-height: 130%;
+  }
+
+  .steps__name {
+    font-size: 20px;
+    line-height: 130%;
+  }
+
+  .steps__arrow {
+    top: 79px;
+    right: -31px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .steps {
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .steps__list {
+    flex-direction: column;
+  }
+
+  .steps__item {
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    margin-bottom: 60px;
+
+    animation-duration: 1s;
+  }
+
+  .steps__picture {
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  .steps__text,
+  .steps__count,
+  .steps__name {
+    flex-grow: 0;
+
+    width: auto;
+
+    margin: 0 15px;
+  }
+
+  .steps__count {
+    min-width: 140px;
+
+    text-align: center;
+  }
+
+  .steps__name {
+    min-height: 0;
+
+    &--tablet {
+      display: block;
+
+      text-align: center;
+    }
+
+    &--desktop {
+      display: none;
+    }
+  }
+
+  .steps__text {
+    flex-shrink: 0;
+
+    width: 40%;
+  }
+
+  .steps__arrow {
+    transform: rotate(90deg);
+    right: auto;
+    left: 75px;
+    top: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .steps {
+    padding-bottom: 130px;
+  }
+
+  .steps__list {
+    justify-content: center;
+  }
+
+  .steps__item {
+    align-items: center;
+
+    width: 217px;
+
+    margin-bottom: 50px;
+  }
+
+  .steps__count,
+  .steps__name,
+  .steps__text {
+    text-align: center;
+  }
+
+  .steps__name{
+    min-height: 0;
+
+    margin-bottom: 30px;
+  }
+
+  .steps__arrow {
+    transform: rotate(90deg);
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: -35px;
+
+    margin-left: -10px;
+  }
+}

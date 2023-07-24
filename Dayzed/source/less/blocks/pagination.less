@@ -1,0 +1,163 @@
+.pagination {
+  .w100();
+
+  margin-bottom: 50px;
+
+  &--collections {
+    margin-top: 85px;
+  }
+
+  &--blog {
+    margin-top: 80px;
+  }
+
+  &--blog-page {
+    margin-top: 94px;
+  }
+
+  &--cart {
+    margin-top: 105px;
+    margin-bottom: 70px;
+  }
+
+  &--login {
+    margin-top: 105px;
+    margin-bottom: 70px;
+  }
+
+  &--story {
+    margin-top: 85px;
+    margin-bottom: 50px;
+  }
+
+  &--customer {
+    margin-top: 85px;
+    margin-bottom: 60px;
+  }
+
+  &--bundle {
+    margin-top: 85px;
+    margin-bottom: 50px;
+  }
+
+  &--product {
+    margin-top: 105px;
+    margin-bottom: 50px;
+  }
+
+  &--contact {
+    margin-top: 65px;
+    margin-bottom: 50px;
+  }
+}
+
+.pagination__wrapper {
+  .wrapper();
+}
+
+.pagination__title {
+  .w100();
+
+  margin-bottom: 20px;
+
+  font-size: 51px;
+  line-height: 51px;
+  font-weight: 300;
+
+  text-align: left;
+  vertical-align: middle;
+
+  color: #000000;
+}
+
+.pagination__list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  align-content: flex-start;
+
+  .w100();
+
+  list-style: none;
+
+  & > li {
+    padding: 0;
+    margin: 0;
+
+    &:not(:last-of-type) a:after {
+      content: "";
+
+      width: 10px;
+      height: 1px;
+
+      margin-left: 5px;
+      margin-right: 5px;
+
+      background-color: #ab875f;
+    }
+
+    & a {
+      display: flex;
+
+      justify-content: flex-start;
+      align-items: center;
+
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 300;
+
+      text-align: left;
+      vertical-align: middle;
+
+      color: #ab875f;
+
+      opacity: 1;
+
+      transition: all 0.5s;
+
+      &.active {
+        cursor: default;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &:hover {
+        opacity: 0.8;
+
+        transition: all 0.5s;
+      }
+    }
+  }
+}
+
+@media (max-width: 917px) and (min-width: 768px) {
+  .pagination {
+    margin-top: 35px;
+    margin-bottom: 30px;
+  }
+
+  .pagination__title {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pagination {
+    margin-top: 35px;
+    margin-bottom: 30px;
+  }
+
+  .pagination__title {
+    font-size: 45px;
+  }
+
+  .pagination__list>li a {
+    line-height: 26px;
+  }
+}

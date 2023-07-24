@@ -1,0 +1,155 @@
+.multi {
+  position: relative;
+
+  z-index: 10;
+
+  .w100();
+}
+
+.multi__top,
+.multi__item {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+
+  color: #4a4a4a;
+
+  text-align: left;
+  vertical-align: middle;
+}
+
+.multi__top {
+  position: relative;
+
+  .w100();
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  padding: 8px 20px 8px 20px;
+
+  cursor: pointer;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    right: 27.7px;
+    top: 50%;
+
+    width: 10px;
+    height: 10px;
+
+    margin-top: -7.7px;
+
+    border-bottom: 1px solid #4a4a4a;
+    border-right: 1px solid #4a4a4a;
+
+    transform-origin: bottom right;
+
+    transform: rotate(45deg);
+  }
+}
+
+.multi__list {
+  display: none;
+
+  position: absolute;
+
+  top: 41px;
+  left: -1px;
+
+  z-index: 1;
+
+  width: calc(100% + 2px);
+
+  max-height: 310px;
+
+  overflow-y: scroll;
+
+  padding: 0;
+  margin: 0;
+
+  background-color: #ffffff;
+
+  border: 1px solid #a2a2a2;
+
+  border-top: 1px solid #ffffff;
+
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+
+  list-style: none;
+
+    /* width */
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #efefef;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #ab875f;
+  }
+}
+
+.multi__item {
+  .w100();
+
+  & label {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+    margin: 0;
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+
+    background-color: rgba(129, 100, 85, 0);
+
+    transition: all 0.5s;
+
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+
+    color: #4a4a4a;
+
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  &:hover,
+  &.active {
+    & label {
+      background-color: rgba(129, 100, 85, 0.1);
+
+      transition: all 0.5s;
+    }
+  }
+}
+
+.multi__overlay {
+  display: none;
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 9;
+
+  width: 100%;
+  height: 100%;
+
+  background: transparent;
+}

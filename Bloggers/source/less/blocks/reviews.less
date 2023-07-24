@@ -1,0 +1,314 @@
+.reviews {
+  .w100();
+
+  padding-bottom: 45px;
+
+  background-color: #f2f2f2;
+}
+
+.reviews__wrapper {
+  .wrapper-bloger();
+}
+
+.reviews__title {
+  .title-bloger();
+}
+
+.reviews__header {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: center;
+
+  align-content: flex-start;
+
+  .w100();
+
+  margin-bottom: 50px;
+}
+
+.reviews__left {
+  width: 25%;
+
+  padding: 0;
+  margin: 0;
+}
+
+.reviews__percent {
+  .w100();
+
+  margin-bottom: 10px;
+
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+
+  text-align: left;
+  vertical-align: middle;
+
+  color: #ff0099;
+}
+
+.reviews__percent-sub {
+  .w100();
+
+  margin-bottom: 50px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+
+  text-align: left;
+  vertical-align: middle;
+
+  color: #000000;
+}
+
+.reviews__count-wrapper {
+  .w100();
+
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+
+  text-align: left;
+  vertical-align: middle;
+
+  color: #666666;
+}
+
+.reviews__right {
+  flex-grow: 1;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  align-content: flex-start;
+
+  padding: 0;
+  margin: 0;
+}
+
+.reviews__rating-list {
+  width: 50%;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.reviews__rating-item {
+  .w100();
+
+  margin-bottom: 15px;
+}
+
+.reviews__rating-caption {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  .w100();
+
+  margin-bottom: 5px;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+
+  text-align: left;
+  vertical-align: middle;
+
+  color: #666666;
+
+  & span {
+    flex-grow: 1;
+
+    text-align: right;
+  }
+}
+
+.reviews__rating-line {
+  position: relative;
+
+  .w100();
+
+  height: 5px;
+
+  border-radius: 2.5px;
+
+  background-color: #e2e2e2;
+
+  overflow: hidden;
+
+  & span {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    z-index: 1;
+
+    height: 100%;
+
+    background-color: #69ddca;
+
+    transition: all 0.5s;
+  }
+}
+
+.reviews__list {
+  .w100();
+
+  list-style: none;
+
+  overflow: hidden;
+}
+
+.reviews__item {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding-top: 20px;
+  padding-bottom: 25px;
+
+  &:first-of-type {
+    border-top: 2px solid #eaeaea;
+  }
+}
+
+.reviews__name {
+  .w100();
+
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+
+  text-align: left;
+  vertical-align: middle;
+
+  color: #000000;
+}
+
+.reviews__status {
+  .w100();
+
+  margin-bottom: 15px;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 300;
+
+  text-align: left;
+  vertical-align: middle;
+
+  color: #666666;
+}
+
+.reviews__stars {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  align-content: flex-start;
+
+  padding: 0;
+  margin: 0;
+}
+
+.reviews__star {
+  width: 16px;
+  height: 16px;
+
+  padding: 0;
+  margin: 0;
+
+  background-image: url(../img/star-gray.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.reviews__stars-title {
+  .w100();
+
+  margin-top: 5px;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 300;
+
+  text-align: left;
+  vertical-align: middle;
+
+  color: #666666;
+}
+
+.reviews__description {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  .w100();
+
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+
+  text-align: left;
+  vertical-align: middle;
+
+  color: #666666;
+}
+
+.reviews__text {
+  width: 80%;
+
+  padding: 0;
+  margin: 0;
+
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 300;
+
+  text-align: left;
+  vertical-align: middle;
+
+  color: #000000;
+}
+
+.reviews__more {
+  display: none;
+
+  .w100();
+
+  margin-top: 5px;
+
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+
+  text-align: right;
+  vertical-align: middle;
+
+  color: #ff0099;
+}

@@ -1,0 +1,156 @@
+.pluses {
+  .w100();
+
+  background-color: #716EFE;
+
+  background-image: url("../img/bg-2.svg");
+  background-repeat: no-repeat;
+  background-position: center calc(100% + 2px);
+  background-size: calc(100% + 2px);
+  overflow-x: hidden;
+
+}
+
+.pluses__header {
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-bottom: 100px;
+}
+
+.pluses__title {
+  margin-bottom: 0;
+}
+
+.pluses__wrapper {
+  width: 945px;
+
+  padding: 0;
+
+  margin: 0 auto 74px;
+
+  overflow: visible;
+}
+
+.pluses__list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.slick-list {
+  overflow: visible;
+}
+
+.pluses__item,
+.slick-initialized .slick-slide.pluses__item {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 285px!important;
+  height: 460px;
+
+  max-width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  padding: 0 23px 25px 23px;
+
+  margin-left: 15px;
+  margin-right: 15px;
+
+  box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  border: 2px solid transparent;
+
+  transition: all 0.5s;
+
+  outline: none;
+
+  &:hover {
+    border: 2px solid #ffffff;
+
+    transition: all 0.5s;
+
+    outline: none;
+  }
+}
+
+.pluses__name {
+  .w100();
+
+  margin-bottom: 25px;
+
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 130%;
+  /* or 31px */
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.pluses__text {
+  flex-grow: 1;
+
+  .w100();
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+  /* or 21px */
+
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.pluses__enter {
+  justify-content: flex-end;
+
+  margin-bottom: 78px;
+}
+
+
+@media (max-width: 1023px) {
+  .pluses__wrapper {
+    margin-left: calc((945px - 100vw)/-2);
+    margin-right: calc((945px - 100vw)/-2);
+  }
+}
+
+@media (max-width: 767px) {
+  .pluses {
+    padding-top: 70px;
+  }
+
+  .pluses__header {
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-bottom: 50px;
+  }
+
+  .pluses__title {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .pluses__enter {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 350px) {
+}

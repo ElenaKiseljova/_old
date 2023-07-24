@@ -1,0 +1,171 @@
+.motivation {
+  .w100();
+
+  padding-bottom: 100px;
+
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.motivation__wrapper {
+  overflow: hidden;
+}
+
+.motivation__header {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  align-content: flex-start;
+
+  .w100();
+
+  margin-bottom: 80px;
+}
+
+.motivation__title {
+  margin-bottom: 0;
+  margin-bottom: 10px;
+
+  color: #716EFE;
+}
+
+.motivation__arrows .button {
+  stroke: #000000;
+}
+
+.motivation__subtitle {
+  .w100();
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+  /* or 21px */
+
+  color: #000000;
+}
+
+.motivation__list-container {
+  width: 418px;
+
+  padding: 0;
+  margin: 0 auto;
+
+  overflow: visible;
+}
+
+.motivation__list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.motivation__item {
+  width: 388px!important;
+
+  height: 218px;
+
+  padding: 0;
+  margin: 0 15px;
+
+  outline: none;
+
+  & .youtube,
+  & iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .motivation {
+    padding-bottom: 80px;
+  }
+
+  .motivation__header {
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-bottom: 50px;
+  }
+
+  .motivation__title {
+    max-width: 400px;
+  }
+
+  .motivation__arrows {
+    padding-top: 21px;
+    padding-bottom: 21px;
+
+    margin-bottom: 10px;
+  }
+
+  .motivation__list-container {
+    width: calc(100% + 32px);
+
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  .motivation__item {
+    width: 355px!important;
+    height: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .motivation {
+    padding-bottom: 50px;
+  }
+
+  .motivation__header {
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .motivation__title {
+    order: 0;
+
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .motivation__arrows {
+    order: 2;
+  }
+
+  .motivation__subtitle {
+    order: 1;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+  }
+
+  .motivation__list-container {
+    width: 100%;
+
+    margin: 0;
+
+    overflow: hidden;
+  }
+
+  .motivation__item {
+    width: calc(100vw - 30px)!important;
+    height: calc(195px + (100vw - 375px)/2);
+
+    margin: 0;
+  }
+}

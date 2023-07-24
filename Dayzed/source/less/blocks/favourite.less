@@ -1,0 +1,42 @@
+.favourite {
+  .w100();
+
+  overflow: hidden;
+}
+
+.favourite__title {
+  .w100();
+
+  margin-bottom: 40px;
+
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 300;
+
+  color: #5d5d5d;
+
+  text-align: left;
+  vertical-align: middle;
+}
+
+.favourite__products-item,
+.favourite__blog-item {
+  position: relative;
+
+  width: 360px;
+  max-width: calc(48% - 12px);
+}
+
+@media (max-width: 767px) {
+  .favourite__products-item {
+    padding: 10px;
+
+    max-width: 48%;
+  }
+
+  .favourite__blog-item {
+    width: 100%;
+
+    max-width: 100%;
+  }
+}

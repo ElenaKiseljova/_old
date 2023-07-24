@@ -1,0 +1,167 @@
+.results {
+  .w100();
+
+  padding-top: 124px;
+  padding-bottom: 119px;
+}
+
+.results__wrapper {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  align-content: flex-start;
+
+  width: 1104px;
+  max-width: 100%;
+
+  padding: 0;
+  margin: 0 auto;
+}
+
+.results__list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  align-content: flex-start;
+
+  .w100();
+
+  list-style: none;
+}
+
+.results__item {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  align-content: flex-start;
+
+  .w100();
+
+  margin-bottom: 43px;
+
+  border-bottom: 1px solid #000000;
+}
+
+.results__left {
+  width: 50%;
+
+  padding: 0;
+  margin: 0;
+}
+
+.results__link {
+  display: block;
+
+  .w100();
+
+  margin-bottom: 19px;
+
+  text-decoration: none;
+
+  color: #000000;
+
+  &:hover {
+    text-decoration: underline;
+
+    color: #000000;
+  }
+}
+
+.results__title {
+  .w100();
+
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  /* or 29px */
+
+  letter-spacing: -0.03em;
+
+  color: #000000;
+
+  text-align: left;
+  vertical-align: middle;
+}
+
+.results__text {
+  .w100();
+
+  margin-bottom: 43px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 160%;
+  /* or 26px */
+
+  letter-spacing: -0.03em;
+
+  color: #000000;
+
+  text-align: left;
+  vertical-align: middle;
+}
+
+.results__type {
+  padding: 0;
+  margin: 0;
+
+  padding: 6px 12.41px 7px 12.41px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  /* or 19px */
+
+  letter-spacing: -0.03em;
+
+  text-align: center;
+  vertical-align: middle;
+
+  border-radius: 48px;
+
+  background-color: #000000;
+
+  color: #ffffff;
+}
+
+@media (max-width: 1135px) {
+  .results__wrapper {
+    width: 100%;
+
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .results__left {
+    width: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  .results {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .results__left {
+    width: 100%;
+
+    margin-bottom: 30px;
+  }
+
+  .results__type {
+    margin-bottom: 30px;
+  }
+}

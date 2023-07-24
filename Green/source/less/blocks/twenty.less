@@ -1,0 +1,281 @@
+.twenty__wrapper {
+  position: relative;
+
+  width: 1103px;
+
+  margin-left: calc(50% - 551.5px);
+  margin-right: calc(50% - 551.5px);
+  margin-top: 144px;
+  margin-bottom: 144px;
+
+  & + h3 {
+    margin-top: 0;
+  }
+}
+
+.twenty__container {
+  .w100();
+}
+
+.twenty__list {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.twenty__item {
+  padding: 0;
+  margin: 0;
+
+  & > span {
+    display: block;
+
+    .w100();
+    max-width: 762px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 64px;
+    margin-bottom: 16px;
+
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+
+    letter-spacing: -0.03em;
+
+    color: #000000;
+
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  & > h3 {
+    .w100();
+    max-width: 762px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 24px;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 120%;
+    /* identical to box height, or 29px */
+
+    letter-spacing: -0.03em;
+
+    color: #000000;
+
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  & > p {
+    .w100();
+    max-width: 762px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 186.5%;
+    /* or 30px */
+
+    letter-spacing: -0.03em;
+
+    color: #000000;
+
+    text-align: left;
+    vertical-align: middle;
+
+    & span {
+      display: none;
+    }
+
+    & a {
+      text-decoration: underline;
+
+      color: #000000;
+
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: none;
+
+        color: #000000;
+      }
+    }
+  }
+}
+
+.twenty__prev,
+.twenty__next {
+  .button();
+
+  position: absolute;
+
+  top: 310px;
+
+  width: 42px;
+  height: 42px;
+
+  margin-top: -21px;
+
+  border-radius: 50%;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 42px 42px;
+}
+
+.twenty__prev {
+  left: -113px;
+  background-image: url("../img/arrow-left.svg");
+}
+
+.twenty__next {
+  right: -113px;
+  background-image: url("../img/arrow-right.svg");
+}
+
+.twenty {
+
+}
+
+.twentytwenty-after-label,
+.twentytwenty-before-label {
+  display: none;
+}
+
+.twentytwenty-horizontal .twentytwenty-handle {
+  width: 173px;
+  height: 48px;
+
+  margin-left: -86.5px;
+  margin-top: -24px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  background-color: #000000;
+
+  &::before,
+  &::after {
+    width: 1px;
+
+    background: #000000;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.twentytwenty-left-arrow, .twentytwenty-right-arrow {
+  width: 24px;
+  height: 30px;
+
+  border: none;
+
+  margin-top: -15px;
+}
+
+.twentytwenty-left-arrow {
+  left: 38px;
+  right: auto;
+
+  background-image: url("../img/icon-left.svg");
+  background-size: 24px 30px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.twentytwenty-right-arrow {
+  left: auto;
+  right: 38px;
+
+  background-image: url("../img/icon-right.svg");
+  background-size: 24px 30px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.twentytwenty-overlay:hover {
+  background-color: transparent;
+}
+
+@media (max-width: 1340px) {
+  .twenty__next,
+  .twenty__prev {
+    top: -70px;
+  }
+
+  .twenty__prev {
+    left: calc(50% - 100px);
+  }
+
+  .twenty__next {
+    right: calc(50% - 100px);
+  }
+}
+
+@media (max-width: 1135px) {
+  .twenty__wrapper {
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .twenty__wrapper {
+    margin-bottom: 80px;
+    margin-top: 80px;
+
+  }
+
+  .twenty__prev,
+  .twenty__next {
+    top: -40px;
+
+    width: 30px;
+    height: 30px;
+
+    background-size: 30px 30px;
+  }
+
+  .twentytwenty-horizontal .twentytwenty-handle {
+    width: 100px;
+    height: 30px;
+
+    margin-left: -50px;
+    margin-top: -15px;
+  }
+
+  .twentytwenty-left-arrow, .twentytwenty-right-arrow {
+    width: 12px;
+    height: 15px;
+
+    margin-top: -7.5px;
+  }
+
+  .twentytwenty-left-arrow {
+    left: 40px;
+
+    background-size: 12px 15px;
+  }
+
+  .twentytwenty-right-arrow {
+    right: 40px;
+
+    background-size: 12px 15px;
+  }
+}

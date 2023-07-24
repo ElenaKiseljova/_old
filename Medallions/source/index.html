@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="plugins/plugins.css">
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <title>Брелок & Календарь</title>
+  </head>
+  <body>
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-bag" viewBox="0 0 105 104">
+    <circle cx="52.5126" cy="51.7875" r="51.7875" fill="#96CDC8"/>
+    <path d="M44.1514 46.384V33.511C44.1514 31.5799 45.7313 30 47.6624 30H58.0886C60.0197 30 61.5996 31.5805 61.5996 33.511V46.384M44.1514 46.384C45.5381 46.384 46.6622 47.5081 46.6622 48.8948C46.6622 50.2814 45.5381 51.4055 44.1514 51.4055C42.7647 51.4055 41.6406 50.2814 41.6406 48.8948C41.6406 47.5081 42.7647 46.384 44.1514 46.384ZM61.5996 46.384C62.9863 46.384 64.1104 47.5081 64.1104 48.8948C64.1104 50.2814 62.9863 51.4055 61.5996 51.4055C60.2129 51.4055 59.0888 50.2814 59.0888 48.8948C59.0888 47.5135 60.2043 46.393 61.5835 46.3842L61.5996 46.384ZM67.9833 38.2975L72.0261 74.3652H33.7251L37.7679 38.2975H67.9833Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol><symbol id="icon-car" viewBox="0 0 104 104">
+    <circle cx="51.9377" cy="52.2123" r="51.7875" fill="#96CDC8"/>
+    <path d="M38.577 33H63.6073V53.6894M53.9931 56.1738H17.1501M53.9931 47.9062H23.9904M53.9931 39.6388H30.6206M63.6073 38.8006H74.3817C76.9827 39.0192 78.8226 40.3162 80.0979 42.413L84.6586 52.8902V63.2721C84.7153 65.0241 84.0368 65.8353 82.7116 65.8196H75.1907M75.1907 65.8196C75.1907 68.749 72.8159 71.1239 69.8865 71.1239C66.9569 71.1239 64.5821 68.749 64.5821 65.8196M75.1907 65.8196C75.1907 64.3338 74.5797 62.991 73.5954 62.0279C72.6389 61.092 71.3303 60.515 69.8865 60.515C66.9569 60.515 64.5821 62.8901 64.5821 65.8196M64.5821 65.8196H43.1992M43.1992 65.8196C43.1992 68.749 40.8242 71.1239 37.8948 71.1239C34.9654 71.1239 32.5904 68.749 32.5904 65.8196M43.1992 65.8196C43.1992 62.8901 40.8242 60.515 37.8948 60.515C34.9654 60.515 32.5904 62.8901 32.5904 65.8196M32.5904 65.8196H21.8355" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol><symbol id="icon-circle" viewBox="0 0 100 101">
+    <circle cx="50" cy="50.4248" r="50" fill="#FFD8B1"/>
+    <circle cx="31.3782" cy="40.4925" r="14.9305" stroke="white" stroke-width="2"/>
+    <circle cx="69.032" cy="40.4925" r="14.9305" stroke="white" stroke-width="2"/>
+    <circle cx="49.7225" cy="72.3533" r="14.9305" stroke="white" stroke-width="2"/>
+    </symbol><symbol id="icon-drop" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="50" fill="#FFD8B1"/>
+    <path d="M69.1339 57.493C69.1339 63.9153 63.8824 69.1245 57.4066 69.1245M36.9406 39.459C36.9406 42.7032 34.2862 45.3356 31.0127 45.3356M29.5582 27.2784C30.2405 26.4825 30.8678 25.7479 31.3772 25.1025C34.1893 28.663 40.5471 34.8929 40.5471 39.8541C40.5471 44.8756 36.4406 48.9482 31.3772 48.9482C26.3127 48.9482 22.2062 44.8756 22.2062 39.8541C22.2062 37.589 23.5345 35.0586 25.2402 32.6394M54.5268 33.3937C55.8773 31.8156 57.1192 30.3639 58.1263 29.0847C63.6897 36.1338 76.2733 48.4592 76.2733 58.2763C76.2733 68.2149 68.1478 76.2732 58.1263 76.2732C48.1047 76.2732 39.9793 68.2149 39.9793 58.2763C39.9793 53.5213 42.9351 48.1789 46.6093 43.1319M27.0324 30.2793C27.2403 30.0186 27.3677 29.868 27.6457 29.532L27.0324 30.2793ZM49.134 39.831C49.8291 38.9469 50.0394 38.7025 50.7427 37.852L49.134 39.831Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol><symbol id="icon-ellipse" viewBox="0 0 30 30">
+    <circle cx="15" cy="15" r="15"/>
+    </symbol><symbol id="icon-gift" viewBox="0 0 100 101">
+    <circle cx="50" cy="50.4248" r="50" fill="#FFD8B1"/>
+    <path d="M27.9549 52.9858V68.9831C27.9549 70.572 29.2307 71.8705 30.7899 71.8705H67.8422C69.4022 71.8705 70.6771 70.572 70.6771 68.9831V40.107C70.6771 38.5182 69.4022 37.2197 67.8422 37.2197H30.7899C29.2299 37.2197 27.9549 38.5182 27.9549 40.107V45.6205V52.9858ZM27.9549 52.9858L64.7448 52.871M16.4132 35.0424C20.9823 20.5517 33.3759 33.8081 49.316 37.2197C49.316 37.2197 71.9428 35.0638 72.4113 23.5238M48.9645 37.2188V71.8705M48.9645 37.2188L41.7825 32.6415C27.6976 23.6651 42.0516 9.73972 47.3288 30.7169L48.9645 37.2188ZM48.9645 37.2188C55.0205 8.17142 72.3978 31.8021 48.9645 37.2188Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol><symbol id="icon-line-1" viewBox="0 0 143 22">
+    <path d="M141.793 19L133.091 10.0072L128 4.72863C126.035 2.69105 122.772 2.6897 120.805 4.72565L115.703 10.0072L110.595 15.2863C108.63 17.3172 105.374 17.3172 103.409 15.2863L98.3008 10.0072L93.1956 4.72255C91.23 2.68778 87.9691 2.68778 86.0034 4.72254L80.8983 10.0072L75.7903 15.2863C73.8252 17.3172 70.5688 17.3172 68.6037 15.2863L63.4958 10.0072L58.3936 4.72564C56.4268 2.6897 53.1636 2.69105 51.1985 4.72863L46.1077 10.0072L40.9998 15.2863C39.0347 17.3172 35.7783 17.3172 33.8132 15.2863L28.7052 10.0072L23.6001 4.72255C21.6344 2.68778 18.3735 2.68779 16.4079 4.72256L11.3027 10.0072L3 18.5933" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol><symbol id="icon-line-3" viewBox="0 0 195 76">
+    <path d="M190.86 3L182.165 12.0072L177.065 17.2823C175.1 19.315 171.841 19.315 169.876 17.2823L164.776 12.0072L159.678 6.7266C157.712 4.69008 154.449 4.69008 152.483 6.7266L147.386 12.0072L142.285 17.2823C140.32 19.315 137.062 19.315 135.096 17.2823L129.996 12.0072L124.913 6.73267C122.948 4.69335 119.682 4.69199 117.715 6.72969L112.621 12.0072L107.52 17.2823C105.555 19.315 102.297 19.315 100.331 17.2823L95.231 12.0072L90.1335 6.72659C88.1676 4.69007 84.9046 4.69007 82.9387 6.7266L77.8412 12.0072L72.7409 17.2823C70.7756 19.315 67.5171 19.315 65.5518 17.2823L60.4515 12.0072L55.357 6.72969C53.3899 4.69199 50.1247 4.69335 48.1594 6.73268L43.0762 12.0072L37.9759 17.2823C36.0105 19.315 32.7521 19.315 30.7867 17.2823L25.6864 12.0072L20.5889 6.7266C18.623 4.69007 15.3601 4.69007 13.3942 6.7266L8.29667 12.0072L0 20.5933" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M191.86 30L183.165 39.0072L178.065 44.2823C176.1 46.315 172.841 46.315 170.876 44.2823L165.776 39.0072L160.678 33.7266C158.712 31.6901 155.449 31.6901 153.483 33.7266L148.386 39.0072L143.285 44.2823C141.32 46.315 138.062 46.315 136.096 44.2823L130.996 39.0072L125.913 33.7327C123.948 31.6933 120.682 31.692 118.715 33.7297L113.621 39.0072L108.52 44.2823C106.555 46.315 103.297 46.315 101.331 44.2823L96.231 39.0072L91.1335 33.7266C89.1676 31.6901 85.9046 31.6901 83.9387 33.7266L78.8412 39.0072L73.7409 44.2823C71.7756 46.315 68.5171 46.315 66.5518 44.2823L61.4515 39.0072L56.357 33.7297C54.3899 31.692 51.1247 31.6933 49.1594 33.7327L44.0762 39.0072L38.9759 44.2823C37.0105 46.315 33.7521 46.315 31.7867 44.2823L26.6864 39.0072L21.5889 33.7266C19.623 31.6901 16.3601 31.6901 14.3942 33.7266L9.29667 39.0072L1 47.5933" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M191.86 55L183.165 64.0072L178.065 69.2823C176.1 71.315 172.841 71.315 170.876 69.2823L165.776 64.0072L160.678 58.7266C158.712 56.6901 155.449 56.6901 153.483 58.7266L148.386 64.0072L143.285 69.2823C141.32 71.315 138.062 71.315 136.096 69.2823L130.996 64.0072L125.913 58.7327C123.948 56.6933 120.682 56.692 118.715 58.7297L113.621 64.0072L108.52 69.2823C106.555 71.315 103.297 71.315 101.331 69.2823L96.231 64.0072L91.1335 58.7266C89.1676 56.6901 85.9046 56.6901 83.9387 58.7266L78.8412 64.0072L73.7409 69.2823C71.7756 71.315 68.5171 71.315 66.5518 69.2823L61.4515 64.0072L56.357 58.7297C54.3899 56.692 51.1247 56.6933 49.1594 58.7327L44.0762 64.0072L38.9759 69.2823C37.0105 71.315 33.7521 71.315 31.7867 69.2823L26.6864 64.0072L21.5889 58.7266C19.623 56.6901 16.3601 56.6901 14.3942 58.7266L9.29667 64.0072L1 72.5933" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol><symbol id="icon-list" viewBox="0 0 104 104">
+    <circle cx="51.7875" cy="51.7875" r="51.7875" fill="#96CDC8"/>
+    <path d="M40.2703 36.9444H61.7297M40.2703 42.9668H52.0452M40.2703 48.9891H57.0182M40.2703 55.0112H61.7297M40.2703 61.0335H52.0452M40.2703 67.0556H57.0182M45.7765 30H37.3058C35.4875 30 34 31.5113 34 33.3587V70.6413C34 72.4887 35.4875 74 37.3058 74H64.6942C66.5125 74 68 72.4887 68 70.6413V33.3587C68 31.5113 66.5125 30 64.6942 30H45.7765Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol><symbol id="icon-pen" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="50" fill="#FFD8B1"/>
+    <path d="M64.0622 60.9749V74.7314C64.0622 77.3967 61.8972 79.5798 59.2532 79.5798H30.8762C28.2321 79.5798 26.0681 77.3976 26.0681 74.7314V46.1163C26.0681 43.4491 28.2321 41.2669 30.8762 41.2669H43.0417M71.477 25.931L63.3278 40.3374M61.2278 44.0479L58.8831 48.1953M56.6913 52.065L52.852 58.8526M56.6827 61.055L43.6518 68.9168M43.7331 53.6069L43.6528 68.9177M43.7331 53.6069L56.6818 61.0559L75.3078 28.1353L62.3581 20.6853M43.7331 53.6069L58.3591 27.7545" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol><symbol id="icon-phone" viewBox="0 0 105 104">
+    <circle cx="52.3626" cy="51.7875" r="51.7875" fill="#96CDC8"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M38.5751 32.3198C38.5751 30.4938 40.0689 29 41.8949 29H63.449C65.275 29 66.7688 30.4938 66.7688 32.3198V70.0454C66.7688 71.8714 65.275 73.3652 63.449 73.3652H41.8949C40.0689 73.3652 38.5751 71.8714 38.5751 70.0454V32.3198ZM52.6688 62.737C51.1448 62.737 49.9094 63.9725 49.9094 65.4965C49.9094 67.0205 51.1448 68.256 52.6688 68.256C54.1928 68.256 55.4283 67.0205 55.4283 65.4965C55.4283 63.9725 54.1928 62.737 52.6688 62.737Z" stroke="white" stroke-width="2"/>
+    </symbol><symbol id="icon-rectangle" viewBox="0 0 88 67">
+    <path d="M0 0L41.2152 0L88 67H46.7848L0 0Z"/>
+    </symbol><symbol id="icon-next" viewBox="0 0 45 27">
+    <path d="M1 13.498H43.3077M43.3077 13.498L30.02 1M43.3077 13.498L30.02 26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol><symbol id="icon-prev" viewBox="0 0 45 27">
+    <path d="M43.3076 13.502L0.999925 13.502M0.999925 13.502L14.2877 26M0.999925 13.502L14.2877 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol></svg>
+
+    <header class="page-header">
+      <nav class="page-navigation">
+        <div class="page-navigation__wrapper">
+          <button class="button button-menu" type="button" name="menu">
+            <span class="visually-hidden">Меню</span>
+            <span class="button-menu__line"></span>
+          </button>
+          <div class="navigation-list-wrapper">
+            <ul class="navigation__list navigation__list--header">
+              <li class="navigation__item">
+                <a class="button navigation__link active" href="#s1">Главная</a>
+              </li>
+              <li class="navigation__item">
+                <a class="button navigation__link" href="#s2">Описание</a>
+              </li>
+              <li class="navigation__item">
+                <a class="button navigation__link" href="#s3">Галерея</a>
+              </li>
+              <li class="navigation__item">
+                <a class="button navigation__link" href="#s6">Каталог</a>
+              </li>
+              <li class="navigation__item">
+                <a class="button navigation__link" href="#s7">FAQ</a>
+              </li>
+              <li class="navigation__item">
+                <a class="button navigation__link" href="#s8">Отзывы</a>
+              </li>
+              <li class="navigation__item">
+                <a class="button navigation__link" href="#s9">Доставка</a>
+              </li>
+            </ul>
+          </div>
+
+          <a class="navigation__button-order button button-order" href="#s10">Заказать</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <h1 class="visually-hidden">Сайт по продаже Брелоков & Календарей</h1>
+
+      <section class="promo" id="s1">
+        <div class="promo__wrapper">
+          <svg class="promo__svg-bg promo__svg-bg--1 svg-bg dash">
+            <use xlink:href="#icon-line-1"></use>
+          </svg>
+          <svg class="promo__svg-bg promo__svg-bg--2 svg-bg dash">
+            <use xlink:href="#icon-line-1"></use>
+          </svg>
+          <svg class="promo__svg-bg promo__svg-bg--3 svg-bg dash">
+            <use xlink:href="#icon-line-1"></use>
+          </svg>
+          <svg class="promo__svg-bg promo__svg-bg--4 svg-bg dash">
+            <use xlink:href="#icon-line-3"></use>
+          </svg>
+          <svg class="promo__svg-bg promo__svg-bg--5 svg-bg r-move">
+            <use xlink:href="#icon-ellipse"></use>
+          </svg>
+          <svg class="promo__svg-bg promo__svg-bg--6 svg-bg l-move">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+          <svg class="promo__svg-bg promo__svg-bg--7 svg-bg r-move">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+          <svg class="promo__svg-bg promo__svg-bg--8 svg-bg l-move">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+          <div class="promo__left">
+            <h2 class="promo__title title">Брелок <span class="promo__title--and title--and">&</span> Календарь</h2>
+
+            <p class="promo__text">
+              Персонализированный брелок-календарь единственный в своем роде
+            </p>
+
+            <p class="promo__price price">
+              <span class="promo__price-old price-old">456 грн</span>
+              <span class="promo__price-new price-new">235 грн</span>
+            </p>
+
+            <a class="promo__button-order button button-order" href="#s10">Заказать</a>
+          </div>
+          <div class="promo__right">
+            <picture class="promo__picture picture">
+              <!-- WEBP -->
+
+              <source type="image/webp" media="(min-width: 150px)" srcset="img/1.webp">
+
+              <img class="promo__img picture__img" width="485" height="485" src="img/1.png" alt="Брелок & Календарь">
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="banner" id="s2">
+        <div class="banner__wrapper">
+          <svg class="banner__svg-bg banner__svg-bg--1 svg-bg dash">
+            <use xlink:href="#icon-line-1"></use>
+          </svg>
+          <svg class="banner__svg-bg banner__svg-bg--2 svg-bg dash">
+            <use xlink:href="#icon-line-3"></use>
+          </svg>
+          <svg class="banner__svg-bg banner__svg-bg--3 svg-bg dash">
+            <use xlink:href="#icon-line-3"></use>
+          </svg>
+          <svg class="banner__svg-bg banner__svg-bg--4 svg-bg l-move">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+          <svg class="banner__svg-bg banner__svg-bg--5 svg-bg r-move">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+          <div class="banner__left">
+            <video class="banner__gif" width="550" height="550" autoplay loop muted playsinline>
+              <source src="video/1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+              Тег video не поддерживается вашим браузером.
+            </video>
+          </div>
+          <div class="banner__right">
+            <h2 class="banner__title title">Подарок <span class="banner__title--and title--and">&</span> Память</h2>
+
+            <div class="banner__text">
+              <p>Иногда нужен необыкновенный подарок, показывающий, что человек для вас особенный, вызывающий улыбку при взгляде на него, дарящий тепло.</p>
+              <p>Маленький брелок для ключей с гравировкой будет идеальным подарком!</p>
+              <p>Его можно подарить на годовщину, день рождения, свадьбу, рождение ребенка и на другие праздники.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery" id="s3">
+        <div class="gallery__wrapper">
+          <h2 class="visually-hidden">Галлерея с брелоками</h2>
+          <div class="gallery__list">
+            <div class="gallery__item tl">
+              <picture class="gallery__picture picture">
+                <!-- WEBP -->
+
+                <source type="image/webp" media="(min-width: 150px)" srcset="img/g1.webp">
+
+                <img src="img/g1.png" alt="Брелок">
+              </picture>
+            </div>
+            <div class="gallery__item tr">
+              <picture class="gallery__picture picture">
+                <!-- WEBP -->
+
+                <source type="image/webp" media="(min-width: 150px)" srcset="img/g2.webp">
+
+                <img src="img/g2.png" alt="Брелок">
+              </picture>
+            </div>
+            <div class="gallery__item center">
+              <picture class="gallery__picture picture">
+                <!-- WEBP -->
+
+                <source type="image/webp" media="(min-width: 150px)" srcset="img/g3.webp">
+
+                <img src="img/g3.png" alt="Брелок">
+              </picture>
+            </div>
+            <div class="gallery__item br">
+              <picture class="gallery__picture picture">
+                <!-- WEBP -->
+
+                <source type="image/webp" media="(min-width: 150px)" srcset="img/g4.webp">
+
+                <img src="img/g4.png" alt="Брелок">
+              </picture>
+            </div>
+            <div class="gallery__item bl">
+              <picture class="gallery__picture picture">
+                <!-- WEBP -->
+
+                <source type="image/webp" media="(min-width: 150px)" srcset="img/g5.webp">
+
+                <img src="img/g5.png" alt="Брелок">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="calendar" id="s4">
+        <div class="calendar__wrapper">
+          <svg class="calendar__svg-bg calendar__svg-bg--1 svg-bg dash">
+            <use xlink:href="#icon-line-1"></use>
+          </svg>
+          <svg class="calendar__svg-bg calendar__svg-bg--2 svg-bg dash">
+            <use xlink:href="#icon-line-3"></use>
+          </svg>
+          <svg class="calendar__svg-bg calendar__svg-bg--3 svg-bg dash">
+            <use xlink:href="#icon-line-3"></use>
+          </svg>
+          <svg class="calendar__svg-bg calendar__svg-bg--4 svg-bg l-move">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+          <svg class="calendar__svg-bg calendar__svg-bg--5 svg-bg r-move">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+          <svg class="calendar__svg-bg calendar__svg-bg--6 svg-bg r-move">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+
+          <h2 class="visually-hidden">Гифка с календариком</h2>
+          <video class="calendar__gif" width="494" height="505" autoplay loop muted playsinline>
+            <source src="video/2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+            Тег video не поддерживается вашим браузером.
+          </video>
+        </div>
+      </section>
+
+      <section class="advantages" id="s5">
+        <div class="advantages__wrapper">
+          <svg class="advantages__svg-bg advantages__svg-bg--1 svg-bg">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+
+          <h2 class="visually-hidden">Преимущества</h2>
+
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <svg class="advantages__svg">
+                <use xlink:href="#icon-gift"></use>
+              </svg>
+              <p class="advantages__text">Идеальный <span class="advantages__text--bold">подарок</span> для юбилеев, дней рождения, свадеб и т.д.</p>
+            </li>
+            <li class="advantages__item">
+              <svg class="advantages__svg">
+                <use xlink:href="#icon-drop"></use>
+              </svg>
+              <p class="advantages__text"><span class="advantages__text--bold">Анодированная</span> нержавеющая сталь - никогда не ржавеет</p>
+            </li>
+            <li class="advantages__item">
+              <svg class="advantages__svg">
+                <use xlink:href="#icon-pen"></use>
+              </svg>
+              <p class="advantages__text">Мы <span class="advantages__text--bold">выгравируем</span> брелок с любой датой, которую вы пожелаете</p>
+            </li>
+            <li class="advantages__item">
+              <svg class="advantages__svg">
+                <use xlink:href="#icon-circle"></use>
+              </svg>
+              <p class="advantages__text"><span class="advantages__text--bold">Три цвета</span> на выбор</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="catalog" id="s6">
+        <div class="catalog__wrapper">
+          <svg class="catalog__svg-bg catalog__svg-bg--1 svg-bg dash">
+            <use xlink:href="#icon-line-3"></use>
+          </svg>
+          <svg class="catalog__svg-bg catalog__svg-bg--2 svg-bg r-move">
+            <use xlink:href="#icon-ellipse"></use>
+          </svg>
+          <svg class="catalog__svg-bg catalog__svg-bg--3 svg-bg l-move">
+            <use xlink:href="#icon-ellipse"></use>
+          </svg>
+          <svg class="catalog__svg-bg catalog__svg-bg--4 svg-bg l-move">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+          <svg class="catalog__svg-bg catalog__svg-bg--5 svg-bg r-move">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+          <svg class="catalog__svg-bg catalog__svg-bg--6 svg-bg">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+
+          <h2 class="catalog__title title">Выбор <span class="catalog__title--and title--and">&</span> Покупка</h2>
+
+          <div class="catalog__color catalog__color--tablet">
+            <p class="catalog__color-title">Выбери цвет брелка</p>
+
+            <ul class="catalog__color-list">
+              <li class="catalog__color-item" data-color="Золотой"><span class="visually-hidden">Золотой</span></li>
+              <li class="catalog__color-item" data-color="Бронзовый"><span class="visually-hidden">Бронзовый</span></li>
+              <li class="catalog__color-item" data-color="Серебряный"><span class="visually-hidden">Серебряный</span></li>
+            </ul>
+          </div>
+
+          <div class="catalog__product">
+            <div class="catalog__image">
+              <p class="catalog__sale">-50%</p>
+
+              <picture class="catalog__picture picture">
+                <!-- WEBP -->
+
+                <source type="image/webp" media="(min-width: 150px)" srcset="img/medallion-2.webp">
+
+                <img src="img/medallion-2.png" alt="medallion">
+              </picture>
+              <picture class="catalog__picture picture">
+                <!-- WEBP -->
+
+                <source type="image/webp" media="(min-width: 150px)" srcset="img/medallion-1.webp">
+
+                <img src="img/medallion-1.png" alt="medallion">
+              </picture>
+              <picture class="catalog__picture picture">
+                <!-- WEBP -->
+
+                <source type="image/webp" media="(min-width: 150px)" srcset="img/1.webp">
+
+                <img src="img/1.png" alt="medallion">
+              </picture>
+            </div>
+
+            <div class="catalog__color catalog__color--desktop">
+              <p class="catalog__color-title">Выбери цвет брелка</p>
+
+              <ul class="catalog__color-list">
+                <li class="catalog__color-item" data-color="Золотой"><span class="visually-hidden">Золотой</span></li>
+                <li class="catalog__color-item" data-color="Бронзовый"><span class="visually-hidden">Бронзовый</span></li>
+                <li class="catalog__color-item" data-color="Серебряный"><span class="visually-hidden">Серебряный</span></li>
+              </ul>
+            </div>
+
+            <div class="catalog__description">
+              <h3 class="catalog__product-title">Брелок - календарь</h3>
+
+              <p class="catalog__price price">
+                <span class="catalog__price-old price-old">967 грн</span>
+                <span class="catalog__price-new price-new">786 грн</span>
+              </p>
+
+              <a class="catalog__button-order button button-order" href="#s10">Заказать</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq" id="s7">
+        <div class="faq__wrapper">
+          <svg class="faq__svg-bg faq__svg-bg--1 svg-bg dash">
+            <use xlink:href="#icon-line-3"></use>
+          </svg>
+          <svg class="faq__svg-bg faq__svg-bg--2 svg-bg dash">
+            <use xlink:href="#icon-line-3"></use>
+          </svg>
+          <svg class="faq__svg-bg faq__svg-bg--3 svg-bg r-move">
+            <use xlink:href="#icon-ellipse"></use>
+          </svg>
+          <svg class="faq__svg-bg faq__svg-bg--4 svg-bg r-move">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+
+          <h2 class="faq__title title">FAQ</h2>
+
+          <ul class="faq__list">
+            <li class="faq__item">
+              <h3 class="faq__item-title">
+                <span class="faq__close"><em></em></span>
+                Могу ли я быть уверен(а), что это изделие из качественного материала?
+              </h3>
+              <div class="faq__text-wrapper">
+                <p class="faq__text-item">
+                  Да, безусловно. Брелок выполнен из анодированной нержавеющей стали. Поэтому он будет радовать вас не один год.
+                </p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <h3 class="faq__item-title">
+                <span class="faq__close"><em></em></span>
+                Как я могу заказать нужную мне дату?
+              </h3>
+              <div class="faq__text-wrapper">
+                <p class="faq__text-item">
+                  После оформления заказа, вам перезвонит наш менеджер и уточнит у вас все детали по созданию идеального брелока. Вы можете выбрать цвет, дату, а также заказать надпись на круглую секцию. Затем мы изготовим для вас ваш персональный брелок и оформим доставку.
+                </p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <h3 class="faq__item-title">
+                <span class="faq__close"><em></em></span>
+                Какое основное преимущество ваших брелоков?
+              </h3>
+              <div class="faq__text-wrapper">
+                <p class="faq__text-item">
+                  Наши брелоки для ключей с календарем ручной работы - это прекрасный способ запомнить особую дату юбилея, дня рождения, свадьбы или даже первого свидания/поцелуя. Мы можем гарантировать, что вашему партнеру это понравится!
+                </p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <h3 class="faq__item-title">
+                <span class="faq__close"><em></em></span>
+                Через какое время после оформления заказа на сайте я смогу получить его?
+              </h3>
+              <div class="faq__text-wrapper">
+                <p class="faq__text-item">
+                  После того как Вы оформите заказ, в течении 1 рабочего дня Вам позвонит менеджер для уточнения деталей и подтверждения заказа. При наличии изделий срок доставки составляет 1-3 рабочих дня с момента подтверждения заказа менеджером.
+                </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="reviews" id="s8">
+        <div class="reviews__wrapper">
+          <svg class="reviews__svg-bg reviews__svg-bg--1 svg-bg dash">
+            <use xlink:href="#icon-line-1"></use>
+          </svg>
+          <svg class="reviews__svg-bg reviews__svg-bg--2 svg-bg dash">
+            <use xlink:href="#icon-line-3"></use>
+          </svg>
+          <svg class="reviews__svg-bg reviews__svg-bg--3 svg-bg">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+
+          <h2 class="reviews__title title">Отзывы</h2>
+          <div class="reviews__arrows arrows">
+            <svg class="reviews__prev arrows__item arrows__item--prev">
+              <use xlink:href="#icon-prev"></use>
+            </svg>
+            <svg class="reviews__next arrows__item arrows__item--next">
+              <use xlink:href="#icon-next"></use>
+            </svg>
+          </div>
+          <div class="reviews__list-wrapper">
+            <ul class="reviews__list">
+              <li class="reviews__item">
+                <picture class="reviews__picture picture">
+                  <!-- WEBP -->
+
+                  <source type="image/webp" media="(min-width: 150px)" srcset="img/r1.webp">
+
+                  <img src="img/r1.png" alt="Покупатель">
+                </picture>
+
+                <div class="reviews__description">
+                  <p class="reviews__buyer">
+                    <span class="reviews__name">Никита&ensp;</span>
+                    <span class="reviews__city">\&ensp;Одесса</span>
+                  </p>
+
+                  <p class="reviews__text">
+                    Добрый день! Сегодня был просто в восторге, получив брелок. Изделие просто шикарное, очень качественно сделано. Очень приятно что ожидания оправдались. Спасибо за подробную консультацию и быструю доставку. Буду вас рекомендовать!
+                  </p>
+                </div>
+              </li>
+              <li class="reviews__item">
+                <picture class="reviews__picture picture">
+                  <!-- WEBP -->
+
+                  <source type="image/webp" media="(min-width: 150px)" srcset="img/r2.webp">
+
+                  <img src="img/r2.png" alt="Покупатель">
+                </picture>
+
+                <div class="reviews__description">
+                  <p class="reviews__buyer">
+                    <span class="reviews__name">Анастасия&ensp;</span>
+                    <span class="reviews__city">\&ensp;Харьков</span>
+                  </p>
+
+                  <p class="reviews__text">
+                    Заказала парню. Все как на фото. Качество супер. Моментальная доставка за которую отдельно спасибо! Консультация продавца меня честно поразила, все было мгновенно и видно что человек разбирается, все доходчиво разъяснила. Спасибо, рекомендую!
+                  </p>
+                </div>
+              </li>
+              <li class="reviews__item">
+                <picture class="reviews__picture picture">
+                  <!-- WEBP -->
+
+                  <source type="image/webp" media="(min-width: 150px)" srcset="img/r3.webp">
+
+                  <img src="img/r3.png" alt="Покупатель">
+                </picture>
+
+                <div class="reviews__description">
+                  <p class="reviews__buyer">
+                    <span class="reviews__name">Ольга&ensp;</span>
+                    <span class="reviews__city">\&ensp;Кременчуг</span>
+                  </p>
+
+                  <p class="reviews__text">
+                    Данное изделие мне подарил муж на нашу годовщину. Серьги очень красивые и сделаны на отлично. Я всем довольна и готова рекомендовать вас своим друзьям
+                  </p>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="reviews__list">
+              <li class="reviews__item">
+                <picture class="reviews__picture picture">
+                  <!-- WEBP -->
+
+                  <source type="image/webp" media="(min-width: 150px)" srcset="img/r4.webp">
+
+                  <img src="img/r4.png" alt="Покупатель">
+                </picture>
+
+                <div class="reviews__description">
+                  <p class="reviews__buyer">
+                    <span class="reviews__name">Давид&ensp;</span>
+                    <span class="reviews__city">\&ensp;Херсон</span>
+                  </p>
+
+                  <p class="reviews__text">
+                    Дарил своей девушке этот брелок. Ей очень понравился, носит его с собой постоянно. Смотрятся они очень нежно и минималистично. Сегодня доставят еще один для сестры, так что обрадую и ее.
+                  </p>
+                </div>
+              </li>
+              <li class="reviews__item">
+                <picture class="reviews__picture picture">
+                  <!-- WEBP -->
+
+                  <source type="image/webp" media="(min-width: 150px)" srcset="img/r5.webp">
+
+                  <img src="img/r5.png" alt="Покупатель">
+                </picture>
+
+                <div class="reviews__description">
+                  <p class="reviews__buyer">
+                    <span class="reviews__name">Людмила&ensp;</span>
+                    <span class="reviews__city">\&ensp;Новомосковск</span>
+                  </p>
+
+                  <p class="reviews__text">
+                    От своего мужа получила подарок такой брелок. Осталась очень довольна красотой и качеством. Он выполнен из анодированной нержавеющей стали. Изделие действительно качественное. Рекомендую!
+                  </p>
+                </div>
+              </li>
+              <li class="reviews__item">
+                <picture class="reviews__picture picture">
+                  <!-- WEBP -->
+
+                  <source type="image/webp" media="(min-width: 150px)" srcset="img/r6.webp">
+
+                  <img src="img/r6.png" alt="Покупатель">
+                </picture>
+
+                <div class="reviews__description">
+                  <p class="reviews__buyer">
+                    <span class="reviews__name">Мария&ensp;</span>
+                    <span class="reviews__city">\&ensp;Киев</span>
+                  </p>
+
+                  <p class="reviews__text">
+                    Была приятно удивлена, когда получила брелок. Думала, что все будет, как и в других интернет-магазинах, а именно несоответствие описания, но удивилась, когда увидела изделие. Выглядят намного лучше, чем на фото. Все действительно качественно и красиво!
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="delivery" id="s9">
+        <div class="delivery__wrapper">
+          <svg class="delivery__svg-bg delivery__svg-bg--1 svg-bg dash">
+            <use xlink:href="#icon-line-3"></use>
+          </svg>
+          <svg class="delivery__svg-bg delivery__svg-bg--2 svg-bg r-move">
+            <use xlink:href="#icon-ellipse"></use>
+          </svg>
+          <svg class="delivery__svg-bg delivery__svg-bg--3 svg-bg l-move">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+          <svg class="delivery__svg-bg delivery__svg-bg--4 svg-bg">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+
+          <h2 class="delivery__title title">Доставка <span class="delivery__title--and title--and">&</span> Оплата</h2>
+
+          <p class="delivery__text">График работы: Пн.-Пт. с 9:00 до 18:00</p>
+
+          <ul class="delivery__list">
+            <li class="delivery__item">
+              <svg class="delivery__svg">
+                <use xlink:href="#icon-list"></use>
+              </svg>
+              <h3 class="delivery__item-title">ЗАЯВКА</h3>
+              <p class="delivery__item-text">Выбираете товар и оставляете заявку на сайте</p>
+            </li>
+            <li class="delivery__item">
+              <svg class="delivery__svg">
+                <use xlink:href="#icon-phone"></use>
+              </svg>
+              <h3 class="delivery__item-title">ЗВОНОК</h3>
+              <p class="delivery__item-text">Наш менеджер перезвонит Вам для подтверждения заказа</p>
+            </li>
+            <li class="delivery__item">
+              <svg class="delivery__svg">
+                <use xlink:href="#icon-car"></use>
+              </svg>
+              <h3 class="delivery__item-title">ДОСТАВКА</h3>
+              <p class="delivery__item-text">Мы отправляем Ваш заказ в течение 1-3 дней</p>
+            </li>
+            <li class="delivery__item">
+              <svg class="delivery__svg">
+                <use xlink:href="#icon-bag"></use>
+              </svg>
+              <h3 class="delivery__item-title">ПОЛУЧЕНИЕ</h3>
+              <p class="delivery__item-text">Оплачиваете заказ по факту получения на руки</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="order" id="s10">
+        <div class="order__wrapper">
+          <svg class="order__svg-bg order__svg-bg--1 svg-bg dash">
+            <use xlink:href="#icon-line-3"></use>
+          </svg>
+          <svg class="order__svg-bg order__svg-bg--2 svg-bg dash">
+            <use xlink:href="#icon-line-3"></use>
+          </svg>
+          <svg class="order__svg-bg order__svg-bg--3 svg-bg r-move">
+            <use xlink:href="#icon-ellipse"></use>
+          </svg>
+          <svg class="order__svg-bg order__svg-bg--4 svg-bg l-move">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+          <svg class="order__svg-bg order__svg-bg--5 svg-bg r-move">
+            <use xlink:href="#icon-rectangle"></use>
+          </svg>
+
+          <div class="order__left">
+            <picture class="order__picture picture">
+              <!-- WEBP -->
+
+              <source type="image/webp" media="(min-width: 150px)" srcset="img/1.webp">
+
+              <img src="img/1.png" alt="Брелок">
+            </picture>
+          </div>
+
+          <div class="order__right">
+            <h2 class="order__title title">Брелок <span class="order__title--and title--and">&</span> Календарь</h2>
+
+            <p class="order__text">
+              Персонализированный брелок-календарь единственный в своем роде
+            </p>
+
+            <p class="order__price price">
+              <span class="order__price-old price-old">967 грн</span>
+              <span class="order__price-new price-new">786 грн</span>
+            </p>
+
+            <form class="order__form order__form--desktop form" action="zakaz.php" method="post">
+              <label class="visually-hidden" for="name-1">Введите Ваше имя:</label>
+              <input class="order__input form__input" type="text" name="name" value="" id="name-1" required placeholder="Имя">
+              <label class="visually-hidden" for="phone-1">Введите Ваш номер телефона:</label>
+              <input class="order__input form__input" type="tel" name="phone" value="" id="phone-1" required placeholder="Телефон">
+
+              <input type="hidden" name="s3" value="Серебряный">
+
+              <button class="order__submit button button-order" type="submit" name="button">Заказать</button>
+            </form>
+          </div>
+
+          <form class="order__form order__form--tablet form" action="zakaz.php" method="post">
+            <label class="visually-hidden" for="name-2">Введите Ваше имя:</label>
+            <input class="order__input form__input" type="text" name="name" value="" id="name-2" required placeholder="Имя">
+            <label class="visually-hidden" for="phone-2">Введите Ваш номер телефона:</label>
+            <input class="order__input form__input" type="tel" name="phone" value="" id="phone-2" required placeholder="Телефон">
+
+            <input type="hidden" name="s3" value="Серебряный">
+
+            <button class="order__submit button button-order" type="submit" name="button">Заказать</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <p class="page-footer__text">Официальное представительство в Украине ООО "Логос"</p>
+        <p class="page-footer__text">Украина, Днепропетровская область, г. Кривой Рог, пл. Горького, 10, офис 9</p>
+        <a class="page-footer__text page-footer__text--privacy" href="politics.html">Политика конфиденциальности</a>
+      </div>
+    </footer>
+
+    <div class="popup popup-video">
+      <video id="plyr" class="popup-video__video" controls="controls">
+        <source src="video/1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        Тег video не поддерживается вашим браузером.
+      </video>
+
+      <button class="button popup-close"><span class="visually-hidden">Закрыть</span></button>
+    </div>
+    <div class="popup-overlay"></div>
+
+
+    <!-- Optional JavaScript -->
+    <script src="plugins/plugins.js"></script>
+
+    <script defer src="js/script.min.js"></script>
+  </body>
+</html>

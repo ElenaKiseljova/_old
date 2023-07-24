@@ -1,0 +1,336 @@
+.categories {
+  .w100();
+
+  padding-bottom: 25px;
+
+  &--skincare {
+    padding-bottom: 55px;
+  }
+}
+
+.categories__wrapper {
+  .wrapper();
+
+  overflow: hidden;
+}
+
+.categories__description {
+  .w100();
+
+  max-width: 75%;
+
+  margin-bottom: 70px;
+
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+
+  color: #4a4a4a;
+
+  text-align: left;
+  vertical-align: middle;
+
+  &--skincare {
+    font-size: 16px;
+    line-height: 30px;
+
+    margin-bottom: 30px;
+  }
+}
+
+.categories__list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  align-items: stretch;
+
+  align-content: flex-start;
+
+  width: calc(100% + 30px);
+
+  padding: 0;
+  margin: 0;
+
+  margin-right: -30px;
+
+  list-style: none;
+}
+
+.categories__item {
+  position: relative;
+
+  width: calc(25% - 30px);
+
+  padding: 0;
+  margin: 0;
+
+  padding: 10px 15px 40px 15px;
+
+  margin-right: 30px;
+  margin-bottom: 35px;
+
+  background-color: #f4f6f6;
+
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0);
+
+  transition: all 0.5s;
+
+  &.stock {
+    & .categories__stock {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+    transition: all 0.5s;
+  }
+}
+
+.categories__link {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+}
+
+.categories__title {
+  .w100();
+
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 300;
+
+  color: #4a4a4a;
+
+  text-align: center;
+  vertical-align: middle;
+
+  transition: all 0.5s;
+
+  &:hover {
+    color: #ab875f;
+
+    transition: all 0.5s;
+  }
+}
+
+.categories__stock {
+  display: none;
+
+  position: absolute;
+
+  top: 10px;
+  left: 15px;
+
+  z-index: 1;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 400;
+
+  text-align: center;
+  vertical-align: middle;
+
+  text-transform: uppercase;
+
+  border-radius: 50%;
+
+  background-color: #ab875f;
+
+  color: #ffffff;
+
+  & span {
+    font-size: 11px;
+    line-height: 12px;
+    font-weight: 400;
+
+    & small {
+      font-size: 8px;
+      line-height: 12px;
+      font-weight: 400;
+    }
+  }
+}
+
+.categories__brand {
+  position: absolute;
+
+  z-index: 1;
+
+  top: -25px;
+  right: -25px;
+  left: auto;
+
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  width: 73px;
+  height: 73px;
+
+  padding: 0;
+  margin: 0;
+
+  padding: 10px 35px 18px 10px;
+
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 300;
+
+  text-align: center;
+  vertical-align: middle;
+
+  text-transform: uppercase;
+
+  border-radius: 50%;
+
+  background-color: #ab875f;
+
+  color: #ffffff;
+}
+
+.categories__picture {
+  overflow: hidden;
+
+  min-height: 185px;
+
+  margin-bottom: 5px;
+
+  & img {
+    width: auto;
+    height: auto;
+
+    max-height: 185px;
+  }
+}
+
+.categories__sub-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  align-content: flex-start;
+
+  .w100();
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.categories__sub-item {
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+
+  & a {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+
+    color: #4a4a4a;
+
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  &:not(:last-of-type) a::after {
+    content: "|";
+
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 917px) and (min-width: 768px) {
+  .categories__description {
+    max-width: none;
+  }
+
+  .categories__item {
+    width: calc(33% - 30px);
+  }
+}
+
+@media (max-width: 767px) {
+  .categories__title {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .categories__description {
+    max-width: none;
+  }
+
+  .categories__list {
+    width: 102%;
+
+    margin-right: -2%;
+  }
+
+  .categories__item {
+    width: 261px;
+
+    max-width: 48%;
+
+    margin-right: 2%;
+  }
+
+  .categories__sub-item a {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .categories__brand {
+    top: -15px;
+    right: -15px;
+
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    padding: 10px;
+
+    font-size: 15px;
+  }
+}

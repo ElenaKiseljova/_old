@@ -1,0 +1,50 @@
+.rating {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+
+  text-align: right;
+  vertical-align: middle;
+
+  & svg {
+    width: 18px;
+    height: 18px;
+
+    margin-right: 10px;
+
+    fill: #816455;
+  }
+
+  & span {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 300;
+
+    color: #816455;
+
+    text-align: left;
+    vertical-align: middle;
+  }
+}
+
+@media (max-width: 500px) {
+  .rating {
+    & svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    & span {
+      font-size: 16px;
+    }
+  }
+}

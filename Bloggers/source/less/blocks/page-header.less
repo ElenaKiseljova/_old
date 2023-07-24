@@ -1,0 +1,329 @@
+.page-header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 999;
+
+  .w100();
+
+  padding: 21px 27px;
+
+  background-color: rgba(255, 229, 0, 1);
+
+  transition: all 1s;
+
+  &.active {
+    background-color: rgba(255, 255, 255, 1);
+
+    transition: all 1s;
+
+    & .page-header__sub-list {
+      background-color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.page-header__wrapper {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: center;
+
+  align-content: flex-start;
+
+  .w100();
+}
+
+.page-header__logo-link {
+  margin-right: 40px;
+}
+
+.page-header__menu {
+  display: none;
+}
+
+.page-header__navigation {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
+  align-items: center;
+
+  align-content: flex-start;
+
+  padding: 0;
+  margin: 0;
+}
+
+.page-header__site-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
+  align-items: center;
+
+  align-content: flex-start;
+
+  padding: 0;
+  margin: 0;
+
+  margin-right: 45px;
+
+  list-style: none;
+}
+
+.page-header__site-item {
+  position: relative;
+
+  padding: 0;
+  margin: 0;
+
+  padding-right: 20px;
+  margin-right: 35px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 3px;
+    left: 50%;
+
+    width: 0px;
+    height: 2px;
+
+    margin-left: -20px;
+
+    background-color: #ff0099;
+
+    opacity: 0;
+
+    transition: all 0.5s;
+
+    text-align: center;
+  }
+
+  &:hover::after,
+  &.active::after {
+    width: 24px;
+
+    opacity: 1;
+
+    transition: all 0.5s;
+  }
+
+  &:nth-of-type(2)::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    right: 0;
+
+    margin-top: -4px;
+
+    width: 8px;
+    height: 8px;
+
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+
+    transform-origin: bottom left;
+
+    transform: rotate(-45deg);
+  }
+
+  & a {
+    position: relative;
+
+    z-index: 5;
+
+    color: #000000;
+
+    font-size: 15px;
+    line-height: 38px;
+    font-weight: 400;
+
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  &.open:nth-of-type(2) .page-header__sub-list,
+  &:nth-of-type(2):hover .page-header__sub-list {
+    top: 50px;
+
+    opacity: 1;
+
+    transition: all 1s;
+  }
+
+  &.open:nth-of-type(2) .page-header__sub-item a,
+  &:nth-of-type(2):hover .page-header__sub-item a {
+    color: rgba(0, 0, 0, 1);
+  }
+}
+
+.page-header__sub-list {
+  position: absolute;
+
+  top: -400px;
+  left: 0;
+
+  z-index: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 300px;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  color: #000000;
+
+  background-color: rgba(255, 229, 0, 1);
+
+  box-shadow: 2px 15px 15px rgba(0, 0, 0, 0.1);
+
+  opacity: 0;
+
+  transition: all 1s;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    top: -20px;
+    left: 0;
+
+    width: 100%;
+    height: 20px;
+
+    background-color: transparent;
+  }
+}
+
+
+.page-header__sub-item {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  & a {
+    width: 100%;
+
+    padding: 10px;
+
+    font-size: 15px;
+    line-height: 38px;
+    font-weight: 400;
+
+    text-align: left;
+    vertical-align: middle;
+
+    color: rgba(0, 0, 0, 0.0);
+
+    background-color: rgba(255, 0, 153, 0);
+
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: rgba(255, 0, 153, 0.3);
+
+      transition: all 0.5s;
+    }
+  }
+}
+
+.page-header__user-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: center;
+
+  align-content: flex-start;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.page-header__user-item {
+  padding: 0;
+  margin: 0;
+
+  &:nth-child(1) {
+    margin-right: 15px;
+  }
+}
+
+.page-header__login,
+.page-header__registration {
+  padding: 4px 35px;
+
+  font-size: 15px;
+  line-height: 38px;
+  font-weight: 400;
+
+  text-align: center;
+  vertical-align: middle;
+
+  color: #000000;
+
+  border-radius: 23px;
+}
+
+.page-header__login {
+  background-color: transparent;
+
+  border: 1px solid #ff0099;
+
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: #ff0099;
+
+    color: #ffffff;
+
+    transition: all 0.5s;
+  }
+}
+
+.page-header__registration {
+
+  padding-left: 40px;
+  padding-right: 40px;
+
+  background-color: #ff0099;
+
+  border: 1px solid #ff0099;
+
+  color: #ffffff;
+
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: transparent;
+
+    color: #000000;
+
+    transition: all 0.5s;
+  }
+}

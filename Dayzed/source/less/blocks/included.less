@@ -1,0 +1,158 @@
+.included {
+  position: relative;
+
+  .w100();
+
+  padding-bottom: 35px;
+}
+
+.included__title {
+  .w100();
+
+  margin-bottom: 35px;
+
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 300;
+
+  color: #666666;
+
+  text-align: left;
+  vertical-align: middle;
+}
+
+.included__stock {
+  display: none;
+
+  position: absolute;
+
+  top: 10px;
+  left: 25px;
+
+  z-index: 1;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 400;
+
+  text-align: center;
+  vertical-align: middle;
+
+  text-transform: uppercase;
+
+  border-radius: 50%;
+
+  background-color: #ab875f;
+
+  color: #ffffff;
+
+  & span {
+    font-size: 11px;
+    line-height: 12px;
+    font-weight: 400;
+
+    & small {
+      font-size: 8px;
+      line-height: 12px;
+      font-weight: 400;
+    }
+  }
+}
+
+.included__arrow {
+  position: absolute;
+
+  bottom: 200px;
+  right: -42.5px;
+
+  width: 25px;
+  height: 18px;
+
+  background-image: url("../img/icon-arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px 18px;
+}
+
+.included__list {
+  margin-bottom: 0;
+}
+
+.included__item {
+  position: relative;
+
+  width: 261px;
+  min-width: auto;
+
+  padding: 25px 25px 30px 25px;
+
+  &.stock {
+    & .included__stock{
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.included__picture {
+  height: 125px;
+
+  margin-bottom: 5px;
+}
+
+.included__item-title {
+  font-size: 12.3px;
+  line-height: 18.08px;
+
+  margin-bottom: 25px;
+}
+
+.included__rating {
+  & > svg {
+    width: 12px;
+    height: 12px;
+
+    margin-right: 5px;
+    margin-top: -2px;
+  }
+
+  & > span {
+    font-size: 13px;
+    line-height: 17px;
+  }
+}
+
+.included__price {
+  font-size: 14.46px;
+  line-height: 18.08px;
+  font-weight: 400;
+}
+
+@media (max-width: 1142px) and (min-width: 768px) {
+  .included__item {
+    max-width: calc(33% - 10px);
+  }
+}
+
+@media (max-width: 940px) {
+  .included__arrow {
+    position: static;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .included {
+    overflow: hidden;
+  }
+}

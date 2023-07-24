@@ -1,0 +1,300 @@
+.page-footer {
+  .w100();
+
+  padding-top: 15px;
+
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130%;
+  /* or 23px */
+
+  color: #FFFFFF;
+
+  background-color: #716EFE;
+}
+
+.page-footer__wrapper {
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  align-content: flex-start;
+
+  padding-bottom: 55px;
+}
+
+.page-footer__left,
+.page-footer__center,
+.page-footer__right {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: 0;
+  margin: 0;
+}
+
+.page-footer__right {
+  max-width: 270px;
+}
+
+.page-footer__logo {
+  margin-bottom: 43px;
+}
+
+.page-footer__button {
+  &--desktop {
+    display: block;
+  }
+
+  &--tablet {
+    display: none;
+  }
+}
+
+.page-footer__title {
+  .w100();
+
+  margin-bottom: 25px;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 130%;
+  /* or 23px */
+
+  color: #FFFFFF;
+}
+
+.page-footer__list {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .w100();
+
+  list-style: none;
+
+  &--contacts {
+    margin-bottom: 15px;
+  }
+}
+
+.page-footer__item {
+  .w100();
+
+  margin-bottom: 5px;
+
+  &--telegram {
+    position: relative;
+
+    & svg {
+      position: absolute;
+
+      top: 5px;
+      left: -25px;
+    }
+  }
+}
+
+.page-footer__registration,
+.page-footer__login,
+.page-footer__link {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130%;
+  /* or 23px */
+
+  color: #FFFFFF;
+
+  text-align: left;
+
+  opacity: 1;
+
+  transition: all .5s;
+
+  &:hover {
+    opacity: 0.3;
+
+    transition: all .5s;
+  }
+}
+
+.page-footer__politics {
+  .w100();
+
+  padding: 16px 0;
+
+  background-color: #F1F1F1;
+}
+
+.page-footer__politics-container {
+  & a,
+  & span {
+    padding: 0;
+    margin: 0;
+
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 130%;
+    /* or 18px */
+
+    color: rgba(0, 0, 0, 0.3);
+
+    transition: all 0.5s;
+  }
+
+  & a:hover {
+    color: rgba(0, 0, 0, 0.7);
+
+    transition: all 0.5s;
+  }
+}
+
+@media (max-width: 1023px) {
+  .page-footer__wrapper {
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+  .page-footer__left {
+    width: 100%;
+  }
+
+  .page-footer__logo {
+    margin-bottom: 60px;
+  }
+
+  .page-footer__button {
+    &--desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+
+      margin-top: 50px;
+    }
+  }
+
+  .page-footer__right {
+    justify-content: space-between;
+  }
+
+  .page-footer__list--contacts{
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 768px) {
+  .page-footer__politics-container {
+    justify-content: space-around;
+
+    & a:nth-of-type(1) {
+      order: 0;
+      width: 50%;
+
+      text-align: center;
+    }
+
+    & a:nth-of-type(2) {
+      order: 1;
+      width: 50%;
+
+      text-align: center;
+    }
+
+    & span {
+      order: 2;
+      width: 100%;
+
+      margin-top: 10px;
+
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .page-footer {
+    justify-content: center;
+
+    padding-top: 50px;
+  }
+
+  .page-footer__wrapper {
+    padding-bottom: 50px;
+  }
+
+  .page-footer__left,
+  .page-footer__center,
+  .page-footer__right {
+    align-items: center;
+  }
+
+  .page-footer__left {
+    order: 0;
+  }
+
+  .page-footer__center {
+    order: 2;
+  }
+
+  .page-footer__right {
+    order: 1;
+
+    margin-bottom: 50px;
+  }
+
+  .page-footer__logo {
+    margin-bottom: 50px;
+
+    & svg {
+      width: 262px;
+      height: 69px;
+    }
+  }
+
+  .page-footer__title,
+  .page-footer__link,
+  .page-footer__login,
+  .page-footer__registration {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .page-footer__list--contacts {
+    margin-bottom: 70px;
+  }
+
+  .page-footer__politics-container {
+    & a,
+    & span {
+      width: 100%;
+
+      text-align: center;
+
+      margin-bottom: 5px;
+    }
+
+    & a:nth-of-type(1) {
+      order: 0;
+    }
+
+    & a:nth-of-type(2) {
+      order: 1;
+    }
+
+    & span {
+      order: 2;
+    }
+  }
+}
